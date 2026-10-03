@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Психолог в Ярославле – {{Имя Фамилия}}, очно и онлайн</title>
+<meta name="description" content="Психолог в Ярославле {{Имя Фамилия}}: консультации очно в кабинете и онлайн. Тревога, выгорание, отношения, кризисы. Цена и формат до записи, запись через форму на сайте.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="{{Имя Фамилия}} – психолог в Ярославле">
+<meta property="og:title" content="Психолог в Ярославле для тех, кто давно собирался прийти">
+<meta property="og:description" content="Первая встреча – чтобы спокойно разобраться, что происходит. Очно в Ярославле или онлайн, цена и формат известны до записи.">
+<meta property="og:url" content="{{ссылка-сайта}}">
+<meta property="og:image" content="{{ссылка-сайта}}/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2713%27 fill=%27none%27 stroke=%27%236a4a5e%27 stroke-width=%273%27/%3E%3Cpath d=%27M16 3a13 13 0 0 1 12.4 9%27 fill=%27none%27 stroke=%27%23f4f2f2%27 stroke-width=%273.4%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"{{Имя Фамилия}} – психолог","description":"Психологическое консультирование взрослых в Ярославле: очно в кабинете и онлайн.","url":"{{ссылка-сайта}}","image":"{{ссылка-сайта}}/assets/og.jpg","telephone":"{{телефон}}","openingHours":"{{часы}}","areaServed":"Ярославль","address":{"@type":"PostalAddress","streetAddress":"{{адрес}}","addressLocality":"Ярославль","addressCountry":"RU"},"priceRange":"{{цена-очно}} ₽"}
+</script>
+<style>
+  /* ---- тема: шесть цветов, два шрифта. Палитра В «пепельная слива» ---- */
+  .v-page {
+    --v-canvas: #f4f2f2; --v-surface: #fcfbfb;
+    --v-ink: #2a2328; --v-ink-soft: #645a61;            /* 6,3:1 на холсте */
+    --v-accent: #6a4a5e; --v-accent-ink: #f8f3f6;       /* кнопка 7,9:1 */
+    --v-accent-deep: #5a3e50;                           /* мелкий акцентный текст */
+    --v-font-display: "Tenor Sans", "Georgia", system-ui, sans-serif;
+    --v-font-text: "Golos Text", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 400;
+    --v-track-tight: -0.015em;
+    --v-shadow-color: 60 40 54;
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .05), 0 8px 22px rgb(var(--v-shadow-color) / .07);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .07), 0 22px 54px rgb(var(--v-shadow-color) / .13);
+    --v-radius: 18px;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --v-section: clamp(3.5rem, 8vw, 7rem);
+  }
+  html, body { margin: 0; background: #f4f2f2; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  .v-page .v-display { line-height: 1.04; }
+  .v-page .v-lede { font-weight: 400; }
+  .v-page .v-label { font-weight: 500; letter-spacing: .01em; text-transform: none; font-size: var(--v-t-sm); color: var(--v-accent-deep); }
+  .v-page .v-btn { font-size: var(--v-t-sm); }
+  .v-page ol { margin: 0; padding: 0; list-style: none; }
+  .slot { color: var(--v-accent-deep); }
+
+  /* ---- шапка ------------------------------------------------------------------ */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter);
+    background: rgb(244 242 242 / 0); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(244 242 242 / .88); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__mark { font-family: var(--v-font-display); font-size: var(--v-t-lg); text-decoration: none; display: inline-flex; align-items: center; gap: .55em; min-height: 44px; white-space: nowrap; }
+  .bar__mark svg { width: 1.05em; height: 1.05em; flex: none; }
+  .nav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
+  .nav a { text-decoration: none; color: var(--v-ink-soft); display: inline-flex; align-items: center; min-height: 44px; transition: color .16s var(--v-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .nav a:hover { color: var(--v-ink); } }
+  .bar .v-btn { padding: .7em 1.3em; }
+  @media (max-width: 1120px) { .nav { display: none; } }
+  @media (max-width: 700px) { .bar__mark { font-size: 1.05rem; } .bar .v-btn { padding: 0 1em; min-height: 44px; } }
+
+  /* ---- плашка демо для заказчика (снимается перед сдачей и при переносе в Тильду) ---- */
+  .demo-for { display: inline-flex; align-items: center; gap: .55em; max-width: 100%; margin-bottom: var(--v-5); padding: .45em .95em .45em .7em;
+    border-radius: 999px; background: rgb(252 251 251 / .86); box-shadow: inset 0 0 0 1px var(--v-hair), var(--v-e1);
+    font-size: var(--v-t-xs); line-height: 1.35; color: var(--v-ink); }
+  .demo-for::before { content: ""; flex: none; width: .55em; height: .55em; border-radius: 50%; background: var(--v-accent); }
+  .demo-for a { color: var(--v-accent-deep); font-weight: 500; }
+
+  /* ---- 1 · hero: два кресла справа, текст слева на стене ----------------------------- */
+  .hero__back img { position: absolute; max-width: none; width: 112%; height: 112%; left: -6%; top: -6%; object-fit: cover; object-position: 62% 50%; }
+  .hero__col { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(to right, rgb(244 242 242 / .8) 0%, rgb(244 242 242 / .5) 36%, transparent 62%); }
+  .hero__copy { bottom: clamp(3rem, 9vh, 6.5rem); max-width: min(44rem, 88vw); }
+  .hero__who { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1em .5em; margin-bottom: var(--v-4); font-size: var(--v-t-base); color: var(--v-ink); }
+  .hero__who b { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-lg); }
+  .hero__who span { color: var(--v-ink-soft); }
+  .hero__copy .v-display { font-size: clamp(2.3rem, 1.2rem + 3.4vw, 4.4rem); line-height: 1.02; max-width: 17ch; }
+  .hero__copy .v-lede { margin-top: var(--v-5); max-width: 40ch; color: var(--v-ink); }
+  .v-page .hero__pluses { margin-top: 1.6rem; display: grid; grid-template-columns: max-content max-content; justify-content: start; gap: var(--v-2) var(--v-5); font-size: var(--v-t-sm); color: var(--v-ink); }
+  .hero__pluses li { display: flex; gap: .55em; align-items: baseline; }
+  .hero__pluses li::before { content: ""; flex: none; width: .5em; height: .5em; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--v-accent); transform: translateY(-.08em); }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-6); margin-top: var(--v-6); }
+  .hero__tg { color: var(--v-ink); font-size: var(--v-t-sm); display: inline-flex; align-items: center; min-height: 44px; }
+  .hero__note { position: absolute; z-index: 3; right: var(--v-gutter); top: clamp(5rem, 14vh, 9rem); text-align: right; display: grid; gap: .25em; max-width: 30ch; }
+  .hero__note b { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-lg); }
+  .hero__note span { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .hero__two { bottom: clamp(4.5rem, 14vh, 9rem); max-width: min(40rem, 88vw); }
+  .hero__two .v-display { font-size: var(--v-t-2xl); max-width: 15ch; }
+  .hero__two .v-lede { margin-top: var(--v-4); max-width: 36ch; }
+  @media (max-width: 1100px) { .v-page .hero__pluses { grid-template-columns: 1fr; } }
+  @media (max-width: 860px) {
+    .hero__back img { object-position: 50% 80%; }
+    .hero__col { background: linear-gradient(to bottom, rgb(244 242 242 / .82) 0%, rgb(244 242 242 / .55) 48%, transparent 72%); }
+    .hero__copy, .hero__two { bottom: auto; top: clamp(4.6rem, 9vh, 6rem); }
+    .demo-for { margin-bottom: var(--v-3); }
+    .hero__who { margin-bottom: var(--v-2); font-size: var(--v-t-sm); }
+    .hero__who b { font-size: var(--v-t-base); }
+    .hero__copy .v-display { font-size: clamp(1.85rem, 1.2rem + 3.2vw, 2.5rem); max-width: none; }
+    .hero__copy .v-lede { font-size: var(--v-t-sm); margin-top: var(--v-3); max-width: 34ch; }
+    .v-page .hero__pluses { display: none; }
+    .hero__cta { margin-top: var(--v-4); gap: var(--v-1) var(--v-5); }
+    .hero__note { display: none; }
+    .hero__two .v-display { font-size: var(--v-t-xl); }
+  }
+
+  /* ---- 2 · обо мне ---------------------------------------------------------------- */
+  .about { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: var(--v-8) var(--v-9); align-items: start; }
+  .about__fig { position: sticky; top: clamp(5rem, 12vh, 7rem); aspect-ratio: 3 / 4; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); background: var(--v-surface); max-width: 27rem; }
+  .about__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .about__copy .v-label { display: block; margin-bottom: var(--v-4); }
+  .about__copy .v-display { max-width: 16ch; }
+  .about__copy > p { margin-top: var(--v-5); max-width: 52ch; text-wrap: pretty; }
+  .about__copy > p + p { margin-top: var(--v-3); color: var(--v-ink-soft); }
+  .facts { margin-top: var(--v-7); }
+  .facts li { display: grid; grid-template-columns: minmax(9rem, .7fr) minmax(0, 1.3fr); gap: var(--v-1) var(--v-6); padding: var(--v-4) 0; border-top: 1px solid var(--v-hair); }
+  .facts li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .facts dt, .facts span:first-child { color: var(--v-ink-soft); font-size: var(--v-t-sm); padding-top: .15em; }
+  .facts b { font-weight: 500; }
+  .about__docs { margin-top: var(--v-5); font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 50ch; }
+  @media (max-width: 860px) {
+    .about { grid-template-columns: 1fr; gap: var(--v-6); }
+    .about__fig { position: relative; top: auto; max-width: 21rem; aspect-ratio: 4 / 5; }
+    .facts li { grid-template-columns: 1fr; }
+  }
+
+  /* ---- 3 · запросы: фразы клиента крупно, без карточек ------------------------------- */
+  .req__head { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); column-gap: var(--v-8); align-items: end; margin-bottom: var(--v-6); }
+  .req__head .v-label { grid-column: 1 / -1; display: block; margin-bottom: var(--v-3); }
+  .req__head p { color: var(--v-ink-soft); max-width: 46ch; text-wrap: pretty; }
+  .req__list { border-bottom: 1px solid var(--v-hair); }
+  .req__list li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: var(--v-2) var(--v-8); align-items: baseline;
+    padding: var(--v-5) var(--v-4); margin: 0 calc(-1 * var(--v-4)); border-top: 1px solid var(--v-hair); border-radius: 0; transition: background-color .3s var(--v-ease-out); }
+  .req__list h3 { font-family: var(--v-font-display); font-weight: 400; font-size: clamp(1.4rem, 1rem + 1.2vw, 2rem); letter-spacing: var(--v-track-tight); line-height: 1.12; text-wrap: balance; }
+  .req__list q { font-size: var(--v-t-lg); line-height: 1.4; color: var(--v-ink-soft); text-wrap: pretty; quotes: "«" "»"; }
+  @media (hover: hover) and (pointer: fine) {
+    .req__list li:hover { background: var(--v-surface); border-radius: calc(var(--v-radius) - 6px); border-top-color: transparent; }
+    .req__list li:hover + li { border-top-color: transparent; }
+    .req__list li:hover q { color: var(--v-ink); }
+  }
+  .req__foot { margin-top: var(--v-7); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--v-5) var(--v-8); align-items: center; }
+  .req__foot p { color: var(--v-ink-soft); max-width: 62ch; font-size: var(--v-t-sm); text-wrap: pretty; }
+  .req__foot p b { color: var(--v-ink); font-weight: 500; }
+  @media (max-width: 860px) {
+    .req__head { grid-template-columns: 1fr; row-gap: var(--v-3); }
+    .req__list li { grid-template-columns: 1fr; padding: var(--v-4) var(--v-3); margin: 0 calc(-1 * var(--v-3)); }
+    .req__list q { font-size: var(--v-t-base); }
+    .req__foot { grid-template-columns: 1fr; }
+    .req__foot .v-btn { justify-self: start; }
+  }
+
+  /* ---- 4 · фирменный ход: 50 минут первой встречи ------------------------------------ */
+  .meet { height: 100%; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--v-8); align-items: center; padding: 5rem var(--v-gutter) var(--v-6); max-width: 82rem; margin: 0 auto; }
+  .meet__head .v-label { display: block; margin-bottom: var(--v-4); }
+  .meet__head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 40ch; text-wrap: pretty; }
+  .meet__stack { position: relative; margin-top: var(--v-7); min-height: 12rem; }
+  .meet__item { position: absolute; inset: 0 0 auto 0; display: grid; gap: var(--v-2); max-width: 36rem; }
+  .meet__item small { font-size: var(--v-t-sm); color: var(--v-accent-deep); font-variant-numeric: tabular-nums; }
+  .meet__item h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); letter-spacing: var(--v-track-tight); line-height: 1.1; }
+  .meet__item p { color: var(--v-ink-soft); max-width: 42ch; text-wrap: pretty; }
+  .dial { position: relative; justify-self: center; width: min(100%, 30rem); aspect-ratio: 1; }
+  .dial svg { width: 100%; height: 100%; display: block; overflow: visible; }
+  .dial__track { fill: none; stroke: var(--v-hair-strong); stroke-width: 1; }
+  .dial__fill { fill: none; stroke: var(--v-accent); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 50 50; stroke-dashoffset: calc(50 - var(--min, 0)); transform: rotate(-90deg); transform-origin: 220px 220px; }
+  .dial__tick { stroke: var(--v-hair-strong); stroke-width: 1; }
+  .dial__tick--5 { stroke: var(--v-ink-soft); stroke-width: 1.4; }
+  .dial__seg { fill: none; stroke: var(--v-hair-strong); stroke-width: 10; transform: rotate(-90deg); transform-origin: 220px 220px; transition: stroke .5s var(--v-ease-out), opacity .5s var(--v-ease-out); opacity: .55; }
+  .dial__seg.is-on { stroke: var(--v-accent); opacity: .9; }
+  .dial__seg.is-done { stroke: var(--v-accent); opacity: .28; }
+  .dial__mid { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; pointer-events: none; }
+  .dial__min { font-family: var(--v-font-display); font-size: clamp(3.4rem, 2rem + 4vw, 6rem); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+  .dial__cap { margin-top: var(--v-2); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .dial__phase { margin-top: var(--v-1); font-size: var(--v-t-sm); color: var(--v-accent-deep); min-height: 1.6em; }
+  @media (max-width: 860px) {
+    .meet { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); gap: var(--v-3); align-items: start; padding: 4.4rem var(--v-gutter) var(--v-5); }
+    .dial { order: -1; width: min(100%, 15rem, 30svh); justify-self: start; }
+    .dial__min { font-size: 2.6rem; }
+    .dial__cap { margin-top: 0; font-size: var(--v-t-xs); }
+    .dial__phase { display: none; }
+    .meet__head .v-label { margin-bottom: var(--v-2); }
+    .meet__head .v-display { font-size: var(--v-t-xl); }
+    .meet__head p { display: none; }
+    .meet__stack { margin-top: var(--v-4); }
+    .meet__item h3 { font-size: var(--v-t-lg); }
+    .meet__item p { font-size: var(--v-t-sm); }
+  }
+
+  /* ---- 5 · формат и стоимость ------------------------------------------------------ */
+  .fmt__head { max-width: 46rem; margin-bottom: var(--v-7); }
+  .fmt__head .v-label { display: block; margin-bottom: var(--v-4); }
+  .fmt__head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 50ch; text-wrap: pretty; }
+  .fmt { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--v-7) var(--v-8); align-items: start; }
+  .fmt__col:nth-child(2) { margin-top: var(--v-9); }
+  .fmt__fig { position: relative; aspect-ratio: 4 / 3; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); background: var(--v-surface); }
+  .fmt__fig .v-layer img { width: 100%; height: 124%; left: 0; top: -12%; object-fit: cover; }
+  .fmt__col h3 { margin-top: var(--v-5); font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-2xl); letter-spacing: var(--v-track-tight); line-height: 1; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .2em .6em; }
+  .fmt__col h3 .sum { font-size: var(--v-t-xl); color: var(--v-accent-deep); white-space: nowrap; }
+  .fmt__col dl { margin: var(--v-4) 0 0; }
+  .fmt__col dl div { display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: var(--v-4); padding: var(--v-3) 0; border-top: 1px solid var(--v-hair); }
+  .fmt__col dt { color: var(--v-ink-soft); font-size: var(--v-t-sm); padding-top: .1em; }
+  .fmt__col dd { margin: 0; }
+  .terms { margin-top: var(--v-8); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--v-5) var(--v-7); padding-top: var(--v-5); border-top: 1px solid var(--v-hair-strong); }
+  .terms div { display: grid; gap: var(--v-1); align-content: start; }
+  .terms b { font-weight: 500; }
+  .terms span { color: var(--v-ink-soft); font-size: var(--v-t-sm); text-wrap: pretty; }
+  @media (max-width: 860px) {
+    .fmt { grid-template-columns: 1fr; }
+    .fmt__col:nth-child(2) { margin-top: 0; }
+    .fmt__fig { aspect-ratio: 16 / 11; }
+    .fmt__col dl div { grid-template-columns: 6.5rem minmax(0, 1fr); }
+    .terms { grid-template-columns: 1fr; margin-top: var(--v-7); }
+  }
+
+  /* ---- 6 · отзывы и вопросы --------------------------------------------------------- */
+  .rev__head { margin-bottom: var(--v-6); max-width: 46rem; }
+  .rev__head .v-label { display: block; margin-bottom: var(--v-4); }
+  .rev__list { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: var(--v-6); align-items: start; }
+  .rev__item { padding-top: var(--v-5); border-top: 1px solid var(--v-hair); }
+  .rev__item--big .rev__text { font-family: var(--v-font-display); font-size: var(--v-t-lg); line-height: 1.38; }
+  .rev__text { text-wrap: pretty; }
+  .rev__meta { margin-top: var(--v-4); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .rev__meta b { color: var(--v-ink); font-weight: 500; }
+  .rev__fact { margin-top: var(--v-5); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .faq { margin-top: var(--v-9); display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--v-6) var(--v-9); align-items: start; }
+  .faq__head { position: sticky; top: clamp(5rem, 12vh, 7rem); }
+  .faq__head .v-label { display: block; margin-bottom: var(--v-4); }
+  .faq__head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 34ch; text-wrap: pretty; }
+  .faq__list { border-bottom: 1px solid var(--v-hair); }
+  .faq__list details { border-top: 1px solid var(--v-hair); }
+  .faq__list summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--v-4); align-items: center; padding: var(--v-5) 0; min-height: 44px;
+    font-family: var(--v-font-display); font-size: var(--v-t-lg); line-height: 1.25; }
+  .faq__list summary::-webkit-details-marker { display: none; }
+  .faq__list summary i { position: relative; width: 1.1rem; height: 1.1rem; flex: none; }
+  .faq__list summary i::before, .faq__list summary i::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1.5px; margin-top: -.75px; background: var(--v-accent); transition: transform .25s var(--v-ease-out); }
+  .faq__list summary i::after { transform: rotate(90deg); }
+  .faq__list details[open] summary i::after { transform: rotate(0deg); }
+  .faq__list details p { padding: 0 0 var(--v-5); max-width: 56ch; color: var(--v-ink-soft); text-wrap: pretty; }
+  .faq__list details[open] p { animation: faq-in .3s var(--v-ease-out); }
+  @keyframes faq-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  @media (max-width: 860px) {
+    .rev__list { grid-template-columns: 1fr; }
+    .faq { grid-template-columns: 1fr; margin-top: var(--v-8); }
+    .faq__head { position: static; }
+    .faq__list summary { font-size: var(--v-t-base); padding: var(--v-4) 0; }
+  }
+
+  /* ---- 7 · запись: форма и карта ---------------------------------------------------- */
+  .book { position: relative; background: radial-gradient(56rem 36rem at calc(var(--v-mx, .3) * 100%) calc(var(--v-my, .3) * 100%), rgb(106 74 94 / .09), transparent 62%); }
+  .book__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: var(--v-8) var(--v-9); align-items: start; }
+  .book__head .v-label { display: block; margin-bottom: var(--v-4); }
+  .book__head .v-display { max-width: 13ch; }
+  .book__head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 44ch; text-wrap: pretty; }
+  .form { margin-top: var(--v-6); display: grid; gap: var(--v-4); max-width: 34rem; }
+  .field { display: grid; gap: var(--v-1); }
+  .field > span, .form legend { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .field input, .field textarea { font: inherit; color: var(--v-ink); background: var(--v-surface); border: 1px solid var(--v-hair-strong); border-radius: 12px; padding: .8em 1em; min-height: 48px; width: 100%;
+    transition: border-color .16s var(--v-ease-out), box-shadow .16s var(--v-ease-out); }
+  .field textarea { min-height: 6.5rem; resize: vertical; }
+  .field input:focus-visible, .field textarea:focus-visible { outline: none; border-color: var(--v-accent); box-shadow: 0 0 0 3px rgb(106 74 94 / .16); }
+  .form fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: var(--v-2); }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--v-2); }
+  .chips label { position: relative; }
+  .chips input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .chips span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.1em; border-radius: 999px; background: var(--v-surface); box-shadow: inset 0 0 0 1px var(--v-hair-strong); font-size: var(--v-t-sm); transition: background-color .16s var(--v-ease-out), color .16s var(--v-ease-out), box-shadow .16s var(--v-ease-out); }
+  .chips input:checked + span { background: var(--v-accent); color: var(--v-accent-ink); box-shadow: none; }
+  .chips input:focus-visible + span { outline: 2px solid var(--v-accent); outline-offset: 3px; }
+  .consent { display: flex; gap: .6em; align-items: flex-start; font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .consent input { margin-top: .2em; width: 1.05rem; height: 1.05rem; accent-color: var(--v-accent); flex: none; }
+  .v-page button.v-btn { background: var(--v-accent); color: var(--v-accent-ink); } /* сброс движка .v-page button перебивает фон кнопки */
+  .form .v-btn { justify-self: start; }
+  .form__done { display: none; padding: var(--v-6); border-radius: var(--v-radius); background: var(--v-surface); box-shadow: var(--v-e1); max-width: 34rem; margin-top: var(--v-6); }
+  .form__done b { display: block; font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); margin-bottom: var(--v-3); }
+  .form__done p { color: var(--v-ink-soft); }
+  .form__done small { display: block; margin-top: var(--v-4); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .book.is-sent .form { display: none; }
+  .book.is-sent .form__done { display: block; animation: faq-in .4s var(--v-ease-out); }
+  .contacts { display: grid; gap: var(--v-5); }
+  .map { position: relative; aspect-ratio: 4 / 3; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); background: var(--v-surface); }
+  .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: saturate(.45) sepia(.12); }
+  .contacts dl { margin: 0; }
+  .contacts dl div { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: var(--v-4); padding: var(--v-3) 0; border-top: 1px solid var(--v-hair); }
+  .contacts dt { color: var(--v-ink-soft); font-size: var(--v-t-sm); padding-top: .1em; }
+  .contacts dd { margin: 0; }
+  .contacts dd a { display: inline-block; padding-block: .1em; }
+  .foot { margin-top: var(--v-9); padding: var(--v-6) 0 calc(var(--v-6) + env(safe-area-inset-bottom)); border-top: 1px solid var(--v-hair); display: flex; flex-wrap: wrap; gap: var(--v-2) var(--v-6); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .foot span:last-child { flex-basis: 100%; }
+  @media (max-width: 860px) {
+    .book__grid { grid-template-columns: 1fr; gap: var(--v-7); }
+    .contacts dl div { grid-template-columns: 6rem minmax(0, 1fr); }
+    .form .v-btn { justify-self: stretch; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__mark" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="#6a4a5e" stroke-width="2.4"/><path d="M16 3a13 13 0 0 1 12.4 9" fill="none" stroke="#f4f2f2" stroke-width="3"/></svg>{{Имя Фамилия}}
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#obo-mne">Обо мне</a>
+      <a href="#zaprosy">Запросы</a>
+      <a href="#vstrecha">Первая встреча</a>
+      <a href="#format">Формат и цены</a>
+      <a href="#otzyvy">Отзывы и вопросы</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a class="v-btn" href="#zapis">Записаться</a>
+  </header>
+
+  <main>
+
+    <!-- 1 · УЗНАВАНИЕ: два кресла в светлом кабинете, имя, оффер, кнопка над сгибом -->
+    <section id="top" data-v-act="pin" data-v-span="2.2" data-v-drift="#f4f2f2" aria-label="Психолог в Ярославле">
+      <div data-v-stage>
+        <div class="v-layer hero__back" data-v-parallax="-0.45">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+            <img src="assets/hero.webp" alt="" width="1920" height="1080" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="hero__col" aria-hidden="true"></div>
+
+        <div class="hero__note" data-v-cue="0 0.6 0" data-v-rise="0">
+          <b>Очно и онлайн</b>
+          <span>Приём по записи, {{дни и часы}}</span>
+        </div>
+
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.62 0 0.1">
+          <!-- плашка демо для заказчика: убрать перед сдачей -->
+          <p class="demo-for">Демо для Кирилла · по заказу <a href="https://kwork.ru/projects/3262761/view" target="_blank" rel="noopener">«Сайт-визитка для психолога»</a></p>
+          <p class="hero__who"><b>{{Имя Фамилия}}</b><span>{{специализация}}</span></p>
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Психолог в Ярославле для тех, кто давно собирался прийти</h1>
+          <p class="v-lede">Первая встреча – чтобы спокойно разобраться, что происходит. Очно в кабинете или онлайн, без оценок и спешки.</p>
+          <ul class="hero__pluses" aria-label="Как устроена работа">
+            <li>Цена и формат известны до записи</li>
+            <li>Всё сказанное остаётся между нами</li>
+            <li>Очно в Ярославле или онлайн</li>
+            <li>Запись через форму, без звонка</li>
+          </ul>
+          <div class="hero__cta">
+            <a class="v-btn" href="#zapis">Записаться</a>
+            <a class="hero__tg" href="{{ссылка-telegram}}" target="_blank" rel="noopener">или напишите в Telegram</a>
+          </div>
+        </div>
+
+        <div class="v-copy v-copy--lead hero__two" data-v-cue="0.64 0.96 0.06 0.04">
+          <h2 class="v-display v-display--lg">Если вы здесь, что-то уже беспокоит</h2>
+          <p class="v-lede">Это достаточная причина прийти. Не нужно ждать, пока станет «совсем плохо», и не нужно заранее знать, с чего начать.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ДОВЕРИЕ К ЧЕЛОВЕКУ: обо мне (только факты от заказчика) -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#ece7e9" id="obo-mne" aria-label="Обо мне">
+      <div class="v-wrap about">
+        <figure class="about__fig" data-v-reveal="up" data-v-reveal-at="0.08 0.45">
+          <img src="assets/portrait.webp" alt="Психолог в кресле в светлом кабинете, спокойный внимательный взгляд" width="1200" height="1600" loading="lazy" decoding="async">
+        </figure>
+        <div class="about__copy" data-v-in data-v-stagger="70">
+          <span class="v-label">Обо мне</span>
+          <h2 class="v-display v-display--lg">Здравствуйте, я {{Имя}}</h2>
+          <p>Работаю со взрослыми: очно в кабинете в Ярославле и онлайн. Не даю советов, «как правильно жить», – помогаю увидеть, что происходит, и найти шаги, которые подходят именно вам.</p>
+          <p>{{пара предложений о себе от психолога: почему выбрали эту работу, с кем работаете охотнее всего}}</p>
+          <ul class="facts">
+            <li><span>Образование</span><b>{{вуз, факультет, год}}</b></li>
+            <li><span>Дополнительное обучение</span><b>{{программы и годы}}</b></li>
+            <li><span>Подход</span><b>{{метод: например, КПТ или гештальт}}</b></li>
+            <li><span>Опыт</span><b>{{с какого года консультирую}}</b></li>
+            <li><span>Супервизия</span><b>{{регулярно, у кого или где}}</b></li>
+          </ul>
+          <p class="about__docs">Дипломы и сертификаты покажу на первой встрече или пришлю по запросу.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · УЗНАВАНИЕ СЕБЯ: с какими запросами работаю -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f4f2f2" id="zaprosy" aria-label="С какими запросами работаю">
+      <div class="v-wrap">
+        <div class="req__head" data-v-in data-v-stagger="70">
+          <span class="v-label">Запросы</span>
+          <h2 class="v-display v-display--lg">С чем ко мне приходят</h2>
+          <p>Если узнаёте себя хотя бы в одной строке, этого достаточно, чтобы записаться. Формулировать «правильно» не нужно.</p>
+        </div>
+        <ul class="req__list" data-v-in data-v-stagger="55">
+          <li><h3>Тревога и напряжение</h3><q>Не могу расслабиться, прокручиваю мысли, плохо сплю</q></li>
+          <li><h3>Усталость и выгорание</h3><q>Сил нет даже на то, что раньше радовало</q></li>
+          <li><h3>Отношения и расставание</h3><q>Ссоримся по кругу и не знаю, остаться или уйти</q></li>
+          <li><h3>Неуверенность в себе</h3><q>Сравниваю себя с другими, боюсь ошибиться, не умею отказывать</q></li>
+          <li><h3>Перемены и кризисы</h3><q>Переезд, развод, новая работа, рождение ребёнка – и почва уходит из-под ног</q></li>
+          <li><h3>Потеря и горе</h3><q>Не стало близкого человека, и непонятно, как жить дальше</q></li>
+          <li><h3>Трудно понять, что со мной</h3><q>Вроде всё нормально, а внутри плохо. Хочу разобраться</q></li>
+        </ul>
+        <div class="req__foot" data-v-in data-v-in-self>
+          <p>Если нужна помощь врача, скажу об этом прямо и подскажу, к кому обратиться. <b>При мыслях о самоубийстве или угрозе жизни звоните 112.</b></p>
+          <a class="v-btn v-btn--ghost" href="#zapis">Записаться</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ФИРМЕННЫЙ ХОД: 50 минут первой встречи, циферблат заполняется скроллом -->
+    <section id="vstrecha" data-v-act="pin" data-v-span="3" data-v-drift="#ece7e9" aria-label="Как проходит первая встреча">
+      <div data-v-stage>
+        <div class="meet">
+          <div class="meet__copy">
+            <div class="meet__head" data-v-cue="0 1 0 0" data-v-rise="0">
+              <span class="v-label">Первая встреча</span>
+              <h2 class="v-display v-display--lg">Что будет за 50 минут</h2>
+              <p>Неизвестность пугает больше, чем сам разговор. Вот как обычно проходит первая встреча – очно и онлайн одинаково.</p>
+            </div>
+            <div class="meet__stack">
+              <div class="meet__item" data-v-cue="0 0.22 0 0.04">
+                <small>0–5 минута</small>
+                <h3>Знакомство и правила</h3>
+                <p>Договариваемся о главном: всё, что вы расскажете, остаётся между нами. На любой вопрос можно не отвечать.</p>
+              </div>
+              <div class="meet__item" data-v-cue="0.2 0.42 0.04 0.04">
+                <small>5–25 минута</small>
+                <h3>Ваша история</h3>
+                <p>Вы рассказываете, что беспокоит, в том порядке, в каком получается. Готовиться или подбирать слова не нужно.</p>
+              </div>
+              <div class="meet__item" data-v-cue="0.4 0.62 0.04 0.04">
+                <small>25–40 минута</small>
+                <h3>Вопросы и опоры</h3>
+                <p>Я уточняю, когда это началось и что вы уже пробовали. Вместе ищем, что помогает держаться уже сейчас.</p>
+              </div>
+              <div class="meet__item" data-v-cue="0.6 0.82 0.04 0.04">
+                <small>40–47 минута</small>
+                <h3>Что дальше</h3>
+                <p>Обсуждаем, чего вы хотите от работы, как часто встречаться и сколько встреч примерно может понадобиться.</p>
+              </div>
+              <div class="meet__item" data-v-cue="0.8 1 0.04 0">
+                <small>47–50 минута</small>
+                <h3>Решение за вами</h3>
+                <p>Продолжать или нет, решаете вы. Можно подумать дома и написать позже – без напоминаний и уговоров.</p>
+              </div>
+            </div>
+          </div>
+          <div class="dial" id="dial" style="--min: 0">
+            <svg viewBox="0 0 440 440" role="img" aria-label="Циферблат: 50 минут первой встречи, пять частей">
+              <g id="dial-ticks"></g>
+              <circle class="dial__track" cx="220" cy="220" r="170"/>
+              <circle class="dial__fill" cx="220" cy="220" r="170" pathLength="50"/>
+              <g id="dial-segs"></g>
+            </svg>
+            <div class="dial__mid" aria-hidden="true">
+              <span class="dial__min v-nums" id="dial-min">0</span>
+              <span class="dial__cap">минута из 50</span>
+              <span class="dial__phase" id="dial-phase">Знакомство</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · ВЫБОР: формат и стоимость -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f4f2f2" id="format" aria-label="Формат и стоимость">
+      <div class="v-wrap">
+        <div class="fmt__head" data-v-in data-v-stagger="70">
+          <span class="v-label">Формат и стоимость</span>
+          <h2 class="v-display v-display--lg">Очно в Ярославле или онлайн из любого города</h2>
+          <p>Встреча длится 50 минут в обоих форматах. Цена одна и та же для первой и следующих встреч, если не указано иначе.</p>
+        </div>
+        <div class="fmt">
+          <article class="fmt__col" data-v-in data-v-stagger="60">
+            <figure class="fmt__fig">
+              <div class="v-layer" data-v-parallax="-0.4"><img src="assets/ochno.webp" alt="Столик между двумя креслами в кабинете: чайник, две чашки, графин воды" width="1000" height="1333" loading="lazy" decoding="async"></div>
+            </figure>
+            <h3>Очно <span class="sum v-nums">{{цена-очно}}&nbsp;₽</span></h3>
+            <dl>
+              <div><dt>Где</dt><dd>Кабинет: {{адрес}}, Ярославль</dd></div>
+              <div><dt>Сколько</dt><dd>50 минут</dd></div>
+              <div><dt>Подойдёт</dt><dd>Если важно выйти из дома и говорить в отдельной тихой комнате</dd></div>
+            </dl>
+          </article>
+          <article class="fmt__col" data-v-in data-v-stagger="60">
+            <figure class="fmt__fig">
+              <div class="v-layer" data-v-parallax="-0.4"><img src="assets/online.webp" alt="Ноутбук на деревянном столе у окна, чашка чая, наушники и блокнот" width="1000" height="1333" loading="lazy" decoding="async"></div>
+            </figure>
+            <h3>Онлайн <span class="sum v-nums">{{цена-онлайн}}&nbsp;₽</span></h3>
+            <dl>
+              <div><dt>Где</dt><dd>Видеосвязь: {{Telegram, Zoom или другое}}</dd></div>
+              <div><dt>Сколько</dt><dd>50 минут</dd></div>
+              <div><dt>Подойдёт</dt><dd>Если вы в другом городе, с маленьким ребёнком или дорога забирает силы</dd></div>
+            </dl>
+          </article>
+        </div>
+        <div class="terms" data-v-in data-v-stagger="60">
+          <div><b>Оплата</b><span>{{как и когда: например, переводом после встречи}}</span></div>
+          <div><b>Перенос и отмена</b><span>{{за сколько часов можно перенести без оплаты}}</span></div>
+          <div><b>Как часто</b><span>Обычно раз в неделю, но частоту обсуждаем вместе на первой встрече</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · ДОВЕРИЕ И ВОЗРАЖЕНИЯ: отзывы (присылает психолог, с согласия авторов) и частые вопросы -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#ece7e9" id="otzyvy" aria-label="Отзывы и частые вопросы">
+      <div class="v-wrap">
+        <div class="rev__head" data-v-in data-v-stagger="60">
+          <span class="v-label">Отзывы</span>
+          <h2 class="v-display v-display--md">Что говорят после встреч</h2>
+        </div>
+        <ul class="rev__list" data-v-in data-v-stagger="90">
+          <li class="rev__item rev__item--big">
+            <p class="rev__text">«{{отзыв 1}}»</p>
+            <p class="rev__meta"><b>{{имя 1}}</b>, {{формат или повод 1}}</p>
+          </li>
+          <li class="rev__item">
+            <p class="rev__text">«{{отзыв 2}}»</p>
+            <p class="rev__meta"><b>{{имя 2}}</b>, {{формат или повод 2}}</p>
+          </li>
+          <li class="rev__item">
+            <p class="rev__text">«{{отзыв 3}}»</p>
+            <p class="rev__meta"><b>{{имя 3}}</b>, {{формат или повод 3}}</p>
+          </li>
+        </ul>
+        <p class="rev__fact" data-v-in data-v-in-self>Отзывы публикуются с согласия авторов, имена изменены или сокращены.</p>
+
+        <div class="faq" id="voprosy">
+          <div class="faq__head" data-v-in data-v-stagger="60">
+            <span class="v-label">Вопросы</span>
+            <h2 class="v-display v-display--md">О чём спрашивают перед записью</h2>
+            <p>Не нашли свой вопрос – задайте его в форме заявки, отвечу до встречи.</p>
+          </div>
+          <div class="faq__list" data-v-in data-v-stagger="50">
+            <details>
+              <summary>Чем психолог отличается от психиатра?<i aria-hidden="true"></i></summary>
+              <p>Психиатр – врач: ставит диагноз и может назначить лекарства. Психолог работает разговором и лекарств не назначает. Если увижу, что вам нужна помощь врача, скажу об этом прямо.</p>
+            </details>
+            <details>
+              <summary>Всё, что я расскажу, останется между нами?<i aria-hidden="true"></i></summary>
+              <p>Да, конфиденциальность – основа работы. Исключение одно: прямая угроза жизни, вашей или чужой. Об этом правиле говорю в начале первой встречи.</p>
+            </details>
+            <details>
+              <summary>Сколько встреч понадобится?<i aria-hidden="true"></i></summary>
+              <p>Зависит от запроса. С конкретной ситуацией бывает достаточно нескольких встреч, с давними трудностями работа идёт дольше. Примерный план обсуждаем на первой встрече, а решение продолжать всегда за вами.</p>
+            </details>
+            <details>
+              <summary>Онлайн – это так же, как очно?<i aria-hidden="true"></i></summary>
+              <p>По содержанию да: те же 50 минут и тот же разговор. Нужны тихое место, где вас не услышат, и стабильная связь. Наушники помогают.</p>
+            </details>
+            <details>
+              <summary>Что, если мне не подойдёт?<i aria-hidden="true"></i></summary>
+              <p>Так бывает, и это нормально. Скажите об этом – обсудим, что не так, или помогу найти другого специалиста.</p>
+            </details>
+            <details>
+              <summary>Как подготовиться к первой встрече?<i aria-hidden="true"></i></summary>
+              <p>Специально никак. Если боитесь забыть важное, запишите пару мыслей в телефон. Прийти можно и с ощущением «не знаю, с чего начать».</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · ДЕЙСТВИЕ: форма заявки, карта, контакты -->
+    <section class="v-section book" data-v-act="flow" data-v-drift="#f4f2f2" id="kontakty" aria-label="Запись и контакты" data-v-spotlight>
+      <div class="v-wrap">
+        <div class="book__grid">
+          <div id="zapis">
+            <div class="book__head" data-v-in data-v-stagger="60">
+              <span class="v-label">Запись</span>
+              <h2 class="v-display v-display--lg">Запишитесь на первую встречу</h2>
+              <p>Оставьте имя и удобный способ связи. Отвечу в течение {{времени ответа}} и предложу несколько вариантов времени.</p>
+            </div>
+            <form class="form" id="form" novalidate data-v-in data-v-stagger="40">
+              <label class="field"><span>Как к вам обращаться</span><input name="name" autocomplete="given-name" required></label>
+              <label class="field"><span>Телефон или ник в Telegram</span><input name="contact" autocomplete="tel" required></label>
+              <fieldset>
+                <legend>Формат</legend>
+                <div class="chips">
+                  <label><input type="radio" name="format" value="Очно" checked><span>Очно</span></label>
+                  <label><input type="radio" name="format" value="Онлайн"><span>Онлайн</span></label>
+                  <label><input type="radio" name="format" value="Пока не знаю"><span>Пока не знаю</span></label>
+                </div>
+              </fieldset>
+              <label class="field"><span>Коротко, что беспокоит – если хотите</span><textarea name="note" rows="3"></textarea></label>
+              <label class="consent"><input type="checkbox" name="consent" required><span>Согласен(на) на обработку персональных данных по <a href="{{ссылка-политики}}">политике конфиденциальности</a></span></label>
+              <button class="v-btn" type="submit" data-v-magnet="0.2" data-v-rise="0">Записаться</button>
+            </form>
+            <div class="form__done" role="status" aria-live="polite">
+              <b>Заявка отправлена</b>
+              <p>Спасибо. Отвечу в течение {{времени ответа}} в удобный вам мессенджер или по телефону.</p>
+              <small>В демо заявка никуда не уходит. На готовом сайте она придёт психологу на почту и в Telegram.</small>
+            </div>
+          </div>
+          <div class="contacts" data-v-in data-v-stagger="60">
+            <div class="map">
+              <!-- демо: карта центра Ярославля; на рабочем сайте – блок карты Тильды с точкой по {{адрес}} -->
+              <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=39.8700%2C57.6170%2C39.9180%2C57.6370&amp;layer=mapnik&amp;marker=57.6266%2C39.8938" title="Кабинет на карте Ярославля" loading="lazy"></iframe>
+            </div>
+            <dl>
+              <div><dt>Кабинет</dt><dd>{{адрес}}, Ярославль</dd></div>
+              <div><dt>Telegram</dt><dd><a href="{{ссылка-telegram}}" target="_blank" rel="noopener">{{ник в Telegram}}</a></dd></div>
+              <div><dt>Телефон</dt><dd><a href="tel:{{телефон}}">{{телефон}}</a></dd></div>
+              <div><dt>Почта</dt><dd><a href="mailto:{{почта}}">{{почта}}</a></dd></div>
+              <div><dt>Приём</dt><dd>{{дни и часы}}, по записи</dd></div>
+            </dl>
+          </div>
+        </div>
+        <footer class="foot">
+          <span>{{Имя Фамилия}}, психолог, Ярославль</span>
+          <span>{{ИП или самозанятый, ИНН}}</span>
+          <a href="{{ссылка-политики}}">Политика конфиденциальности</a>
+          <span>Психологическое консультирование не является медицинской услугой.</span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  // На телефоне пины короче: правим атрибут до монтирования.
+  if (window.matchMedia('(max-width: 860px)').matches) {
+    document.getElementById('top').setAttribute('data-v-span', '1.7');
+    document.getElementById('vstrecha').setAttribute('data-v-span', '2.6');
+  }
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Шапка: подложка после 40 px прокрутки.
+  (function () {
+    var bar = document.querySelector('.bar'), on = null;
+    function tick() { var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+
+  // Фирменный ход: циферблат 50 минут. Пять частей встречи делят акт поровну по --v-p,
+  // внутри части минута идёт линейно от её начала до конца: 0–5, 5–25, 25–40, 40–47, 47–50.
+  (function () {
+    var act = document.getElementById('vstrecha'), dial = document.getElementById('dial');
+    if (!act || !dial) return;
+    var NS = 'http://www.w3.org/2000/svg', C = 220;
+    var bounds = [0, 5, 25, 40, 47, 50], names = ['Знакомство', 'Ваша история', 'Вопросы и опоры', 'Что дальше', 'Решение'];
+    var ticks = document.getElementById('dial-ticks'), segs = document.getElementById('dial-segs');
+    for (var m = 0; m < 50; m++) {
+      var a = m / 50 * Math.PI * 2 - Math.PI / 2, big = m % 5 === 0, r1 = big ? 184 : 188, r2 = 196;
+      var l = document.createElementNS(NS, 'line');
+      l.setAttribute('x1', (C + Math.cos(a) * r1).toFixed(1)); l.setAttribute('y1', (C + Math.sin(a) * r1).toFixed(1));
+      l.setAttribute('x2', (C + Math.cos(a) * r2).toFixed(1)); l.setAttribute('y2', (C + Math.sin(a) * r2).toFixed(1));
+      l.setAttribute('class', 'dial__tick' + (big ? ' dial__tick--5' : ''));
+      ticks.appendChild(l);
+    }
+    var segEls = [];
+    for (var i = 0; i < 5; i++) {
+      var s = document.createElementNS(NS, 'circle');
+      s.setAttribute('cx', C); s.setAttribute('cy', C); s.setAttribute('r', 152); s.setAttribute('pathLength', 50);
+      s.setAttribute('class', 'dial__seg');
+      s.setAttribute('stroke-dasharray', (bounds[i + 1] - bounds[i] - 0.5) + ' 50');
+      s.setAttribute('stroke-dashoffset', -(bounds[i] + 0.25));
+      segs.appendChild(s); segEls.push(s);
+    }
+    var minEl = document.getElementById('dial-min'), phaseEl = document.getElementById('dial-phase');
+    var lastMin = -1, lastK = -1;
+    function render(p) {
+      p = Math.min(1, Math.max(0, p));
+      var k = Math.min(4, Math.floor(p * 5)), t = p * 5 - k;
+      var min = bounds[k] + (bounds[k + 1] - bounds[k]) * Math.min(1, t * 1.1);
+      dial.style.setProperty('--min', min.toFixed(2));
+      var whole = Math.min(50, Math.round(min));
+      if (whole !== lastMin) { lastMin = whole; minEl.textContent = whole; }
+      if (k !== lastK) {
+        lastK = k; phaseEl.textContent = names[k];
+        segEls.forEach(function (el, j) { el.classList.toggle('is-on', j === k); el.classList.toggle('is-done', j < k); });
+      }
+    }
+    var live = false, lastP = -1;
+    function tick() {
+      var p = parseFloat(getComputedStyle(act).getPropertyValue('--v-p')) || 0;
+      if (p !== lastP) { lastP = p; render(p); }
+      if (live) requestAnimationFrame(tick);
+    }
+    new IntersectionObserver(function (es) { live = es[0].isIntersecting; if (live) tick(); }).observe(act);
+    render(0);
+  })();
+
+  // Форма: в демо заявка никуда не уходит, показываем состояние «отправлено».
+  // На рабочем сайте (Тильда) форма сама отправляет заявки на почту и в Telegram.
+  (function () {
+    var form = document.getElementById('form'), book = document.getElementById('kontakty');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      book.classList.add('is-sent');
+    });
+  })();
+</script>
+</body>
+</html>

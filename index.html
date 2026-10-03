@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Примеры сайтов</title>
+<style>
+  :root { color-scheme: dark; --bg: #16191c; --card: #1f2327; --ink: #eceae5; --soft: #a3a6a8; --line: rgb(236 234 229 / .12); --accent: #d09a48; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 1rem/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { width: min(100% - 2rem, 46rem); margin: 0 auto; padding: clamp(3rem, 8vw, 6rem) 0; }
+  h1 { font-size: clamp(1.8rem, 1.2rem + 2.4vw, 2.8rem); line-height: 1.1; margin: 0 0 .75rem; letter-spacing: -.01em; }
+  p { color: var(--soft); margin: 0 0 2.5rem; max-width: 52ch; }
+  ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  li { border-bottom: 1px solid var(--line); }
+  a { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 1.1rem .25rem; color: var(--ink); text-decoration: none; }
+  a span { color: var(--soft); font-size: .9rem; text-align: right; }
+  a:hover b, a:focus-visible b { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  b { font-weight: 600; transition: color .15s ease-out; }
+  @media (max-width: 520px) { a { flex-direction: column; gap: .15rem; } a span { text-align: left; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Примеры одностраничных сайтов</h1>
+  <p>Демо по нишам: у каждого свой стиль, анимация при прокрутке и адаптив под телефон. Названия компаний и цены на демо-сайтах условные.</p>
+  <ul>
+    <li><a href="https://pavel-sites.github.io/bazi-demo/"><b>Консультант по бацзы</b><span>реальный проект</span></a></li>
+    <li><a href="shinomontazh/"><b>Шиномонтаж</b><span>демо</span></a></li>
+    <li><a href="nogti/"><b>Студия маникюра</b><span>демо</span></a></li>
+    <li><a href="stroiteli/"><b>Строительство домов и бань</b><span>демо</span></a></li>
+    <li><a href="remont/"><b>Ремонт квартир</b><span>демо</span></a></li>
+  </ul>
+</main>
+</body>
+</html>

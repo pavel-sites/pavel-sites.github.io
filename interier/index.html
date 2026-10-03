@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Линия – дизайн интерьера квартиры</title>
+<meta name="description" content="Дизайн интерьера квартиры: планировка, визуализации и рабочие чертежи. Вы заранее видите каждую комнату и знаете смету.">
+<meta property="og:title" content="Дизайн интерьера квартиры: проект, по которому строят без вопросов">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#efeeea">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23efeeea'/%3E%3Cpath d='M7 7h18v18H7z' fill='none' stroke='%232c44c2' stroke-width='2.4'/%3E%3Cpath d='M18 7v8' stroke='%232c44c2' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/Commissioner-300-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="vibe.css">
+<style>
+html, body { background: #efeeea; }
+
+.v-page {
+  --v-canvas: #efeeea;
+  --v-surface: #fafaf8;
+  --v-ink: #18191c;
+  --v-ink-soft: #5c5e63;
+  --v-accent: #2c44c2;
+  --v-accent-ink: #f4f6ff;
+  --v-shadow-color: 40 40 36;
+  --v-font-display: "Commissioner", "Helvetica Neue", Arial, sans-serif;
+  --v-font-text: "Onest", "Segoe UI", system-ui, sans-serif;
+  --v-display-weight: 300;
+  --v-radius: 6px;
+  --v-section: clamp(4rem, 9vw, 8rem);
+  --v-t-sm: clamp(0.94rem, 0.9rem + 0.18vw, 1rem);
+  line-height: 1.6;
+}
+.v-page .v-display { letter-spacing: -0.025em; }
+.v-page h2.v-display { font-size: var(--v-t-3xl); line-height: 1.02; }
+.v-page .muted { color: var(--v-ink-soft); }
+.v-page .note { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+.v-page .v-btn { border-radius: var(--v-radius); font-weight: 500; }
+.v-page button.v-btn { background: var(--v-accent); color: var(--v-accent-ink); }
+.v-page .tag { font-size: var(--v-t-sm); color: var(--v-accent); }
+
+/* шапка */
+.bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-5); padding: .85rem var(--v-gutter); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+.bar.is-scrolled { background: rgb(239 238 234 / .88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--v-hair); }
+.bar__brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; font-family: var(--v-font-display); font-size: 1.3rem; font-weight: 400; letter-spacing: -0.02em; }
+.bar__brand svg { width: 22px; height: 22px; }
+.bar__brand small { font-family: var(--v-font-text); font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: 0; }
+.bar__nav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
+.bar__nav a { text-decoration: none; color: var(--v-ink-soft); transition: color .16s var(--v-ease-out); }
+.bar__nav a:hover { color: var(--v-ink); }
+.bar .v-btn { padding: .65em 1.15em; }
+@media (max-width: 900px) { .bar__nav { display: none; } }
+@media (max-width: 420px) { .bar__brand small { display: none; } }
+
+/* 1. hero */
+.hero__back picture img { position: absolute; left: 0; top: -7%; width: 100%; height: 114%; object-fit: cover; object-position: 60% 50%; max-width: none; }
+.hero__col { position: absolute; inset: 0 auto 0 0; width: 60%; z-index: 2; pointer-events: none; background: linear-gradient(to right, rgb(239 238 234 / .82), rgb(239 238 234 / .55) 55%, rgb(239 238 234 / 0)); }
+.hero .v-copy { max-width: min(46rem, 90vw); bottom: auto; top: 50%; translate: 0 -46%; }
+.hero h1 { font-size: clamp(2.5rem, 1.3rem + 3.9vw, 5.2rem); line-height: .98; }
+.hero .v-lede { margin-top: var(--v-5); max-width: 36ch; }
+.hero__cta { display: flex; flex-wrap: wrap; gap: var(--v-3) var(--v-5); align-items: center; margin-top: var(--v-6); }
+.hero__label { margin-bottom: var(--v-4); }
+.demo-for { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: var(--v-5); padding: .45rem .85rem .45rem .5rem; border-radius: 999px; background: rgb(250 250 248 / .9); box-shadow: inset 0 0 0 1px var(--v-hair-strong); font-size: var(--v-t-xs); color: var(--v-ink); }
+.demo-for i { width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--v-accent); color: var(--v-accent-ink); display: grid; place-items: center; font-style: normal; font-weight: 600; font-size: .78rem; }
+@media (max-width: 860px) {
+  .hero__col { width: 100%; background: linear-gradient(to bottom, rgb(239 238 234 / .92) 0%, rgb(239 238 234 / .82) 58%, rgb(239 238 234 / 0) 86%); }
+  .hero .v-copy { top: 5.2rem; translate: none; }
+  .hero__back picture img { object-position: 50% 100%; }
+}
+
+/* 2. от планировки к комнате */
+.plan__in { height: 100%; width: min(100% - 2 * var(--v-gutter), 78rem); margin-inline: auto; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); grid-template-areas: "head fig" "cues fig"; column-gap: clamp(2rem, 5vw, 5rem); align-content: center; padding-top: 4rem; }
+.plan__head { grid-area: head; align-self: end; }
+.plan__head h2.v-display { font-size: var(--v-t-2xl); line-height: 1.04; }
+.plan__cues { grid-area: cues; position: relative; min-height: 13rem; margin-top: var(--v-6); }
+.pcue { position: absolute; inset: 0 0 auto 0; }
+.pcue b { display: block; font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: var(--v-3); }
+.pcue b span { color: var(--v-accent); margin-right: .4em; font-size: .7em; vertical-align: .25em; }
+.pcue p { max-width: 38ch; }
+.plan__fig { grid-area: fig; position: relative; aspect-ratio: 16 / 11; align-self: center; border-radius: var(--v-radius); background: var(--v-surface); box-shadow: var(--v-e1); overflow: hidden; }
+.plan__fig svg { position: absolute; inset: 6%; width: 88%; height: 88%; }
+.plan__fig .ln { fill: none; stroke: var(--v-accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: calc(1 - min(1, .08 + var(--v-p, 0) * 2.6)); }
+.plan__fig .ln--wall { stroke-width: 6; stroke: var(--v-ink); stroke-dashoffset: 0; }
+.plan__fig .ln--soft { stroke-width: 1.2; opacity: .55; }
+.plan__fig .dim { fill: var(--v-accent); font: 500 12px var(--v-font-text); opacity: min(1, max(0, (var(--v-p, 0) - .25) * 6)); }
+.plan__fig figure { position: absolute; inset: 0; margin: 0; opacity: calc(1 - min(1, max(0, (var(--v-p, 0) - .72) * 7))); }
+.plan__fig .work { opacity: min(1, max(0, (var(--v-p, 0) - .74) * 7)); }
+.plan__fig .work path { fill: none; stroke: var(--v-accent); stroke-width: 1.2; }
+.plan__fig .work circle { fill: var(--v-surface); stroke: var(--v-accent); stroke-width: 1.4; }
+.plan__fig .work text { fill: var(--v-accent); font: 500 12px var(--v-font-text); }
+.plan__fig figure img { width: 100%; height: 100%; object-fit: cover; }
+.plan__cap { position: absolute; left: 1rem; bottom: 1rem; z-index: 2; padding: .35rem .7rem; border-radius: 999px; background: rgb(250 250 248 / .9); font-size: var(--v-t-xs); }
+@media (max-width: 860px) {
+  .plan__in { grid-template-columns: 1fr; grid-template-areas: "head" "fig" "cues"; align-content: start; row-gap: var(--v-4); padding-top: 4.4rem; }
+  .plan__head h2.v-display { font-size: var(--v-t-xl); }
+  .plan__fig { aspect-ratio: 4 / 3; max-height: 38svh; width: 100%; }
+  .plan__cues { margin-top: 0; min-height: 11rem; }
+  .pcue b { font-size: var(--v-t-lg); }
+}
+
+/* 3. форматы */
+.fmt__head { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--v-6) clamp(2rem, 6vw, 6rem); align-items: end; margin-bottom: var(--v-7); }
+.rows { border-top: 1px solid var(--v-ink); }
+.rows li { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 5fr) minmax(0, 2fr) minmax(0, 2fr); gap: var(--v-5); align-items: baseline; padding: var(--v-5) 0; border-bottom: 1px solid var(--v-hair-strong); }
+.rows h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); letter-spacing: -0.02em; line-height: 1.1; }
+.rows p { color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+.rows .term { font-size: var(--v-t-sm); }
+.rows .price { font-family: var(--v-font-display); font-size: var(--v-t-lg); text-align: right; white-space: nowrap; }
+.rows li.is-main { background: var(--v-surface); margin-inline: calc(-1 * var(--v-4)); padding-inline: var(--v-4); box-shadow: inset 3px 0 0 var(--v-accent); }
+.rows li.is-main h3::after { content: "чаще всего выбирают"; display: block; margin-top: .4rem; font-family: var(--v-font-text); font-size: var(--v-t-xs); color: var(--v-accent); letter-spacing: 0; }
+.fmt__foot { display: flex; flex-wrap: wrap; gap: var(--v-4) var(--v-6); align-items: center; justify-content: space-between; margin-top: var(--v-6); }
+@media (max-width: 860px) {
+  .fmt__head { grid-template-columns: 1fr; }
+  .rows li { grid-template-columns: 1fr auto; gap: var(--v-2) var(--v-4); }
+  .rows h3 { grid-column: 1 / -1; }
+  .rows p { grid-column: 1 / -1; }
+  .rows .price { text-align: right; }
+}
+
+/* 4. интерьеры */
+.gal [data-v-stage] { display: flex; align-items: center; }
+.gal .rail { padding: 5rem var(--v-gutter) 2rem; align-items: center; gap: clamp(1rem, 2.4vw, 2rem); }
+.gal__intro { width: clamp(17rem, 26vw, 23rem); flex: none; display: flex; flex-direction: column; gap: var(--v-4); }
+.shot { flex: none; margin: 0; }
+.shot img { height: min(66svh, 40rem); width: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--v-radius); box-shadow: var(--v-e1); }
+.shot--wide img { aspect-ratio: 16 / 10; }
+.shot figcaption { margin-top: var(--v-3); display: flex; justify-content: space-between; gap: var(--v-4); font-size: var(--v-t-sm); }
+.shot figcaption span { color: var(--v-ink-soft); }
+@media (pointer: coarse) {
+  .gal .rail { padding-block: var(--v-section); }
+  .gal [data-v-stage] { scroll-padding-inline: var(--v-gutter); }
+  .gal__intro { width: min(70vw, 18rem); }
+  .shot img { height: 56svh; }
+}
+
+/* 5. обо мне */
+.me { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--v-7) clamp(2rem, 6vw, 6rem); align-items: center; }
+.me__fig { margin: 0; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); }
+.me__fig img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.me__text { display: flex; flex-direction: column; gap: var(--v-5); }
+.me__quote { font-family: var(--v-font-display); font-weight: 300; font-size: var(--v-t-xl); line-height: 1.25; letter-spacing: -0.015em; text-wrap: balance; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--v-5) var(--v-6); margin-top: var(--v-3); }
+.facts b { display: block; font-weight: 500; }
+.facts span { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+@media (max-width: 860px) { .me { grid-template-columns: 1fr; } .me__fig { max-width: 26rem; } .facts { grid-template-columns: 1fr; } }
+
+/* 6. заявка */
+.book { padding-top: 0; }
+.book__band { position: relative; height: clamp(14rem, 34vw, 26rem); overflow: hidden; }
+.book__band .v-layer img { width: 100%; height: 130%; top: -15%; left: 0; object-fit: cover; object-position: 50% 60%; }
+.book__band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgb(239 238 234 / 0) 40%, #efeeea 100%); }
+.book__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--v-7) clamp(2rem, 6vw, 6rem); margin-top: calc(-1 * clamp(3rem, 8vw, 6rem)); position: relative; z-index: 2; }
+.book__side { display: flex; flex-direction: column; gap: var(--v-4); padding-top: var(--v-7); }
+.form { background: var(--v-surface); border-radius: var(--v-radius); padding: clamp(1.25rem, 3vw, 2.25rem); box-shadow: var(--v-e2); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--v-4); }
+.form .full { grid-column: 1 / -1; }
+.form label { display: flex; flex-direction: column; gap: var(--v-2); font-size: var(--v-t-sm); font-weight: 500; }
+.form input, .form select, .form textarea { font: inherit; font-weight: 400; font-size: 1rem; color: var(--v-ink); background: #fff; border: 1px solid var(--v-hair-strong); border-radius: var(--v-radius); padding: .75rem .85rem; width: 100%; transition: border-color .16s var(--v-ease-out), box-shadow .16s var(--v-ease-out); }
+.form textarea { min-height: 6rem; resize: vertical; }
+.form input:focus, .form select:focus, .form textarea:focus { outline: none; border-color: var(--v-accent); box-shadow: 0 0 0 3px rgb(44 68 194 / .18); }
+.form__send { display: flex; flex-wrap: wrap; gap: var(--v-4); align-items: center; }
+.form__status { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+@media (max-width: 860px) { .book__grid { grid-template-columns: 1fr; } .book__side { padding-top: 0; } .form { grid-template-columns: 1fr; } }
+
+.foot { padding: var(--v-6) 0 var(--v-7); border-top: 1px solid var(--v-hair); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+.foot .v-wrap { display: flex; flex-wrap: wrap; gap: var(--v-3) var(--v-6); justify-content: space-between; }
+</style>
+</head>
+<body>
+<div class="v-page" id="page">
+  <div data-v-progress></div>
+
+  <header class="bar" id="bar">
+    <a class="bar__brand" href="#top" aria-label="Линия, дизайн интерьера">
+      <svg viewBox="0 0 22 22" aria-hidden="true"><path d="M2 2h18v18H2z" fill="none" stroke="#2c44c2" stroke-width="2"/><path d="M13 2v7" stroke="#2c44c2" stroke-width="2"/></svg>
+      Линия <small>дизайн интерьера</small>
+    </a>
+    <nav class="bar__nav" aria-label="Разделы">
+      <a href="#proekt">Как работаю</a>
+      <a href="#formaty">Форматы и цены</a>
+      <a href="#interery">Интерьеры</a>
+      <a href="#obo-mne">Обо мне</a>
+    </nav>
+    <a class="v-btn" href="#zapis">Обсудить проект</a>
+  </header>
+
+  <main>
+    <!-- 1 -->
+    <section class="hero" id="top" data-v-act="pin" data-v-span="2" data-v-drift="#efeeea">
+      <div data-v-stage>
+        <div class="v-layer hero__back" data-v-parallax="-0.45">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+            <img src="assets/hero.webp" alt="Светлая гостиная с льняным диваном и синей вазой" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="hero__col"></div>
+        <div class="v-copy v-copy--lead" data-v-cue="0 0.72 0">
+          <p class="demo-for"><i>А</i>Демо для Александра · по заказу «Сделать шорт-лендинг»</p>
+          <p class="tag hero__label">Частный дизайнер интерьера</p>
+          <h1 class="v-display" data-v-kinetic="lines">Дизайн интерьера квартиры: проект, по которому строят без вопросов</h1>
+          <p class="v-lede">Планировка, визуализации и рабочие чертежи. Вы заранее видите каждую комнату и знаете смету.</p>
+          <div class="hero__cta">
+            <a class="v-btn" href="#zapis">Обсудить проект</a>
+            <span class="note">Первая встреча и обмер – бесплатно</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2: фирменный ход -->
+    <section class="plan" id="proekt" data-v-act="pin" data-v-span="2.8" data-v-drift="#e9e8e3">
+      <div data-v-stage>
+        <div class="plan__in">
+          <div class="plan__head">
+            <h2 class="v-display">От планировки к готовой комнате</h2>
+          </div>
+
+          <div class="plan__fig">
+            <svg viewBox="0 0 600 420" aria-hidden="true">
+              <path class="ln ln--wall" pathLength="1" d="M20 20 H200 M260 20 H340 M420 20 H580 V400 H330 M270 400 H20 Z"/>
+              <path class="ln ln--wall" pathLength="1" d="M400 20 V150"/>
+              <path class="ln ln--soft" pathLength="1" d="M200 20 H260 M340 20 H420"/>
+              <path class="ln" pathLength="1" d="M330 400 A60 60 0 0 0 270 340"/>
+              <path class="ln" pathLength="1" d="M34 34 h56 v210 h-56 Z"/>
+              <path class="ln" pathLength="1" d="M150 120 h150 v60 h-150 Z"/>
+              <path class="ln" pathLength="1" d="M230 255 a42 42 0 1 0 0.1 0 Z"/>
+              <path class="ln ln--soft" pathLength="1" d="M222 230 h16 v-14 h-16 Z M222 312 h16 v14 h-16 Z M188 263 h-14 v16 h14 Z M272 263 h14 v16 h-14 Z"/>
+              <path class="ln" pathLength="1" d="M420 290 h140 v80 h-140 Z M420 290 v-16 h140 v16"/>
+              <path class="ln ln--soft" pathLength="1" d="M405 200 h170 v190 h-170 Z"/>
+              <path class="ln" pathLength="1" d="M440 60 h70 v70 h-70 Z"/>
+              <path class="ln ln--soft" pathLength="1" d="M20 410 V418 M580 410 V418 M20 414 H580"/>
+              <text class="dim" x="300" y="410" text-anchor="middle">6 400</text>
+              <text class="dim" x="120" y="205" text-anchor="middle">кухня</text>
+              <text class="dim" x="490" y="245" text-anchor="middle">гостиная</text>
+              <g class="work">
+                <path d="M592 20 V400 M588 20 H596 M588 400 H596"/>
+                <text x="586" y="214" text-anchor="end">4 200</text>
+                <path d="M150 104 H300 M150 100 V108 M300 100 V108"/>
+                <text x="225" y="98" text-anchor="middle">2 400</text>
+                <circle cx="96" cy="70" r="5"/><circle cx="96" cy="150" r="5"/><circle cx="300" cy="150" r="5"/>
+                <circle cx="414" cy="330" r="5"/><circle cx="566" cy="330" r="5"/><circle cx="520" cy="38" r="5"/>
+                <path d="M225 150 L230 255" stroke-dasharray="4 5"/>
+                <text x="246" y="208">свет над столом</text>
+              </g>
+            </svg>
+            <figure data-v-reveal="up" data-v-reveal-at="0.42 0.7">
+              <img src="assets/room.webp" alt="Готовая кухня-гостиная: остров из дуба, обеденный стол, кресло у окна" loading="lazy">
+              <span class="plan__cap">Визуализация: та же кухня-гостиная</span>
+            </figure>
+          </div>
+
+          <div class="plan__cues">
+            <div class="pcue" data-v-cue="0 0.36 0.05 0.06">
+              <b><span>1</span>Обмер и планировка</b>
+              <p>Обмеряю квартиру и предлагаю 2–3 варианта планировки. Решаем, где кухня, сколько места под хранение и куда падает свет.</p>
+            </div>
+            <div class="pcue" data-v-cue="0.34 0.7 0.06 0.06">
+              <b><span>2</span>Визуализации</b>
+              <p>Каждая комната в 3D с реальными материалами и мебелью. Вы видите результат до того, как куплен первый мешок штукатурки.</p>
+            </div>
+            <div class="pcue" data-v-cue="0.68 1 0.06 0">
+              <b><span>3</span>Рабочие чертежи</b>
+              <p>Альбом для бригады: развёртки стен, электрика, сантехника, ведомость материалов. Строители делают по чертежу, а не додумывают.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="v-section v-section--tight" id="formaty" data-v-act="flow" data-v-drift="#efeeea">
+      <div class="v-wrap">
+        <div class="fmt__head" data-v-in>
+          <h2 class="v-display">Форматы и цены</h2>
+          <p class="muted">Цена за квадратный метр квартиры. Итоговую сумму и сроки фиксируем в договоре после первой встречи.</p>
+        </div>
+        <ul class="rows" data-v-in data-v-stagger="70">
+          <li>
+            <h3>Планировка</h3>
+            <p>Обмер, 2–3 варианта планировки, расстановка мебели, схема света и розеток</p>
+            <span class="term">1–2 недели</span>
+            <span class="price">от 900 ₽/м²</span>
+          </li>
+          <li class="is-main">
+            <h3>Полный проект</h3>
+            <p>Планировка, 3D-визуализации всех комнат, рабочие чертежи и ведомость материалов</p>
+            <span class="term">4–6 недель</span>
+            <span class="price">от 2 900 ₽/м²</span>
+          </li>
+          <li>
+            <h3>Авторский надзор</h3>
+            <p>Выезды на объект, контроль по чертежам, общение с бригадой и поставщиками</p>
+            <span class="term">весь ремонт</span>
+            <span class="price">от 25 000 ₽/мес</span>
+          </li>
+        </ul>
+        <div class="fmt__foot" data-v-in>
+          <span class="note">Не знаете, какой формат нужен? Расскажите о квартире – подскажу на первой встрече.</span>
+          <a class="v-btn" href="#zapis">Обсудить проект</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section class="gal" id="interery" data-v-act="pan" data-v-span="3.2" data-v-drift="#e9e8e3">
+      <div data-v-stage>
+        <div class="rail" data-v-pan="0.04">
+          <div class="gal__intro">
+            <h2 class="v-display">Интерьеры</h2>
+            <p class="muted">Спокойные материалы, много света и один яркий акцент. Так квартира не надоедает через год.</p>
+          </div>
+          <figure class="shot shot--wide"><img src="assets/room.webp" alt="Кухня-гостиная с дубовым островом" loading="lazy"><figcaption>Кухня-гостиная <span>дуб, камень</span></figcaption></figure>
+          <figure class="shot"><img src="assets/bedroom.webp" alt="Спальня с дубовой кроватью и льняным бельём" loading="lazy"><figcaption>Спальня <span>лён, известь</span></figcaption></figure>
+          <figure class="shot"><img src="assets/kitchen.webp" alt="Кухня с дубовыми фасадами и каменной столешницей" loading="lazy"><figcaption>Кухня <span>фасады без ручек</span></figcaption></figure>
+          <figure class="shot"><img src="assets/bath.webp" alt="Ванная в микроцементе с дубовой тумбой" loading="lazy"><figcaption>Ванная <span>микроцемент</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section class="v-section" id="obo-mne" data-v-act="flow" data-v-drift="#efeeea">
+      <div class="v-wrap me">
+        <figure class="me__fig" data-v-reveal="up" data-v-reveal-at="0.08 0.42">
+          <img src="assets/desk.webp" alt="Рабочий стол дизайнера: образцы дуба, камня, льна и синей краски" loading="lazy">
+        </figure>
+        <div class="me__text" data-v-in data-v-stagger="70">
+          <p class="tag">Обо мне</p>
+          <h2 class="v-display">Веду проект от обмера до последней розетки</h2>
+          <p class="me__quote">Хороший интерьер решается на бумаге, пока стены ещё можно двигать бесплатно</p>
+          <ul class="facts">
+            <li><b>Квартиры 40–150 м²</b><span>новостройки и вторичное жильё</span></li>
+            <li><b>Один дизайнер на проект</b><span>без передачи «младшему специалисту»</span></li>
+            <li><b>Сроки в договоре</b><span>по каждому этапу проекта</span></li>
+            <li><b>Чертежи понятны бригаде</b><span>с размерами и ведомостью материалов</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="v-section book" id="zapis" data-v-act="flow" data-v-drift="#efeeea">
+      <div class="book__band" aria-hidden="true">
+        <div class="v-layer" data-v-parallax="-0.7"><img src="assets/hero.webp" alt="" loading="lazy"></div>
+      </div>
+      <div class="v-wrap book__grid">
+        <div class="book__side" data-v-in>
+          <h2 class="v-display">Расскажите о квартире</h2>
+          <p class="muted">Отвечу в течение дня, договоримся о встрече и обмере. Первая встреча ни к чему не обязывает.</p>
+        </div>
+        <div data-v-in>
+          <form class="form" id="form" novalidate>
+            <label>Как к вам обращаться<input name="name" type="text" autocomplete="name" required></label>
+            <label>Телефон или Telegram<input name="contact" type="text" autocomplete="tel" placeholder="+7 или @username" required></label>
+            <label>Площадь, м²<input name="area" type="text" inputmode="numeric" placeholder="например, 64"></label>
+            <label>Объект
+              <select name="type">
+                <option>Новостройка</option>
+                <option>Вторичное жильё</option>
+                <option>Частный дом</option>
+              </select>
+            </label>
+            <label class="full">Что важно в проекте<textarea name="msg" placeholder="Состав семьи, пожелания, сроки ремонта"></textarea></label>
+            <div class="form__send full">
+              <button class="v-btn" type="submit">Обсудить проект</button>
+              <span class="form__status" id="status" role="status" aria-live="polite"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="v-wrap">
+      <span>Линия – дизайн интерьера</span>
+      <span>Демо-сайт для заказчика: название, цены и фото условные</span>
+    </div>
+  </footer>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+(function () {
+  var page = document.getElementById("page");
+  if (matchMedia("(max-width: 860px)").matches) {
+    document.getElementById("top").setAttribute("data-v-span", "1.6");
+    document.getElementById("proekt").setAttribute("data-v-span", "2.4");
+  }
+  Vibe.mount(page);
+  var bar = document.getElementById("bar");
+  var onBar = function () { bar.classList.toggle("is-scrolled", scrollY > 40); };
+  addEventListener("scroll", onBar, { passive: true }); onBar();
+  var form = document.getElementById("form"), status = document.getElementById("status");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var ok = form.name.value.trim().length > 1 && form.contact.value.trim().length > 4;
+    status.textContent = ok ? "Это демо-сайт: заявка не отправляется." : "Заполните имя и телефон или Telegram.";
+  });
+})();
+</script>
+</body>
+</html>

@@ -20,24 +20,24 @@
 <link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2713%27 fill=%27none%27 stroke=%27%23b3204f%27 stroke-width=%273%27/%3E%3Cpath d=%27M16 3a13 13 0 0 1 12.4 9%27 fill=%27none%27 stroke=%27%23f7f2f3%27 stroke-width=%273.4%27/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Marck+Script&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2713%27 fill=%27none%27 stroke=%27%237a1426%27 stroke-width=%273%27/%3E%3Cpath d=%27M16 3a13 13 0 0 1 12.4 9%27 fill=%27none%27 stroke=%27%23fbf1f1%27 stroke-width=%273.4%27/%3E%3C/svg%3E">
 <link rel="stylesheet" href="vibe.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"{{Имя Фамилия}} – ведущая мероприятий","description":"Ведущая свадеб, юбилеев и корпоративов: сценарий под гостей, работа с подрядчиками, цена заранее.","url":"{{ссылка-сайта}}","image":"{{ссылка-сайта}}/assets/og.jpg","telephone":"{{телефон}}","areaServed":"{{город}}","priceRange":"{{цена-праздник}} ₽"}
 </script>
 <style>
-  /* ---- тема: шесть цветов, два шрифта. палитра «ягода» ---- */
+  /* ---- тема: шесть цветов, два шрифта. палитра «бордо и пудра» (по референсу заказчицы) ---- */
   .v-page {
-    --v-canvas: #f7f2f3; --v-surface: #fffdfd;
-    --v-ink: #231a1f; --v-ink-soft: #665a61;            /* 6,3:1 на холсте */
-    --v-accent: #b3204f; --v-accent-ink: #fff5f8;       /* кнопка 6,4:1 */
-    --v-accent-deep: #971a42;                           /* мелкий акцентный текст */
+    --v-canvas: #fbf1f1; --v-surface: #fffdfd;
+    --v-ink: #2b0f15; --v-ink-soft: #6e5258;            /* 6,3:1 на холсте */
+    --v-accent: #7a1426; --v-accent-ink: #fff5f8;       /* кнопка 6,4:1 */
+    --v-accent-deep: #6a1121;                           /* мелкий акцентный текст */
     --v-font-display: "Prata", "Georgia", system-ui, sans-serif;
     --v-font-text: "Manrope", "Segoe UI", system-ui, sans-serif;
     --v-display-weight: 400;
     --v-track-tight: -0.015em;
-    --v-shadow-color: 80 30 50;
+    --v-shadow-color: 70 15 25;
     --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .05), 0 8px 22px rgb(var(--v-shadow-color) / .07);
     --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .07), 0 22px 54px rgb(var(--v-shadow-color) / .13);
     --v-radius: 18px;
@@ -45,7 +45,7 @@
     --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
     --v-section: clamp(3.5rem, 8vw, 7rem);
   }
-  html, body { margin: 0; background: #f7f2f3; }
+  html, body { margin: 0; background: #fbf1f1; }
   html { scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   .v-page .v-display { line-height: 1.04; }
@@ -58,8 +58,8 @@
   /* ---- шапка ------------------------------------------------------------------ */
   .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
     padding: var(--v-3) var(--v-gutter);
-    background: rgb(247 242 243 / 0); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
-  .bar.is-scrolled { background: rgb(247 242 243 / .88); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+    background: rgb(251 241 241 / 0); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(251 241 241 / .88); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
   .bar__mark { font-family: var(--v-font-display); font-size: var(--v-t-lg); text-decoration: none; display: inline-flex; align-items: center; gap: .55em; min-height: 44px; white-space: nowrap; }
   .bar__mark svg { width: 1.05em; height: 1.05em; flex: none; }
   .nav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
@@ -80,7 +80,7 @@
   /* ---- 1 · hero: два кресла справа, текст слева на стене ----------------------------- */
   .hero__back img { position: absolute; max-width: none; width: 112%; height: 112%; left: -6%; top: -6%; object-fit: cover; object-position: 62% 50%; }
   .hero__col { position: absolute; inset: 0; z-index: 2; pointer-events: none;
-    background: linear-gradient(to right, rgb(247 242 243 / .9) 0%, rgb(247 242 243 / .7) 34%, transparent 58%); }
+    background: linear-gradient(to right, rgb(251 241 241 / .9) 0%, rgb(251 241 241 / .7) 34%, transparent 58%); }
   .hero__copy { bottom: clamp(3rem, 9vh, 6.5rem); max-width: min(44rem, 88vw); }
   .hero__who { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1em .5em; margin-bottom: var(--v-4); font-size: var(--v-t-base); color: var(--v-ink); }
   .hero__who b { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-lg); }
@@ -101,7 +101,7 @@
   @media (max-width: 1100px) { .v-page .hero__pluses { grid-template-columns: 1fr; } }
   @media (max-width: 860px) {
     .hero__back img { object-position: 50% 80%; }
-    .hero__col { background: linear-gradient(to bottom, rgb(247 242 243 / .82) 0%, rgb(247 242 243 / .55) 48%, transparent 72%); }
+    .hero__col { background: linear-gradient(to bottom, rgb(251 241 241 / .82) 0%, rgb(251 241 241 / .55) 48%, transparent 72%); }
     .hero__copy, .hero__two { bottom: auto; top: clamp(4.6rem, 9vh, 6rem); }
     .demo-for { margin-bottom: var(--v-3); }
     .hero__who { margin-bottom: var(--v-2); font-size: var(--v-t-sm); }
@@ -255,7 +255,7 @@
   }
 
   /* ---- 7 · запись: форма и карта ---------------------------------------------------- */
-  .book { position: relative; background: radial-gradient(56rem 36rem at calc(var(--v-mx, .3) * 100%) calc(var(--v-my, .3) * 100%), rgb(179 32 79 / .09), transparent 62%); }
+  .book { position: relative; background: radial-gradient(56rem 36rem at calc(var(--v-mx, .3) * 100%) calc(var(--v-my, .3) * 100%), rgb(122 20 38 / .09), transparent 62%); }
   .book__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: var(--v-8) var(--v-9); align-items: start; }
   .book__head .v-label { display: block; margin-bottom: var(--v-4); }
   .book__head .v-display { max-width: 13ch; }
@@ -266,7 +266,7 @@
   .field input, .field textarea { font: inherit; color: var(--v-ink); background: var(--v-surface); border: 1px solid var(--v-hair-strong); border-radius: 12px; padding: .8em 1em; min-height: 48px; width: 100%;
     transition: border-color .16s var(--v-ease-out), box-shadow .16s var(--v-ease-out); }
   .field textarea { min-height: 6.5rem; resize: vertical; }
-  .field input:focus-visible, .field textarea:focus-visible { outline: none; border-color: var(--v-accent); box-shadow: 0 0 0 3px rgb(179 32 79 / .16); }
+  .field input:focus-visible, .field textarea:focus-visible { outline: none; border-color: var(--v-accent); box-shadow: 0 0 0 3px rgb(122 20 38 / .16); }
   .form fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: var(--v-2); }
   .chips { display: flex; flex-wrap: wrap; gap: var(--v-2); }
   .chips label { position: relative; }
@@ -301,6 +301,43 @@
     .contacts dl div { grid-template-columns: 6rem minmax(0, 1fr); }
     .form .v-btn { justify-self: stretch; justify-content: center; }
   }
+
+  /* ---- стиль по референсу заказчицы: пудра + бордо, заглавные с засечками, полароиды ---- */
+  .v-page .v-display { text-transform: uppercase; letter-spacing: .005em; line-height: 1.12; }
+  .v-page .v-display--xl { line-height: 1.1; }
+  /* маска построчной анимации заголовка не должна срезать «Й» и верх заглавных */
+  .v-page .v-display .v-k { padding-top: .12em; margin-top: -.12em; }
+  .hero__copy .v-display { font-size: clamp(1.9rem, .8rem + 2.7vw, 3.5rem); max-width: 16ch; }
+  .hero__script, .pola figcaption { font-family: "Marck Script", cursive; color: var(--v-accent); }
+  .hero__script { font-size: clamp(1.3rem, 1rem + .8vw, 1.8rem); line-height: 1.15; margin: var(--v-3) 0 var(--v-3); transform: rotate(-2deg); transform-origin: left center; }
+  @media (max-width: 860px) { .hero__script { font-size: 1.15rem; margin: var(--v-1) 0 var(--v-2); } .hero__copy .v-display { font-size: clamp(1.5rem, 1rem + 3vw, 2.1rem); } }
+  @media (min-width: 861px) {
+    /* первый экран из двух половин: текст на пудре слева, фото во всю высоту справа */
+    .hero__back { left: 47%; }
+    .hero__back img { object-position: 64% 30%; }
+    .hero__col { display: none; }
+    .hero__copy, .hero__two { max-width: min(40rem, 42vw); }
+    .v-page .hero__pluses { grid-template-columns: 1fr; }
+  }
+  /* тёмные бордовые секции: свои цвета текста и линий (переменные на .v-page уже посчитаны) */
+  .v-page #vecher, .v-page #ceny {
+    --v-ink: #f8ecec; --v-ink-soft: #dcbcc1; --v-accent: #f1c9cf; --v-accent-deep: #f1c9cf; --v-surface: #5c1a26;
+    --v-hair: rgb(248 236 236 / .16); --v-hair-strong: rgb(248 236 236 / .3);
+    color: var(--v-ink);
+  }
+  .v-page #ceny .fmt__fig { box-shadow: 0 0 0 1px rgb(248 236 236 / .12), 0 22px 54px rgb(0 0 0 / .35); }
+  /* полароиды */
+  .about { align-items: center; }
+  .polas { position: relative; width: min(100%, 30rem); aspect-ratio: 1 / 1.08; }
+  .pola { position: absolute; margin: 0; padding: 10px 10px 44px; background: #fffdfb; box-shadow: 0 2px 6px rgb(70 15 25 / .12), 0 22px 48px rgb(70 15 25 / .2); }
+  .pola img { display: block; width: 100%; object-fit: cover; }
+  .pola--main { width: 62%; left: 19%; top: 8%; z-index: 2; transform: rotate(-2deg); }
+  .pola--main img { aspect-ratio: 3 / 4; }
+  .pola--a { width: 46%; left: 0; top: 0; transform: rotate(-9deg); }
+  .pola--b { width: 46%; right: 0; bottom: 2%; z-index: 3; transform: rotate(7deg); }
+  .pola--a img, .pola--b img { aspect-ratio: 4 / 3; }
+  .pola figcaption { position: absolute; left: 14px; right: 0; bottom: 8px; text-align: left; font-size: 1.15rem; line-height: 1.2; white-space: nowrap; }
+  @media (max-width: 860px) { .polas { width: min(100%, 22rem); margin-inline: auto; } }
 </style>
 </head>
 <body>
@@ -309,7 +346,7 @@
 
   <header class="bar">
     <a class="bar__mark" href="#top">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="#b3204f" stroke-width="2.4"/><path d="M16 3a13 13 0 0 1 12.4 9" fill="none" stroke="#f7f2f3" stroke-width="3"/></svg>{{Имя Фамилия}}
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="#7a1426" stroke-width="2.4"/><path d="M16 3a13 13 0 0 1 12.4 9" fill="none" stroke="#fbf1f1" stroke-width="3"/></svg>{{Имя Фамилия}}
     </a>
     <nav class="nav" aria-label="Разделы">
       <a href="#obo-mne">Обо мне</a>
@@ -325,7 +362,7 @@
   <main>
 
     <!-- 1 · УЗНАВАНИЕ: ведущая с микрофоном в банкетном зале, имя, оффер, кнопка над сгибом -->
-    <section id="top" data-v-act="pin" data-v-span="2.2" data-v-drift="#f7f2f3" aria-label="Ведущая свадеб и праздников">
+    <section id="top" data-v-act="pin" data-v-span="2.2" data-v-drift="#fbf1f1" aria-label="Ведущая свадеб и праздников">
       <div data-v-stage>
         <div class="v-layer hero__back" data-v-parallax="-0.45">
           <picture>
@@ -339,6 +376,7 @@
           <!-- плашка демо для заказчика: убрать перед сдачей -->
           <p class="demo-for">Демо по вашему заказу <a href="https://kwork.ru/projects/3263652/view" target="_blank" rel="noopener">«Создать сайт»</a> на Kwork</p>
           <p class="hero__who"><b>{{Имя Фамилия}}</b><span>ведущая мероприятий</span></p>
+          <p class="hero__script">праздник, который хочется пересказывать</p>
           <h1 class="v-display v-display--xl" data-v-kinetic="lines">Ведущая свадеб и юбилеев в {{город}}: без неловких пауз</h1>
           <p class="v-lede">Сценарий под ваших гостей, без пошлых конкурсов и затянутых тостов. Вы отдыхаете – тайминг, музыка и подрядчики на мне.</p>
           <ul class="hero__pluses" aria-label="Как я работаю">
@@ -361,11 +399,13 @@
     </section>
 
     <!-- 2 · ДОВЕРИЕ К ЧЕЛОВЕКУ: обо мне (только факты от заказчицы) -->
-    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f1e8eb" id="obo-mne" aria-label="Обо мне">
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f5e6e6" id="obo-mne" aria-label="Обо мне">
       <div class="v-wrap about">
-        <figure class="about__fig" data-v-reveal="up" data-v-reveal-at="0.08 0.45">
-          <img src="assets/portrait.webp" alt="Ведущая в банкетном зале перед праздником, микрофон в руке" width="1200" height="1600" loading="lazy" decoding="async">
-        </figure>
+        <div class="polas" data-v-reveal="up" data-v-reveal-at="0.08 0.45">
+          <figure class="pola pola--a"><img src="assets/svadba.webp" alt="Ведущая объявляет молодожёнов" width="1200" height="900" loading="lazy" decoding="async"></figure>
+          <figure class="pola pola--main"><img src="assets/portrait.webp" alt="Ведущая в банкетном зале перед праздником, микрофон в руке" width="1200" height="1600" loading="lazy" decoding="async"><figcaption>это я – {{Имя}}</figcaption></figure>
+          <figure class="pola pola--b"><img src="assets/yubiley.webp" alt="Юбиляр говорит тост, ведущая держит микрофон" width="1200" height="900" loading="lazy" decoding="async"></figure>
+        </div>
         <div class="about__copy" data-v-in data-v-stagger="70">
           <span class="v-label">Обо мне</span>
           <h2 class="v-display v-display--lg">Здравствуйте, я {{Имя}}</h2>
@@ -383,7 +423,7 @@
     </section>
 
     <!-- 3 · УЗНАВАНИЕ СЕБЯ: какие праздники и что от них хотят -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#f7f2f3" id="prazdniki" aria-label="Какие праздники веду">
+    <section class="v-section" data-v-act="flow" data-v-drift="#fbf1f1" id="prazdniki" aria-label="Какие праздники веду">
       <div class="v-wrap">
         <div class="req__head" data-v-in data-v-stagger="70">
           <span class="v-label">Праздники</span>
@@ -405,7 +445,7 @@
     </section>
 
     <!-- 4 · ФИРМЕННЫЙ ХОД: вечер по часам, циферблат с 17:00 до 23:00 ведётся скроллом -->
-    <section id="vecher" data-v-act="pin" data-v-span="3" data-v-drift="#f1e8eb" aria-label="Как проходит вечер">
+    <section id="vecher" data-v-act="pin" data-v-span="3" data-v-drift="#4a0f1a" aria-label="Как проходит вечер">
       <div data-v-stage>
         <div class="meet">
           <div class="meet__copy">
@@ -460,7 +500,7 @@
     </section>
 
     <!-- 5 · ВЫБОР: цены -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#f7f2f3" id="ceny" aria-label="Стоимость">
+    <section class="v-section" data-v-act="flow" data-v-drift="#4a0f1a" id="ceny" aria-label="Стоимость">
       <div class="v-wrap">
         <div class="fmt__head" data-v-in data-v-stagger="70">
           <span class="v-label">Стоимость</span>
@@ -500,7 +540,7 @@
     </section>
 
     <!-- 6 · ДОВЕРИЕ И ВОЗРАЖЕНИЯ: отзывы (присылает заказчица) и частые вопросы -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#f1e8eb" id="otzyvy" aria-label="Отзывы и частые вопросы">
+    <section class="v-section" data-v-act="flow" data-v-drift="#f5e6e6" id="otzyvy" aria-label="Отзывы и частые вопросы">
       <div class="v-wrap">
         <div class="rev__head" data-v-in data-v-stagger="60">
           <span class="v-label">Отзывы</span>
@@ -554,7 +594,7 @@
     </section>
 
     <!-- 7 · ДЕЙСТВИЕ: форма заявки и контакты -->
-    <section class="v-section book" data-v-act="flow" data-v-drift="#f7f2f3" id="kontakty" aria-label="Заявка и контакты" data-v-spotlight>
+    <section class="v-section book" data-v-act="flow" data-v-drift="#fbf1f1" id="kontakty" aria-label="Заявка и контакты" data-v-spotlight>
       <div class="v-wrap">
         <div class="book__grid">
           <div id="zapis">

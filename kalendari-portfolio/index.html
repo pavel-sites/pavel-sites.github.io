@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Квартальные календари на 2027 год с логотипом – Квартал</title>
+<meta name="description" content="Квартальные календари на 2027 год с вашим логотипом: готовые дизайны шапки или свой макет, макет на согласование до печати. Тираж от 30 штук.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Квартал – квартальные календари">
+<meta property="og:title" content="Квартальные календари на 2027 год с вашим логотипом">
+<meta property="og:description" content="Готовые шапки или свой макет в фирменном стиле. До печати – макет на согласование.">
+<meta property="og:url" content="https://pavel-sites.github.io/kalendari-portfolio">
+<meta property="og:image" content="https://pavel-sites.github.io/kalendari-portfolio/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@500;600;700;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%276%27 y=%272%27 width=%2720%27 height=%2728%27 rx=%272%27 fill=%27%23fbfcfd%27 stroke=%27%2316213a%27 stroke-width=%272%27/%3E%3Crect x=%276%27 y=%272%27 width=%2720%27 height=%279%27 fill=%27%232340c8%27/%3E%3Crect x=%2713%27 y=%2717%27 width=%276%27 height=%275%27 fill=%27none%27 stroke=%27%23d9322b%27 stroke-width=%272%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"Квартальный календарь на 2027 год с логотипом","description":"Квартальные календари на 2027 год: готовые дизайны шапки или макет в фирменном стиле, логотип и контакты на рекламных полях.","image":"https://pavel-sites.github.io/kalendari-portfolio/assets/og.jpg","brand":{"@type":"Brand","name":"Квартал"},"offers":{"@type":"Offer","priceCurrency":"RUB","price":"390","availability":"https://schema.org/PreOrder"}}
+</script>
+<style>
+  /* ---- тема: холодная бумага, чернила, кобальт; красный только у бегунка календаря ---- */
+  .v-page {
+    --v-canvas: #eef0f3; --v-surface: #fbfcfd;
+    --v-ink: #16213a; --v-ink-soft: #4d586e;            /* 6,6:1 на холсте */
+    --v-accent: #2340c8; --v-accent-ink: #f5f7ff;       /* кнопка 8,9:1 */
+    --v-accent-deep: #1d34a6;
+    --red: #d9322b;
+    --v-font-display: "Alumni Sans", "Arial Narrow", system-ui, sans-serif;
+    --v-font-text: "Onest", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 700;
+    --v-track-tight: 0em;
+    --v-shadow-color: 22 33 58;
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .05), 0 8px 22px rgb(var(--v-shadow-color) / .08);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .07), 0 22px 54px rgb(var(--v-shadow-color) / .14);
+    --v-radius: 10px;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --v-t-3xl: clamp(3rem, 2rem + 4.4vw, 5.6rem);
+    --v-t-4xl: clamp(3.4rem, 1.9rem + 6vw, 7.4rem);
+    --v-section: clamp(3.5rem, 8vw, 7rem);
+  }
+  html, body { margin: 0; background: #eef0f3; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  .v-page .v-display { line-height: .98; text-wrap: balance; }
+  .v-page .v-lede { font-weight: 400; }
+  .v-page .v-label { font-weight: 500; letter-spacing: .01em; text-transform: none; font-size: var(--v-t-sm); color: var(--v-accent-deep); }
+  .v-page .v-btn { font-size: var(--v-t-sm); }
+  .v-page button.v-btn { background: var(--v-accent); color: var(--v-accent-ink); } /* сброс движка .v-page button перебивает фон кнопки */
+  .v-page ol, .v-page ul { margin: 0; padding: 0; list-style: none; }
+  .slot { color: var(--v-accent-deep); }
+  @media (max-width: 860px) { .v-page .v-display--lg { font-size: clamp(2.3rem, 1.6rem + 3vw, 2.8rem); } }
+
+  /* ---- шапка сайта ------------------------------------------------------------------ */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter); background: rgb(238 240 243 / 0); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(238 240 243 / .9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__mark { font-family: var(--v-font-display); font-weight: 700; font-size: 1.6rem; text-decoration: none; display: inline-flex; align-items: center; gap: .45em; min-height: 44px; white-space: nowrap; }
+  .bar__mark svg { width: .85em; height: 1.05em; flex: none; }
+  .nav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
+  .nav a { text-decoration: none; color: var(--v-ink-soft); display: inline-flex; align-items: center; min-height: 44px; transition: color .16s var(--v-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .nav a:hover { color: var(--v-ink); } }
+  .bar .v-btn { padding: .7em 1.3em; }
+  .bar__short { display: none; }
+  @media (max-width: 1060px) { .nav { display: none; } }
+  @media (max-width: 700px) { .bar__mark { font-size: 1.35rem; } .bar .v-btn { padding: 0 1em; min-height: 44px; } .bar__long { display: none; } .bar__short { display: inline; } }
+
+  /* ---- плашка демо для заказчика (снимается перед сдачей и при переносе в Тильду) ---- */
+  .demo-for { display: inline-flex; align-items: center; gap: .6em; max-width: 100%; margin-bottom: var(--v-5); padding: .35em .95em .35em .4em;
+    border-radius: 999px; background: rgb(251 252 253 / .9); box-shadow: inset 0 0 0 1px var(--v-hair), var(--v-e1);
+    font-size: var(--v-t-xs); line-height: 1.35; color: var(--v-ink); }
+  .demo-for img { width: 32px; height: 32px; border-radius: 50%; flex: none; object-fit: cover; }
+  .demo-for a { color: var(--v-accent-deep); font-weight: 500; }
+
+  /* ---- календарь (свёрстан кодом, заполняется скриптом) ---------------------------------
+     Всё внутри в em от ширины: --w задаёт размер целиком. Пропорции как у настоящего
+     квартальника: шапка 297×210, три блока на пружинах, красный бегунок на среднем. */
+  .cal { --w: 22rem; --lab: 2.3em; --cw: 2.45em; --rh: 1.14em;
+    position: relative; width: var(--w); font-size: calc(var(--w) / 22); font-family: var(--v-font-display); color: #1b2233;
+    box-shadow: 0 2.4em 3.6em -1.6em rgb(22 33 58 / .42), 0 .4em 1em rgb(22 33 58 / .12); background: #fff; }
+  .cal__head { position: relative; aspect-ratio: 297 / 210; overflow: hidden; background: #c9cfd8; }
+  .cal__head::before { content: ""; position: absolute; z-index: 2; left: 0; right: 0; top: 0; height: .55em; background: linear-gradient(#5c6372, #2c313c); }
+  .cal__head::after { content: ""; position: absolute; z-index: 3; left: 50%; top: -.5em; width: 1.6em; height: 1.2em; margin-left: -.8em; border: .22em solid #2c313c; border-bottom: 0; border-radius: .8em .8em 0 0; }
+  .cal__head img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .25s var(--v-ease-out); }
+  .cal__year { position: absolute; z-index: 2; right: .55em; top: .5em; font-size: 3.4em; font-weight: 800; line-height: 1; color: #fff; text-shadow: 0 .04em .3em rgb(10 16 30 / .35); letter-spacing: .01em; }
+  .cal__brand { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; height: 22%; display: flex; flex-direction: column; justify-content: flex-start; padding: .5em 1em 0; background: #fff; }
+  .cal__brand b { font-size: 1.9em; font-weight: 800; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--v-accent); }
+  .cal__brand small { font-family: var(--v-font-text); font-size: .62em; color: #59627a; margin-top: .3em; }
+  .cal__spring { position: relative; z-index: 2; height: .95em; margin: 0 1.4em -.95em; border-radius: .3em; background: repeating-linear-gradient(90deg, transparent 0 .24em, #4a505c .24em .29em, #c9cdd5 .29em .34em, #3a3f4a .34em .4em, transparent .4em .56em);
+    -webkit-mask: linear-gradient(90deg, #000 44%, transparent 44% 56%, #000 56%); mask: linear-gradient(90deg, #000 44%, transparent 44% 56%, #000 56%); }
+  .cal__block { position: relative; padding: 1.1em 1em .5em; background: #fff; }
+  .cal__block + .cal__spring + .cal__block, .cal__spring + .cal__block { border-top: 1px solid #e3e6ec; }
+  .cal__mname { text-align: center; font-size: 1.55em; font-weight: 700; line-height: 1; margin-bottom: .35em; letter-spacing: .02em; }
+  .cal__block--now .cal__mname { color: var(--v-accent); }
+  .cal__grid { position: relative; display: grid; justify-content: center; grid-template-columns: var(--lab) repeat(6, var(--cw)); grid-template-rows: repeat(7, var(--rh)); grid-auto-flow: column; }
+  .cal__grid span { display: flex; align-items: center; justify-content: center; font-size: 1em; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+  .cal__grid .wd { justify-content: flex-start; font-family: var(--v-font-text); font-size: .62em; font-weight: 500; color: #7a8296; }
+  .cal__grid .off { color: var(--red); }
+  .cal__run { position: absolute; left: 0; top: 0; width: var(--cw); height: var(--rh); margin-left: calc((100% - var(--lab) - 6 * var(--cw)) / 2 + var(--lab));
+    border: .16em solid var(--red); background: rgb(217 50 43 / .1); border-radius: .12em;
+    transform: translate(calc(var(--c, 0) * var(--cw)), calc(var(--r, 0) * var(--rh))); transition: transform .32s var(--v-ease-out); }
+  .cal__ad { margin-top: .45em; padding-top: .35em; border-top: 1px dashed #d3d8e1; display: flex; justify-content: space-between; gap: 1em; font-family: var(--v-font-text); font-size: .56em; color: #8a91a3; }
+  .cal__ad b { font-weight: 600; color: #59627a; }
+  @media (prefers-reduced-motion: reduce) { .cal__run { transition: none; } }
+
+  /* ---- 1 · hero: календарь на стене офиса ---------------------------------------------- */
+  .hero__wall img { position: absolute; max-width: none; width: 110%; height: 110%; left: -5%; top: -5%; object-fit: cover; object-position: 40% 60%; }
+  .hero__col { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to right, rgb(238 240 243 / .82) 0%, rgb(238 240 243 / .5) 34%, transparent 56%); }
+  .hero__cal { position: absolute; z-index: 3; inset: auto; right: max(var(--v-gutter), 9vw); top: clamp(4.6rem, 9vh, 6rem); }
+  .hero__cal .cal { --w: min(30vh, 25vw); }
+  .hero__copy { top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-top: 3rem; max-width: min(40rem, 52vw); }
+  .hero__copy .v-display { font-size: clamp(3.2rem, 1.4rem + 4.4vw, 6.4rem); line-height: .92; max-width: 14ch; }
+  .hero__copy .v-lede { margin-top: var(--v-5); max-width: 38ch; color: var(--v-ink); }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-6); margin-top: var(--v-6); }
+  .hero__more { color: var(--v-ink); font-size: var(--v-t-sm); display: inline-flex; align-items: center; min-height: 44px; }
+  @media (max-width: 860px) {
+    .hero__wall img { width: 104%; height: 104%; left: -2%; top: -2%; object-position: 50% 100%; }
+    .hero__col { background: linear-gradient(to bottom, rgb(238 240 243 / .86) 0%, rgb(238 240 243 / .6) 40%, transparent 62%); }
+    .hero__copy { top: clamp(4.4rem, 9vh, 5.4rem); bottom: auto; display: block; padding-top: 0; max-width: none; }
+    .demo-for { margin-bottom: var(--v-3); }
+    .hero__copy .v-display { font-size: clamp(2.7rem, 1.6rem + 6vw, 3.6rem); max-width: 12ch; }
+    .hero__copy .v-lede { font-size: var(--v-t-sm); margin-top: var(--v-3); max-width: 30ch; }
+    .hero__cta { margin-top: var(--v-4); gap: 0 var(--v-5); }
+    .hero__cal { right: 7vw; top: auto; bottom: -18svh; }
+    .hero__cal .cal { --w: min(48vw, 15rem); }
+  }
+  @media (max-width: 860px) and (max-height: 700px) { .hero__cal { bottom: -34svh; } }
+
+  /* ---- 2 · год на стене: фирменный ход ---------------------------------------------- */
+  .year [data-v-stage] { background: radial-gradient(70% 90% at 70% 40%, #f6f7f9 0%, #e6e9ee 70%); }
+  .year__cal { position: absolute; z-index: 2; left: 58%; top: calc(50% + 1.6rem); transform: translate(-50%, -50%); }
+  .year__cal .cal { --w: min(30vh, 28vw); }
+  .year__copy { left: var(--v-gutter); top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; max-width: min(30rem, 36vw); }
+  .year__copy .v-display { font-size: var(--v-t-3xl); max-width: 12ch; }
+  .year__copy p { margin-top: var(--v-4); max-width: 34ch; color: var(--v-ink-soft); text-wrap: pretty; }
+  .year__when { position: absolute; z-index: 2; right: var(--v-gutter); bottom: clamp(2rem, 7vh, 4rem); text-align: right; font-family: var(--v-font-display); line-height: 1; }
+  .year__when b { display: block; font-size: clamp(3rem, 2rem + 4vw, 6rem); font-weight: 800; color: rgb(22 33 58 / .1); }
+  .year__when span { font-size: var(--v-t-lg); font-weight: 600; color: var(--v-ink-soft); }
+  @media (max-width: 860px) {
+    .year__copy { top: clamp(4.4rem, 9vh, 5.2rem); bottom: auto; display: block; max-width: none; right: var(--v-gutter); }
+    .year__copy .v-display { font-size: clamp(2.2rem, 1.4rem + 4.6vw, 3rem); }
+    .year__copy p { font-size: var(--v-t-sm); margin-top: var(--v-2); }
+    .year__cal { left: 50%; top: auto; bottom: -10svh; transform: translateX(-50%); }
+    .year__cal .cal { --w: min(60vw, calc((100svh - 13rem) / 2.4)); }
+    .year__when { display: none; }
+  }
+
+  /* ---- 3 · примерьте шапку ------------------------------------------------------------- */
+  .try { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--v-8) var(--v-9); align-items: center; }
+  .try__head .v-label { display: block; margin-bottom: var(--v-4); }
+  .try__head .v-display { max-width: 12ch; }
+  .try__head p { margin-top: var(--v-4); max-width: 42ch; color: var(--v-ink-soft); text-wrap: pretty; }
+  .designs { margin-top: var(--v-6); border: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--v-3); }
+  .designs legend, .try__name > span { font-size: var(--v-t-sm); color: var(--v-ink-soft); margin-bottom: var(--v-2); padding: 0; }
+  .designs label { position: relative; display: grid; gap: var(--v-2); cursor: pointer; font-size: var(--v-t-xs); line-height: 1.25; }
+  .designs input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .designs img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; box-shadow: 0 0 0 1px var(--v-hair); transition: box-shadow .16s var(--v-ease-out), transform .16s var(--v-ease-out); }
+  .designs input:checked ~ img { box-shadow: 0 0 0 3px var(--v-accent); }
+  .designs input:checked ~ span { color: var(--v-accent-deep); font-weight: 500; }
+  .designs input:focus-visible ~ img { outline: 2px solid var(--v-accent); outline-offset: 4px; }
+  @media (hover: hover) and (pointer: fine) { .designs label:hover img { transform: translateY(-2px); } }
+  .try__name { margin-top: var(--v-6); display: grid; gap: var(--v-1); max-width: 26rem; }
+  .try__name input, .field input, .field textarea { font: inherit; color: var(--v-ink); background: var(--v-surface); border: 1px solid var(--v-hair-strong); border-radius: var(--v-radius); padding: .8em 1em; min-height: 48px; width: 100%;
+    transition: border-color .16s var(--v-ease-out), box-shadow .16s var(--v-ease-out); }
+  .try__name input:focus-visible, .field input:focus-visible, .field textarea:focus-visible { outline: none; border-color: var(--v-accent); box-shadow: 0 0 0 3px rgb(35 64 200 / .16); }
+  .try__note { margin-top: var(--v-3); font-size: var(--v-t-xs); color: var(--v-ink-soft); max-width: 44ch; }
+  .try__view { position: relative; display: flex; justify-content: center; height: min(44rem, 82vh); overflow: hidden; padding-top: 1.4rem;
+    -webkit-mask: linear-gradient(to bottom, #000 78%, transparent); mask: linear-gradient(to bottom, #000 78%, transparent); }
+  .try__view .cal { --w: min(26rem, 38vw); }
+  @media (max-width: 860px) {
+    .try { grid-template-columns: 1fr; gap: var(--v-6); }
+    .designs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .try__view { height: 30rem; order: -1; }
+    .try__view .cal { --w: min(19rem, 82vw); }
+  }
+
+  /* ---- 4 · что внутри и цены ------------------------------------------------------------ */
+  .inside__band { position: relative; height: clamp(14rem, 34vw, 26rem); border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); }
+  .inside__band img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+  .inside__band figcaption { position: absolute; left: var(--v-5); bottom: var(--v-4); padding: .35em .8em; border-radius: 6px; background: rgb(251 252 253 / .9); font-size: var(--v-t-xs); color: var(--v-ink); }
+  .inside { margin-top: var(--v-9); display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: var(--v-8) var(--v-9); align-items: start; }
+  .inside .v-label { display: block; margin-bottom: var(--v-4); }
+  .inside .v-display { max-width: 11ch; }
+  .parts { margin-top: var(--v-6); }
+  .parts li { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: var(--v-1) var(--v-5); padding: var(--v-4) 0; border-top: 1px solid var(--v-hair); }
+  .parts li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .parts b { font-family: var(--v-font-display); font-size: 1.45rem; font-weight: 700; line-height: 1.05; }
+  .parts span { color: var(--v-ink-soft); font-size: var(--v-t-sm); text-wrap: pretty; }
+  .prices { padding: var(--v-7); border-radius: var(--v-radius); background: var(--v-surface); box-shadow: var(--v-e1); }
+  .prices h3 { font-family: var(--v-font-display); font-size: var(--v-t-2xl); font-weight: 700; line-height: 1; margin: 0; }
+  .prices > p { margin-top: var(--v-3); color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 44ch; }
+  .prices ul { margin-top: var(--v-5); }
+  .prices li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--v-1) var(--v-5); align-items: baseline; padding: var(--v-4) 0; border-top: 1px solid var(--v-hair); }
+  .prices li b { font-weight: 500; }
+  .prices li small { grid-column: 1; font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .prices li em { grid-row: 1; grid-column: 2; font-style: normal; font-family: var(--v-font-display); font-size: 1.6rem; font-weight: 700; white-space: nowrap; }
+  .prices__foot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-3) var(--v-5); margin-top: var(--v-6); }
+  .prices__foot span { font-size: var(--v-t-xs); color: var(--v-ink-soft); max-width: 30ch; }
+  @media (max-width: 860px) {
+    .inside { grid-template-columns: 1fr; margin-top: var(--v-8); gap: var(--v-7); }
+    .parts li { grid-template-columns: 1fr; }
+    .prices { padding: var(--v-6) var(--v-5); }
+  }
+
+  /* ---- 5 · как заказать и вопросы ------------------------------------------------------- */
+  .steps__head .v-display { max-width: 14ch; }
+  .steps { margin-top: var(--v-7); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--v-5); counter-reset: st; }
+  .steps li { position: relative; padding-top: var(--v-6); border-top: 2px solid var(--v-ink); counter-increment: st; }
+  .steps li::before { content: counter(st); position: absolute; top: var(--v-3); right: 0; font-family: var(--v-font-display); font-size: 1.4rem; font-weight: 700; color: var(--v-accent); }
+  .steps b { display: block; font-family: var(--v-font-display); font-size: 1.7rem; font-weight: 700; line-height: 1; max-width: 9ch; }
+  .steps p { margin-top: var(--v-3); color: var(--v-ink-soft); font-size: var(--v-t-sm); text-wrap: pretty; }
+  .faq { margin-top: var(--v-9); display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--v-6) var(--v-9); align-items: start; }
+  .faq__head { position: sticky; top: clamp(5rem, 12vh, 7rem); }
+  .faq__head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 34ch; }
+  .faq__list { border-bottom: 1px solid var(--v-hair); }
+  .faq__list details { border-top: 1px solid var(--v-hair); }
+  .faq__list summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--v-4); align-items: center; padding: var(--v-5) 0; min-height: 44px;
+    font-family: var(--v-font-display); font-size: 1.6rem; font-weight: 600; line-height: 1.1; }
+  .faq__list summary::-webkit-details-marker { display: none; }
+  .faq__list summary i { position: relative; width: 1.1rem; height: 1.1rem; flex: none; }
+  .faq__list summary i::before, .faq__list summary i::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: var(--v-accent); transition: transform .25s var(--v-ease-out); }
+  .faq__list summary i::after { transform: rotate(90deg); }
+  .faq__list details[open] summary i::after { transform: rotate(0deg); }
+  .faq__list details p { padding: 0 0 var(--v-5); max-width: 56ch; color: var(--v-ink-soft); text-wrap: pretty; }
+  .faq__list details[open] p { animation: fade-in .3s var(--v-ease-out); }
+  @keyframes fade-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  @media (max-width: 960px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--v-7); } }
+  @media (max-width: 860px) {
+    .faq { grid-template-columns: 1fr; margin-top: var(--v-8); }
+    .faq__head { position: static; }
+    .faq__list summary { font-size: 1.35rem; padding: var(--v-4) 0; }
+  }
+  @media (max-width: 520px) { .steps { grid-template-columns: 1fr; row-gap: var(--v-5); } }
+
+  /* ---- 6 · заявка ------------------------------------------------------------------- */
+  .book { position: relative; background: radial-gradient(56rem 36rem at calc(var(--v-mx, .3) * 100%) calc(var(--v-my, .3) * 100%), rgb(35 64 200 / .07), transparent 62%); }
+  .book__grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--v-8) var(--v-9); align-items: start; }
+  .book__head .v-label { display: block; margin-bottom: var(--v-4); }
+  .book__head .v-display { max-width: 12ch; }
+  .book__head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 44ch; text-wrap: pretty; }
+  .form { margin-top: var(--v-6); display: grid; gap: var(--v-4); max-width: 34rem; }
+  .field { display: grid; gap: var(--v-1); }
+  .field > span, .form legend { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .field textarea { min-height: 6rem; resize: vertical; }
+  .field input[readonly] { background: transparent; border-style: dashed; color: var(--v-ink-soft); }
+  .form fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: var(--v-2); }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--v-2); }
+  .chips label { position: relative; }
+  .chips input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .chips span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.1em; border-radius: 999px; background: var(--v-surface); box-shadow: inset 0 0 0 1px var(--v-hair-strong); font-size: var(--v-t-sm); transition: background-color .16s var(--v-ease-out), color .16s var(--v-ease-out), box-shadow .16s var(--v-ease-out); }
+  .chips input:checked + span { background: var(--v-accent); color: var(--v-accent-ink); box-shadow: none; }
+  .chips input:focus-visible + span { outline: 2px solid var(--v-accent); outline-offset: 3px; }
+  .consent { display: flex; gap: .6em; align-items: flex-start; font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .consent input { margin-top: .2em; width: 1.05rem; height: 1.05rem; accent-color: var(--v-accent); flex: none; }
+  .form .v-btn { justify-self: start; }
+  .form__done { display: none; padding: var(--v-6); border-radius: var(--v-radius); background: var(--v-surface); box-shadow: var(--v-e1); max-width: 34rem; margin-top: var(--v-6); }
+  .form__done b { display: block; font-family: var(--v-font-display); font-weight: 700; font-size: var(--v-t-2xl); line-height: 1; margin-bottom: var(--v-3); }
+  .form__done p { color: var(--v-ink-soft); }
+  .form__done small { display: block; margin-top: var(--v-4); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .book.is-sent .form { display: none; }
+  .book.is-sent .form__done { display: block; animation: fade-in .4s var(--v-ease-out); }
+  .contacts { padding-top: var(--v-8); }
+  .contacts h3 { font-family: var(--v-font-display); font-size: var(--v-t-xl); font-weight: 700; margin: 0 0 var(--v-4); }
+  .contacts dl { margin: 0; }
+  .contacts dl div { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: var(--v-4); padding: var(--v-3) 0; border-top: 1px solid var(--v-hair); }
+  .contacts dt { color: var(--v-ink-soft); font-size: var(--v-t-sm); padding-top: .1em; }
+  .contacts dd { margin: 0; }
+  .foot { margin-top: var(--v-9); padding: var(--v-6) 0 calc(var(--v-6) + env(safe-area-inset-bottom)); border-top: 1px solid var(--v-hair); display: flex; flex-wrap: wrap; gap: var(--v-2) var(--v-6); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  @media (max-width: 860px) {
+    .book__grid { grid-template-columns: 1fr; gap: var(--v-6); }
+    .contacts { padding-top: 0; }
+    .contacts dl div { grid-template-columns: 6rem minmax(0, 1fr); }
+    .form .v-btn { justify-self: stretch; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__mark" href="#top">
+      <svg viewBox="0 0 26 32" aria-hidden="true"><rect x="2" y="2" width="22" height="28" rx="1.5" fill="#fbfcfd" stroke="#16213a" stroke-width="2"/><rect x="2" y="2" width="22" height="10" fill="#2340c8"/><rect x="10" y="18" width="7" height="5" fill="none" stroke="#d9322b" stroke-width="2"/></svg>Квартал
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#god">Год на стене</a>
+      <a href="#dizajn">Дизайны</a>
+      <a href="#ceny">Что внутри и цены</a>
+      <a href="#kak">Как заказать</a>
+    </nav>
+    <a class="v-btn" href="#zakaz"><span class="bar__long">Заказать календари</span><span class="bar__short">Заказать</span></a>
+  </header>
+
+  <main>
+
+    <!-- 1 · УЗНАВАНИЕ: квартальник висит на стене офиса, оффер слева, кнопка над сгибом -->
+    <section id="top" data-v-act="pin" data-v-span="1.8" data-v-drift="#eef0f3" aria-label="Квартальные календари на 2027 год">
+      <div data-v-stage>
+        <div class="v-layer hero__wall" data-v-parallax="-0.5">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+            <img src="assets/hero.webp" alt="" width="1920" height="1080" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="hero__col" aria-hidden="true"></div>
+        <div class="v-layer hero__cal" data-v-parallax="-1.1">
+          <div class="cal" data-cal data-head="assets/zima.webp" data-date="2027-01-11" role="img" aria-label="Квартальный календарь на 2027 год: шапка с фото, три месяца, красный бегунок на дате"></div>
+        </div>
+
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.8 0">
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Квартальные календари на 2027 год с вашим логотипом</h1>
+          <p class="v-lede">Выберите шапку из готовых дизайнов или пришлите свой макет. До печати – макет на согласование, без сюрпризов в тираже.</p>
+          <div class="hero__cta">
+            <a class="v-btn" href="#zakaz">Заказать календари</a>
+            <a class="hero__more" href="#dizajn">Посмотреть дизайны</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ДОВОД: календарь работает весь год – месяцы листаются скроллом, бегунок идёт по датам -->
+    <section id="god" class="year" data-v-act="pin" data-v-span="3" data-v-drift="#e6e9ee" aria-label="Календарь работает весь год">
+      <div data-v-stage>
+        <div class="year__cal">
+          <div class="cal" id="year-cal" data-cal data-head="assets/leto.webp" data-date="2027-01-11" aria-hidden="true"></div>
+        </div>
+        <p class="year__when" aria-hidden="true"><b id="year-day">11</b><span id="year-month">января</span></p>
+
+        <div class="v-copy year__copy" data-v-cue="0 0.34 0 0.06">
+          <h2 class="v-display v-display--lg">Висит перед глазами весь год</h2>
+          <p>Каждое утро кто-то сдвигает бегунок на новую дату – и видит ваш логотип прямо над ней.</p>
+        </div>
+        <div class="v-copy year__copy" data-v-cue="0.32 0.66 0.06 0.06">
+          <h2 class="v-display v-display--lg">Три месяца сразу – удобно планировать</h2>
+          <p>Прошлый, текущий и следующий месяц рядом: по квартальнику назначают встречи, отпуска и сроки сдачи.</p>
+        </div>
+        <div class="v-copy year__copy" data-v-cue="0.64 0.98 0.06 0.04">
+          <h2 class="v-display v-display--lg">В декабре он всё ещё на стене</h2>
+          <p>Ручку теряют за неделю, а календарь дарит повод вспомнить о вас двенадцать месяцев подряд.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · ВЫБОР: примерочная шапки – дизайн и своё название сразу на календаре -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#eef0f3" id="dizajn" aria-label="Дизайны шапки">
+      <div class="v-wrap try">
+        <div class="try__head" data-v-in data-v-stagger="60">
+          <span class="v-label">Дизайны шапки</span>
+          <h2 class="v-display v-display--lg">Примерьте шапку на свой календарь</h2>
+          <p>Выберите фото и впишите название компании – справа сразу видно, как будет выглядеть календарь. Свой макет или фото тоже подойдут.</p>
+          <fieldset class="designs" id="designs">
+            <legend>Шапка</legend>
+            <label><input type="radio" name="design" value="zima" data-title="Зимнее утро" checked><img src="assets/zima-s.webp" alt="" width="480" height="360" loading="lazy"><span>Зимнее утро</span></label>
+            <label><input type="radio" name="design" value="leto" data-title="Озеро в июне"><img src="assets/leto-s.webp" alt="" width="480" height="360" loading="lazy"><span>Озеро в июне</span></label>
+            <label><input type="radio" name="design" value="gorod" data-title="Набережная вечером"><img src="assets/gorod-s.webp" alt="" width="480" height="360" loading="lazy"><span>Набережная вечером</span></label>
+            <label><input type="radio" name="design" value="cvety" data-title="Пионы"><img src="assets/cvety-s.webp" alt="" width="480" height="360" loading="lazy"><span>Пионы</span></label>
+          </fieldset>
+          <label class="try__name"><span>Название на календаре</span><input id="brand-input" maxlength="28" placeholder="Ваш логотип" autocomplete="organization"></label>
+          <p class="try__note">Это примерка: в готовом календаре на этом месте стоит ваш логотип в фирменных цветах, а под ним – телефон и сайт.</p>
+        </div>
+        <div class="try__view" data-v-in>
+          <div class="cal" id="try-cal" data-cal data-head="assets/zima.webp" data-date="2027-01-11" role="img" aria-label="Примерка календаря с выбранной шапкой"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ДОКАЗАТЕЛЬСТВО И ЦЕНА: из чего календарь и сколько стоит -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#e9ecf0" id="ceny" aria-label="Что внутри и цены">
+      <div class="v-wrap">
+        <figure class="inside__band" data-v-reveal="left" data-v-reveal-at="0.05 0.4">
+          <img src="assets/gorod.webp" alt="Фото для шапки календаря: набережная старого города вечером" width="1400" height="1050" loading="lazy">
+          <figcaption>Шапка – фото на весь год: ваше или из готовых дизайнов</figcaption>
+        </figure>
+        <div class="inside">
+          <div data-v-in data-v-stagger="50">
+            <span class="v-label">Что внутри</span>
+            <h2 class="v-display v-display--lg">Из чего собран календарь</h2>
+            <ul class="parts">
+              <li><b>Шапка</b><span>Фото и ваш логотип, формат A4, 297 × 210 мм, бумага мелованная 250 г/м²</span></li>
+              <li><b>Три блока</b><span>Прошлый, текущий и следующий месяц; выходные и праздники выделены красным</span></li>
+              <li><b>Рекламные поля</b><span>Логотип, телефон и сайт под каждым месяцем</span></li>
+              <li><b>Бегунок</b><span>Красное окошко, которое двигают по датам</span></li>
+              <li><b>Пружины и крепление</b><span>Металлические пружины, ригель с петлёй, каждый календарь в пакете</span></li>
+            </ul>
+          </div>
+          <div class="prices" data-v-in data-v-stagger="50">
+            <h3>Сколько стоит</h3>
+            <p>Цена за штуку зависит от тиража – точный расчёт пришлём в ответ на заявку.</p>
+            <ul>
+              <li><b>Готовая шапка + ваш логотип</b><em>от 390 ₽</em><small>Один из дизайнов, логотип и контакты на полях</small></li>
+              <li><b>Шапка по вашему фото</b><em>от 450 ₽</em><small>Ваш снимок, вёрстка шапки по фирменному стилю</small></li>
+              <li><b>Полностью ваш макет</b><em>от 340 ₽</em><small>Присылаете готовый файл, проверяем перед печатью</small></li>
+            </ul>
+            <div class="prices__foot">
+              <a class="v-btn" href="#zakaz">Заказать календари</a>
+              <span>Тираж от 30 штук, готовность за 5 рабочих дней</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · СНЯТИЕ СТРАХОВ: порядок заказа и вопросы -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#eef0f3" id="kak" aria-label="Как заказать">
+      <div class="v-wrap">
+        <div class="steps__head" data-v-in>
+          <h2 class="v-display v-display--lg">Как заказать</h2>
+        </div>
+        <ol class="steps" data-v-in data-v-stagger="70">
+          <li><b>Заявка</b><p>Дизайн, примерный тираж и логотип – можно в одном сообщении.</p></li>
+          <li><b>Макет на согласование</b><p>Присылаем макет с вашим логотипом за 1 рабочий день, правим до «да».</p></li>
+          <li><b>Печать и сборка</b><p>Печатаем только согласованный макет, собираем на пружины с бегунком.</p></li>
+          <li><b>Доставка</b><p>Самовывоз в Нижнем Новгороде или доставка СДЭК по России.</p></li>
+        </ol>
+
+        <div class="faq">
+          <div class="faq__head" data-v-in>
+            <h2 class="v-display v-display--lg">Вопросы</h2>
+            <p>Не нашли ответ – напишите, ответим в течение часа в рабочее время.</p>
+          </div>
+          <div class="faq__list" data-v-in data-v-stagger="40">
+            <details><summary>Какой минимальный тираж?<i aria-hidden="true"></i></summary><p>От 30 штук. Чем больше тираж, тем ниже цена за календарь – точную сумму пришлём в расчёте.</p></details>
+            <details><summary>Можно поставить свой логотип на готовый дизайн?<i aria-hidden="true"></i></summary><p>Да: логотип встаёт в шапку и на рекламные поля под каждым месяцем. Перед печатью присылаем макет на согласование.</p></details>
+            <details><summary>У нас своё фото или готовый макет – подойдёт?<i aria-hidden="true"></i></summary><p>Подойдёт. Проверим размер и качество файла и скажем, если фото не хватит для печати.</p></details>
+            <details><summary>Успеете к Новому году?<i aria-hidden="true"></i></summary><p>Обычный срок – 5 рабочих дней после согласования макета. Заказы к Новому году лучше оформить до середины декабря.</p></details>
+            <details><summary>Как оплатить?<i aria-hidden="true"></i></summary><p>Компании – по счёту, частные заказы – картой или переводом.</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · ДЕЙСТВИЕ: заявка -->
+    <section class="v-section book" data-v-act="flow" data-v-drift="#eef0f3" id="zakaz" aria-label="Заявка на календари" data-v-spotlight>
+      <div class="v-wrap">
+        <div class="book__grid">
+          <div>
+            <div class="book__head" data-v-in data-v-stagger="60">
+              <span class="v-label">Заявка</span>
+              <h2 class="v-display v-display--lg">Заказать календари на 2027 год</h2>
+              <p>Оставьте контакт и примерный тираж – пришлём расчёт и макет с вашим логотипом.</p>
+            </div>
+            <form class="form" id="form" novalidate data-v-in data-v-stagger="40">
+              <label class="field"><span>Как к вам обращаться</span><input name="name" autocomplete="name" required></label>
+              <label class="field"><span>Телефон или ник в Telegram</span><input name="contact" autocomplete="tel" required></label>
+              <fieldset>
+                <legend>Сколько календарей</legend>
+                <div class="chips">
+                  <label><input type="radio" name="qty" value="до 50" checked><span>до 50</span></label>
+                  <label><input type="radio" name="qty" value="50–200"><span>50–200</span></label>
+                  <label><input type="radio" name="qty" value="больше 200"><span>больше 200</span></label>
+                  <label><input type="radio" name="qty" value="пока не знаю"><span>пока не знаю</span></label>
+                </div>
+              </fieldset>
+              <label class="field"><span>Дизайн из примерки</span><input name="design" id="design-field" value="Зимнее утро" readonly></label>
+              <label class="field"><span>Комментарий – если нужно</span><textarea name="note" rows="3"></textarea></label>
+              <label class="consent"><input type="checkbox" name="consent" required><span>Согласен(на) на обработку персональных данных по <a href="#">политике конфиденциальности</a></span></label>
+              <button class="v-btn" type="submit" data-v-magnet="0.2" data-v-rise="0">Заказать календари</button>
+            </form>
+            <div class="form__done" role="status" aria-live="polite">
+              <b>Заявка отправлена</b>
+              <p>Спасибо. Пришлём расчёт и макет в течение рабочего дня.</p>
+              <small>В демо заявка никуда не уходит. На готовом сайте она придёт на почту и в Telegram.</small>
+            </div>
+          </div>
+          <div class="contacts" data-v-in data-v-stagger="60">
+            <h3>Или напишите напрямую</h3>
+            <dl>
+              <div><dt>Telegram</dt><dd><a href="https://t.me/" target="_blank" rel="noopener">@kvartal_kalendar</a></dd></div>
+              <div><dt>Телефон</dt><dd><a href="tel:+79000000000">+7 900 000-00-00</a></dd></div>
+              <div><dt>Почта</dt><dd><a href="mailto:hello@example.ru">hello@example.ru</a></dd></div>
+              <div><dt>Город</dt><dd>Нижний Новгород, доставка по России</dd></div>
+            </dl>
+          </div>
+        </div>
+        <footer class="foot">
+          <span>Квартал – квартальные календари</span>
+          <span>Демо-сайт для портфолио: название, цены и контакты условные</span>
+          <a href="#">Политика конфиденциальности</a>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // Календарь собирается кодом: шапка, три месяца на пружинах, бегунок на текущей дате.
+  // Выходные и неподвижные праздники – красным (переносы праздников не отмечаем).
+  var CAL = (function () {
+    var MONTHS = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+    var WD = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+    var HOLI = { '0': [1, 2, 3, 4, 5, 6, 7, 8], '1': [23], '2': [8], '4': [1, 9], '5': [12], '10': [4] };
+    function first(y, m) { return (new Date(y, m, 1).getDay() + 6) % 7; }
+    function grid(y, m) {
+      var f = first(y, m), n = new Date(y, m + 1, 0).getDate(), h = HOLI[m] || [], out = [], i;
+      for (i = 0; i < 7; i++) out.push('<span class="wd">' + WD[i] + '</span>');
+      for (i = 0; i < 42; i++) {
+        var d = i - f + 1, row = i % 7; // ячейки идут по колонкам-неделям: 7 строк дней недели
+        out.push(d >= 1 && d <= n ? '<span' + (row > 4 || h.indexOf(d) >= 0 ? ' class="off"' : '') + '>' + d + '</span>' : '<span></span>');
+      }
+      return out.join('');
+    }
+    function block(cls) {
+      return '<div class="cal__block' + cls + '"><div class="cal__mname"></div><div class="cal__grid"></div><div class="cal__ad"><b data-brand-small>Ваш логотип</b><span>телефон · сайт</span></div></div>';
+    }
+    function make(el) {
+      el.innerHTML = '<div class="cal__head"><img src="' + el.getAttribute('data-head') + '" alt=""><span class="cal__year">2027</span>' +
+        '<div class="cal__brand"><b data-brand>Ваш логотип</b><small>телефон · сайт · адрес</small></div></div>' +
+        '<div class="cal__spring"></div>' + block('') + '<div class="cal__spring"></div>' + block(' cal__block--now') + '<div class="cal__spring"></div>' + block('');
+      var run = document.createElement('i'); run.className = 'cal__run';
+      el.querySelector('.cal__block--now .cal__grid').appendChild(run);
+      el._m = null;
+      var p = el.getAttribute('data-date').split('-');
+      set(el, +p[0], +p[1] - 1, +p[2]);
+    }
+    function set(el, y, m, d) {
+      var key = y * 12 + m;
+      if (el._m !== key) {
+        el._m = key;
+        var bs = el.querySelectorAll('.cal__block');
+        [-1, 0, 1].forEach(function (k, j) {
+          var dt = new Date(y, m + k, 1), yy = dt.getFullYear(), mm = dt.getMonth();
+          bs[j].querySelector('.cal__mname').textContent = MONTHS[mm] + (yy !== 2027 ? ' ' + yy : '');
+          var g = bs[j].querySelector('.cal__grid'), run = g.querySelector('.cal__run');
+          g.innerHTML = grid(yy, mm); if (run) g.appendChild(run);
+        });
+      }
+      var i = first(y, m) + d - 1, run = el.querySelector('.cal__run');
+      run.style.setProperty('--c', Math.floor(i / 7)); run.style.setProperty('--r', i % 7);
+    }
+    function brand(el, text) {
+      el.querySelectorAll('[data-brand],[data-brand-small]').forEach(function (b) { b.textContent = text; });
+    }
+    document.querySelectorAll('[data-cal]').forEach(make);
+    return { set: set, brand: brand };
+  })();
+</script>
+<script src="vibe.js"></script>
+<script>
+  // На телефоне пины короче: правим атрибут до монтирования.
+  if (window.matchMedia('(max-width: 860px)').matches) {
+    document.getElementById('top').setAttribute('data-v-span', '1.5');
+    document.getElementById('god').setAttribute('data-v-span', '2.6');
+  }
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Шапка: подложка после 40 px прокрутки.
+  (function () {
+    var bar = document.querySelector('.bar'), on = null;
+    function tick() { var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+
+  // Фирменный ход «Год на стене»: --v-p акта ведёт дату по 2027 году,
+  // месяцы листаются, бегунок идёт по дням среднего блока.
+  (function () {
+    var act = document.getElementById('god'), cal = document.getElementById('year-cal');
+    var dayEl = document.getElementById('year-day'), monEl = document.getElementById('year-month');
+    var GEN = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+    var start = new Date(2027, 0, 11).getTime(), end = new Date(2027, 11, 20).getTime(), lastKey = '';
+    function render(p) {
+      p = Math.min(1, Math.max(0, p));
+      var dt = new Date(start + (end - start) * p), y = dt.getFullYear(), m = dt.getMonth(), d = dt.getDate(), key = m + '-' + d;
+      if (key === lastKey) return;
+      lastKey = key; CAL.set(cal, y, m, d); dayEl.textContent = d; monEl.textContent = GEN[m];
+    }
+    var live = false, lastP = -1;
+    function tick() {
+      var p = parseFloat(getComputedStyle(act).getPropertyValue('--v-p')) || 0;
+      if (p !== lastP) { lastP = p; render(p); }
+      if (live) requestAnimationFrame(tick);
+    }
+    new IntersectionObserver(function (es) { live = es[0].isIntersecting; if (live) tick(); }).observe(act);
+    render(0);
+  })();
+
+  // Примерочная: выбранная шапка и название сразу на календаре и в поле заявки.
+  (function () {
+    var cal = document.getElementById('try-cal'), img = cal.querySelector('.cal__head img');
+    var input = document.getElementById('brand-input'), field = document.getElementById('design-field');
+    function sync() {
+      var r = document.querySelector('#designs input:checked'), name = input.value.trim();
+      field.value = r.getAttribute('data-title') + (name ? ' · надпись «' + name + '»' : '');
+    }
+    document.getElementById('designs').addEventListener('change', function (e) {
+      var v = e.target.value; img.style.opacity = 0;
+      setTimeout(function () { img.src = 'assets/' + v + '.webp'; img.onload = function () { img.style.opacity = 1; }; }, 160);
+      sync();
+    });
+    input.addEventListener('input', function () { CAL.brand(cal, input.value.trim() || 'Ваш логотип'); sync(); });
+  })();
+
+  // Форма: в демо заявка никуда не уходит, показываем состояние «отправлено».
+  // На рабочем сайте (Тильда) форма сама отправляет заявки на почту и в Telegram.
+  (function () {
+    var form = document.getElementById('form'), book = document.getElementById('zakaz');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      book.classList.add('is-sent');
+    });
+  })();
+</script>
+</body>
+</html>

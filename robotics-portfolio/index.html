@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Gearbox Kids – Robotics &amp; Coding Classes for Kids 6–10 in Austin, TX</title>
+<meta name="description" content="Hands-on robotics and engineering classes for kids ages 6–10 in Austin, TX. LEGO WeDo and Arduino, coding basics, engineering thinking. First class FREE – book on WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Build Robots. Learn to Code. Have Fun!">
+<meta property="og:description" content="Robotics classes for kids 6–10 in Austin, TX. First class FREE.">
+<meta property="og:url" content="https://pavel-sites.github.io/robotics-portfolio">
+<meta property="og:image" content="https://pavel-sites.github.io/robotics-portfolio/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%274%27 y=%278%27 width=%2724%27 height=%2719%27 rx=%276%27 fill=%27%2315213b%27/%3E%3Ccircle cx=%2712%27 cy=%2717%27 r=%273%27 fill=%27%23ffc914%27/%3E%3Ccircle cx=%2720%27 cy=%2717%27 r=%273%27 fill=%27%23ffc914%27/%3E%3Cpath d=%27M16 8V3%27 stroke=%27%2315213b%27 stroke-width=%272.4%27/%3E%3Ccircle cx=%2716%27 cy=%273%27 r=%272.4%27 fill=%27%23ff6b4a%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<!--
+  Google Analytics 4: replace G-XXXXXXXXXX with the school's Measurement ID and uncomment.
+  (Or install Google Tag Manager instead – the click script below also pushes to dataLayer.)
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Gearbox Kids","description":"Hands-on robotics and engineering classes for kids ages 6–10 in Austin, TX.","url":"https://pavel-sites.github.io/robotics-portfolio","image":"https://pavel-sites.github.io/robotics-portfolio/assets/og.jpg","telephone":"+15125550100","address":{"@type":"PostalAddress","streetAddress":"1200 Example Ave","addressLocality":"Austin","addressRegion":"TX","addressCountry":"US"}}
+</script>
+<style>
+  /* ---- theme: warm paper, deep navy ink, one sunny-yellow accent; block colours live only in the program ---- */
+  .v-page {
+    --v-canvas: #f7f6f2; --v-surface: #ffffff;
+    --v-ink: #15213b; --v-ink-soft: #4d5871;            /* 7.4:1 on paper */
+    --v-accent: #ffc914; --v-accent-ink: #15213b;       /* button 10:1 */
+    --v-accent-deep: #2f5fd6;                           /* links */
+    --b-event: #ffc914; --b-build: #3d7bff; --b-code: #8b5cf6; --b-test: #1fae7a; --b-make: #ff6b4a;
+    --v-font-display: "Bricolage Grotesque", "Arial Rounded MT Bold", system-ui, sans-serif;
+    --v-font-text: "Figtree", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 800;
+    --v-track-tight: -0.035em;
+    --v-shadow-color: 21 33 59;
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .06), 0 8px 22px rgb(var(--v-shadow-color) / .08);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .08), 0 22px 54px rgb(var(--v-shadow-color) / .15);
+    --v-radius: 18px;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --v-t-3xl: clamp(2.2rem, 1.5rem + 2.8vw, 3.8rem);
+    --v-section: clamp(3.5rem, 8vw, 6.5rem);
+  }
+  html, body { margin: 0; background: #f7f6f2; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  .v-page .v-display { line-height: .98; text-wrap: balance; }
+  .v-page .v-lede { font-weight: 400; }
+  .v-page .v-label { font-weight: 600; letter-spacing: .01em; text-transform: none; font-size: var(--v-t-sm); color: var(--v-accent-deep); }
+  .v-page .v-btn { font-size: var(--v-t-sm); font-weight: 700; gap: .55em; }
+  .v-page .v-btn svg { width: 1.25em; height: 1.25em; flex: none; }
+  .v-page ol, .v-page ul { margin: 0; padding: 0; list-style: none; }
+  .slot { color: var(--v-accent-deep); }
+  .v-page .sec-head { max-width: 40rem; }
+  .v-page .sec-head .v-label { display: block; margin-bottom: var(--v-3); }
+  .v-page .sec-head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 46ch; text-wrap: pretty; }
+
+  /* ---- header -------------------------------------------------------------------------- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter); background: rgb(247 246 242 / 0); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(247 246 242 / .9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .logo { font-family: var(--v-font-display); font-weight: 800; font-size: 1.2rem; letter-spacing: -.02em; text-decoration: none; display: inline-flex; align-items: center; gap: .5em; min-height: 44px; white-space: nowrap; }
+  .logo svg { width: 1.9em; height: 1.9em; flex: none; }
+  .nav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); font-weight: 500; }
+  .nav a { text-decoration: none; color: var(--v-ink-soft); display: inline-flex; align-items: center; min-height: 44px; transition: color .16s var(--v-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .nav a:hover { color: var(--v-ink); } }
+  .bar .v-btn { padding: .65em 1.2em; }
+  .bar__short { display: none; }
+  @media (max-width: 1060px) { .nav { display: none; } }
+  @media (max-width: 560px) { .logo { font-size: 1.05rem; } .bar .v-btn { padding: 0 .95em; min-height: 44px; } .bar__long { display: none; } .bar__short { display: inline; } }
+
+  /* ---- demo plaque for the client (remove before handover) ---- */
+  .demo-for { display: inline-flex; align-items: center; gap: .55em; max-width: 100%; margin-bottom: var(--v-5); padding: .45em .95em .45em .7em;
+    border-radius: 999px; background: rgb(255 255 255 / .9); box-shadow: inset 0 0 0 1px var(--v-hair), var(--v-e1); font-size: var(--v-t-xs); line-height: 1.35; color: var(--v-ink); }
+  .demo-for::before { content: ""; flex: none; width: .55em; height: .55em; border-radius: 50%; background: var(--b-make); }
+  .demo-for a { color: var(--v-accent-deep); font-weight: 600; }
+
+  /* ---- mobile WhatsApp dock ------------------------------------------------------------------ */
+  .dock { display: none; }
+  @media (max-width: 700px) {
+    .dock { position: fixed; z-index: 29; left: 0; right: 0; bottom: 0; display: flex; padding: var(--v-2) var(--v-gutter) calc(var(--v-2) + env(safe-area-inset-bottom));
+      background: rgb(247 246 242 / .92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--v-hair);
+      transform: translateY(110%); transition: transform .3s var(--v-ease-out); }
+    .dock.is-on { transform: none; }
+    .dock .v-btn { flex: 1; justify-content: center; min-height: 50px; }
+  }
+
+  /* ---- 1 · hero --------------------------------------------------------------------------- */
+  .hero__back img { position: absolute; max-width: none; width: 108%; height: 110%; left: -2%; top: -5%; object-fit: cover; object-position: 70% 55%; }
+  .hero__col { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to right, rgb(247 246 242 / .94) 0%, rgb(247 246 242 / .75) 34%, transparent 58%); }
+  .hero__copy { top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-top: 3.5rem; max-width: min(40rem, 50vw); }
+  .hero__copy .v-display { font-size: clamp(2.6rem, 1.3rem + 4.2vw, 5.4rem); }
+  .hero__copy .v-lede { margin-top: var(--v-5); max-width: 34ch; color: var(--v-ink); font-size: var(--v-t-lg); }
+  .free { position: relative; display: inline-flex; align-items: baseline; gap: .35em; margin-top: var(--v-5); padding: .45em .9em .5em; border-radius: 12px; background: var(--b-make); color: #fff;
+    font-family: var(--v-font-display); font-weight: 800; font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); letter-spacing: -.02em; transform: rotate(-2.5deg); box-shadow: 0 6px 0 rgb(21 33 59 / .9); }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-6); margin-top: var(--v-6); }
+  .hero__cta .v-btn { padding: .95em 1.5em; font-size: var(--v-t-base); }
+  .hero__where { display: inline-flex; align-items: center; gap: .4em; font-size: var(--v-t-sm); font-weight: 500; color: var(--v-ink); text-decoration: none; min-height: 44px; }
+  .hero__where svg { width: 1.1em; height: 1.1em; color: var(--b-make); }
+  @media (max-width: 860px) {
+    .hero__back img { width: 104%; height: 104%; left: -2%; top: -2%; object-position: 50% 100%; }
+    .hero__col { background: linear-gradient(to bottom, rgb(247 246 242 / .95) 0%, rgb(247 246 242 / .8) 52%, transparent 74%); }
+    .hero__copy { top: clamp(4.4rem, 9vh, 5.4rem); bottom: auto; display: block; padding-top: 0; max-width: none; }
+    .demo-for { margin-bottom: var(--v-3); }
+    .hero__copy .v-display { font-size: clamp(2.3rem, 1.4rem + 5vw, 3rem); }
+    .hero__copy .v-lede { font-size: var(--v-t-base); margin-top: var(--v-3); }
+    .free { margin-top: var(--v-3); }
+    .hero__cta { margin-top: var(--v-4); gap: 0 var(--v-5); }
+  }
+
+  /* ---- 2a · what kids will learn: the program of blocks (signature) -------------------------- */
+  .learn { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: var(--v-8) var(--v-9); align-items: start; margin-top: var(--v-7); }
+  .prog { position: relative; padding: var(--v-6) var(--v-6) var(--v-6) var(--v-5); border-radius: var(--v-radius); background: #fff; box-shadow: var(--v-e1);
+    background-image: radial-gradient(circle at 1px 1px, rgb(21 33 59 / .09) 1px, transparent 0); background-size: 18px 18px; }
+  .prog__cap { font-size: var(--v-t-xs); color: var(--v-ink-soft); margin-bottom: var(--v-4); }
+  .blk { --c: var(--b-build); --x: 0; position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .2em 1em; align-items: center; padding: .85em 1.1em .9em; margin-top: -1px;
+    border-radius: 10px; background: var(--c); color: #fff; max-width: 34rem;
+    transform: translateX(calc(var(--x) * 1px)); transition: transform .55s var(--v-ease-out), opacity .45s var(--v-ease-out); }
+  .blk::before { content: ""; position: absolute; left: 1.4em; top: -7px; width: 2.2em; height: 8px; border-radius: 0 0 6px 6px; background: var(--c); }
+  .blk::after { content: ""; position: absolute; left: 1.4em; bottom: -7px; z-index: 1; width: 2.2em; height: 8px; border-radius: 0 0 6px 6px; background: var(--c); }
+  .blk + .blk { margin-top: 6px; }
+  .blk--hat { --c: var(--b-event); color: var(--v-ink); border-radius: 26px 26px 10px 10px; padding-top: 1em; }
+  .blk--hat::before { display: none; }
+  .blk--build { --c: var(--b-build); } .blk--code { --c: var(--b-code); } .blk--test { --c: var(--b-test); } .blk--make { --c: var(--b-make); }
+  .blk i { font-style: normal; font-family: var(--v-font-display); font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em; padding: .2em .65em; border-radius: 999px; background: rgb(255 255 255 / .22); white-space: nowrap; }
+  .blk--hat i { background: rgb(21 33 59 / .1); }
+  .blk b { font-family: var(--v-font-display); font-weight: 700; font-size: var(--v-t-lg); line-height: 1.1; letter-spacing: -.02em; }
+  .blk span { grid-column: 2; font-size: var(--v-t-sm); line-height: 1.4; opacity: .95; }
+  .blk--hat span { opacity: .85; }
+  .js .blk:not(.is-in) { --x: 70; opacity: 0; }
+  @media (prefers-reduced-motion: reduce) { .blk { transition: none; } .js .blk:not(.is-in) { --x: 0; opacity: 1; } }
+  .shots { display: grid; gap: var(--v-4); }
+  .shots figure { margin: 0; position: relative; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); aspect-ratio: 4 / 3; }
+  .shots img { width: 100%; height: 100%; object-fit: cover; }
+  .shots figcaption { position: absolute; left: var(--v-3); bottom: var(--v-3); padding: .3em .75em; border-radius: 999px; background: rgb(255 255 255 / .92); font-size: var(--v-t-xs); font-weight: 600; }
+  .shots figure:nth-child(2) { margin-left: 12%; margin-top: -10%; border: 6px solid var(--v-canvas); }
+  .shots figure:first-child figcaption { bottom: auto; top: var(--v-3); }
+  @media (max-width: 900px) {
+    .learn { grid-template-columns: 1fr; gap: var(--v-6); }
+    .prog { padding: var(--v-5) var(--v-4); }
+    .blk { grid-template-columns: 1fr; padding: .8em .95em; }
+    .blk i { justify-self: start; }
+    .blk span { grid-column: 1; }
+    .shots { grid-template-columns: 1fr 1fr; }
+    .shots figure:nth-child(2) { margin: 0; border: 0; }
+  }
+
+  /* ---- 2b · teachers -------------------------------------------------------------------- */
+  .teachers { margin-top: var(--v-7); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--v-4); }
+  .tcard { padding: var(--v-5); border-radius: var(--v-radius); background: #fff; box-shadow: var(--v-e1); display: grid; gap: var(--v-3); align-content: start; }
+  .tcard__ph { position: relative; aspect-ratio: 1; border-radius: 14px; display: grid; place-items: center; overflow: hidden;
+    background: repeating-linear-gradient(135deg, rgb(21 33 59 / .04) 0 10px, transparent 10px 20px), #eef0f5; }
+  .tcard__ph b { width: 4.2rem; height: 4.2rem; border-radius: 50%; display: grid; place-items: center; background: var(--c); color: #fff; font-family: var(--v-font-display); font-size: 1.4rem; }
+  .tcard__ph small { position: absolute; bottom: .7em; font-size: .72rem; color: var(--v-ink-soft); }
+  .tcard h3 { margin: 0; font-family: var(--v-font-display); font-weight: 800; font-size: var(--v-t-lg); letter-spacing: -.02em; line-height: 1.1; }
+  .tcard__role { font-size: var(--v-t-xs); font-weight: 600; color: var(--v-accent-deep); }
+  .tcard p { font-size: var(--v-t-sm); color: var(--v-ink-soft); line-height: 1.45; }
+  @media (max-width: 1000px) { .teachers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 520px) {
+    .teachers { grid-template-columns: 1fr; }
+    .tcard { grid-template-columns: 5.5rem minmax(0, 1fr); column-gap: var(--v-4); }
+    .tcard__ph { grid-row: span 3; }
+    .tcard__ph b { width: 3rem; height: 3rem; font-size: 1.05rem; }
+    .tcard__ph small { display: none; }
+  }
+
+  /* ---- 2c · pricing --------------------------------------------------------------------- */
+  .prices { margin-top: var(--v-7); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--v-4); max-width: 60rem; }
+  .price { position: relative; padding: var(--v-6); border-radius: var(--v-radius); background: #fff; box-shadow: var(--v-e1); display: flex; flex-direction: column; }
+  .price--free { background: var(--v-ink); color: #fff; }
+  .price h3 { margin: 0; font-size: var(--v-t-base); font-weight: 600; }
+  .price__sum { margin-top: var(--v-3); font-family: var(--v-font-display); font-weight: 800; font-size: clamp(2.4rem, 1.8rem + 2vw, 3.4rem); letter-spacing: -.04em; line-height: 1; }
+  .price--free .price__sum { color: var(--v-accent); }
+  .price__per { font-size: var(--v-t-sm); opacity: .75; margin-left: .2em; font-family: var(--v-font-text); font-weight: 500; letter-spacing: 0; }
+  .price ul { margin-top: var(--v-5); display: grid; gap: .55em; font-size: var(--v-t-sm); }
+  .price li { display: flex; gap: .6em; align-items: baseline; }
+  .price li::before { content: ""; flex: none; width: .55em; height: .55em; border-radius: 2px; background: var(--b-test); transform: translateY(-.05em); }
+  .price--free li::before { background: var(--v-accent); }
+  .price .v-btn { margin-top: auto; align-self: flex-start; }
+  .price ul + .v-btn { margin-top: var(--v-6); }
+  @media (max-width: 700px) { .prices { grid-template-columns: 1fr; } .price .v-btn { align-self: stretch; justify-content: center; } }
+
+  /* ---- 2d · location + contact ----------------------------------------------------------- */
+  .visit { position: relative; margin-top: var(--v-7); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: var(--v-5); align-items: stretch; }
+  .map { position: relative; min-height: 22rem; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); background: #e7eaf0; }
+  .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .contact { padding: var(--v-6); border-radius: var(--v-radius); background: #fff; box-shadow: var(--v-e1); display: flex; flex-direction: column; gap: var(--v-5); }
+  .contact h3 { margin: 0; font-family: var(--v-font-display); font-weight: 800; font-size: var(--v-t-xl); letter-spacing: -.03em; line-height: 1.05; }
+  .contact dl { margin: 0; }
+  .contact dl div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: var(--v-3); padding: .7em 0; border-top: 1px solid var(--v-hair); font-size: var(--v-t-sm); }
+  .contact dt { color: var(--v-ink-soft); }
+  .contact dd { margin: 0; font-weight: 500; }
+  .contact__btns { display: flex; flex-wrap: wrap; gap: var(--v-3); margin-top: auto; }
+  .v-page .v-btn--line { background: transparent; color: var(--v-ink); box-shadow: inset 0 0 0 2px var(--v-ink); }
+  .final { position: relative; margin-top: var(--v-8); padding: var(--v-8) var(--v-7); border-radius: 28px; overflow: hidden; color: #fff; background: var(--v-ink); }
+  .final__bg { position: absolute; inset: 0; }
+  .final__bg img { width: 100%; height: 100%; object-fit: cover; opacity: .32; }
+  .final__bg::after { content: ""; position: absolute; inset: 0; background: radial-gradient(42rem 26rem at calc(var(--v-mx, .3) * 100%) calc(var(--v-my, .4) * 100%), rgb(255 201 20 / .22), transparent 60%), linear-gradient(to right, rgb(21 33 59 / .92), rgb(21 33 59 / .55)); }
+  .final > div:last-child { position: relative; max-width: 36rem; }
+  .final .v-display { color: #fff; font-size: var(--v-t-3xl); }
+  .final p { margin-top: var(--v-4); color: rgb(255 255 255 / .86); max-width: 40ch; }
+  .final .v-btn { margin-top: var(--v-6); padding: .95em 1.5em; font-size: var(--v-t-base); }
+  .foot { margin-top: var(--v-7); padding: var(--v-6) 0 calc(var(--v-6) + env(safe-area-inset-bottom)); border-top: 1px solid var(--v-hair); display: flex; flex-wrap: wrap; gap: var(--v-2) var(--v-6); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .foot span:last-child { flex-basis: 100%; }
+  @media (max-width: 860px) {
+    .visit { grid-template-columns: 1fr; }
+    .map { min-height: 18rem; }
+    .contact { padding: var(--v-5); }
+    .final { padding: var(--v-7) var(--v-5); }
+    .final .v-btn { width: 100%; justify-content: center; }
+    .foot { padding-bottom: calc(5.5rem + env(safe-area-inset-bottom)); }
+  }
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="logo" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="8" width="24" height="19" rx="6" fill="#15213b"/><circle cx="12" cy="17" r="3" fill="#ffc914"/><circle cx="20" cy="17" r="3" fill="#ffc914"/><path d="M12 23h8" stroke="#ffc914" stroke-width="2" stroke-linecap="round"/><path d="M16 8V3" stroke="#15213b" stroke-width="2.4"/><circle cx="16" cy="3" r="2.4" fill="#ff6b4a"/></svg>Gearbox Kids
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#learn">What Kids Learn</a>
+      <a href="#teachers">Teachers</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#location">Location</a>
+    </nav>
+    <a class="v-btn" data-wa="header" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg><span class="bar__long">Book a FREE Trial Class</span><span class="bar__short">Book FREE Trial</span></a>
+  </header>
+
+  <main>
+
+    <!-- 1 · FIRST SCREEN: kids building a robot, offer and WhatsApp button above the fold -->
+    <section id="top" data-v-act="pin" data-v-span="1.6" data-v-drift="#f7f6f2" aria-label="Robotics classes for kids in Austin">
+      <div data-v-stage>
+        <div class="v-layer hero__back" data-v-parallax="-0.5">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+            <img src="assets/hero.webp" alt="Two kids building a small robot from colourful bricks in a bright classroom" width="1920" height="1080" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="hero__col" aria-hidden="true"></div>
+
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.8 0">
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Build Robots.<br> Learn to Code.<br> Have Fun!</h1>
+          <p class="v-lede">Hands-on robotics and engineering classes for kids ages 6–10 in Austin, TX.</p>
+          <p class="free">First Class FREE!</p>
+          <div class="hero__cta">
+            <a class="v-btn" data-wa="hero" href="#contact" data-v-magnet="0.2" data-v-rise="0"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>Book a FREE Trial Class</a>
+            <a class="hero__where" href="#location"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>North Austin, Austin, TX</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2a · WHAT KIDS WILL LEARN: a program of snap-together blocks (signature) -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f7f6f2" id="learn" aria-label="What kids will learn">
+      <div class="v-wrap">
+        <div class="sec-head" data-v-in data-v-stagger="60">
+          <span class="v-label">What Kids Will Learn</span>
+          <h2 class="v-display v-display--lg">Every class is a little program they run themselves</h2>
+          <p>Kids build a real robot, write the code that makes it move, test it, fix it – and leave with something they invented.</p>
+        </div>
+        <div class="learn">
+          <div class="prog" id="prog" role="list" aria-label="A typical class, as a program">
+            <p class="prog__cap" aria-hidden="true">a typical class, the way kids code it</p>
+            <div class="blk blk--hat" role="listitem"><i>when</i><b>Class starts</b><span>Welcome, a quick challenge and today’s mission</span></div>
+            <div class="blk blk--build" role="listitem"><i>build</i><b>Robots with LEGO WeDo &amp; Arduino</b><span>Motors, sensors, gears and real electronics</span></div>
+            <div class="blk blk--code" role="listitem"><i>code</i><b>Programming basics</b><span>Block coding first, then real Arduino code for older kids</span></div>
+            <div class="blk blk--test" role="listitem"><i>test</i><b>Engineering thinking</b><span>Try it, measure it, find the bug, make it better</span></div>
+            <div class="blk blk--make" role="listitem"><i>invent</i><b>Creativity &amp; problem-solving</b><span>Kids design their own robot for a real-life problem</span></div>
+          </div>
+          <div class="shots" data-v-in data-v-stagger="80">
+            <figure><img src="assets/arduino.webp" alt="A child plugs a wire into a breadboard with a glowing LED" width="1200" height="900" loading="lazy"><figcaption>Arduino: real electronics</figcaption></figure>
+            <figure><img src="assets/wedo.webp" alt="A child watches the brick robot they built spin its fan" width="1200" height="900" loading="lazy"><figcaption>WeDo: build, code, play</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2b · MEET OUR TEACHERS: uniform compact cards, placeholders until real photos and bios -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f7f6f2" id="teachers" aria-label="Meet our teachers">
+      <div class="v-wrap">
+        <div class="sec-head" data-v-in data-v-stagger="60">
+          <span class="v-label">Meet Our Teachers</span>
+          <h2 class="v-display v-display--lg">Engineers and educators who love kids’ questions</h2>
+        </div>
+        <ul class="teachers" data-v-in data-v-stagger="60">
+          <li class="tcard"><div class="tcard__ph" style="--c:#3d7bff"><b>MR</b></div><h3>Maya R.</h3><span class="tcard__role">Robotics &amp; LEGO WeDo</span><p>Mechanical engineer turned teacher. Six years running LEGO-based robotics clubs for kids 6–10.</p></li>
+          <li class="tcard"><div class="tcard__ph" style="--c:#8b5cf6"><b>DK</b></div><h3>Daniel K.</h3><span class="tcard__role">Coding &amp; Arduino</span><p>Software developer who teaches Arduino and first real code. Loves turning bugs into “aha” moments.</p></li>
+          <li class="tcard"><div class="tcard__ph" style="--c:#1fae7a"><b>PS</b></div><h3>Priya S.</h3><span class="tcard__role">Engineering &amp; design</span><p>Product designer with an engineering degree. Leads the invent-your-own-robot projects.</p></li>
+          <li class="tcard"><div class="tcard__ph" style="--c:#ff6b4a"><b>LM</b></div><h3>Lucas M.</h3><span class="tcard__role">Early STEM, ages 6–7</span><p>Early-childhood educator with a STEM certificate. Makes first robots easy for 6–7-year-olds.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2c · PRICING: first class free, then regular classes -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f7f6f2" id="pricing" aria-label="Pricing">
+      <div class="v-wrap">
+        <div class="sec-head" data-v-in data-v-stagger="60">
+          <span class="v-label">Pricing</span>
+          <h2 class="v-display v-display--lg">Try it free. Stay if they love it.</h2>
+        </div>
+        <div class="prices" data-v-in data-v-stagger="70">
+          <div class="price price--free">
+            <h3>Trial class</h3>
+            <div class="price__sum">FREE</div>
+            <ul>
+              <li>A full class with a real robot to build</li>
+              <li>Meet the teacher and see the classroom</li>
+              <li>No payment details, no commitment</li>
+            </ul>
+            <a class="v-btn" data-wa="pricing" href="#contact">Book a FREE Trial Class</a>
+          </div>
+          <div class="price">
+            <h3>Regular classes</h3>
+            <div class="price__sum">$35<span class="price__per">/ class</span></div>
+            <ul>
+              <li>1 class a week, 60 minutes</li>
+              <li>Small groups by age: 6–7 and 8–10</li>
+              <li>All kits and parts included</li>
+              <li>Monthly plan: 4 classes for $120</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2d · LOCATION + CONTACT: map, directions, WhatsApp, phone, repeat CTA -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f7f6f2" id="location" aria-label="Location and contact" data-v-spotlight>
+      <div class="v-wrap">
+        <div class="sec-head" data-v-in data-v-stagger="60">
+          <span class="v-label">Location &amp; Contact</span>
+          <h2 class="v-display v-display--lg">Come see the robots</h2>
+        </div>
+        <div class="visit" data-v-in data-v-stagger="70">
+          <div class="map">
+            <!-- demo: Austin, TX; on the real site – the school's exact address -->
+            <iframe src="https://maps.google.com/maps?q=Austin%2C%20TX&amp;z=12&amp;output=embed" title="School location on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="contact" id="contact">
+            <h3>Questions? Text us on WhatsApp</h3>
+            <dl>
+              <div><dt>Address</dt><dd>1200 Example Ave, Austin, TX 78758</dd></div>
+              <div><dt>WhatsApp</dt><dd><a data-wa="contact-number" href="#contact">+1 (512) 555-0100</a></dd></div>
+              <div><dt>Phone</dt><dd><a href="tel:+15125550100">+1 (512) 555-0100</a></dd></div>
+              <div><dt>Classes</dt><dd>Mon–Fri 3:30–7 pm, Sat 10 am–2 pm</dd></div>
+            </dl>
+            <div class="contact__btns">
+              <a class="v-btn" data-wa="contact" href="#contact">Book a FREE Trial Class</a>
+              <a class="v-btn v-btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Austin%2C%20TX" target="_blank" rel="noopener">Get Directions</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="final" data-v-in>
+          <div class="final__bg" aria-hidden="true"><img src="assets/class.webp" alt="" width="1600" height="900" loading="lazy"></div>
+          <div>
+            <h2 class="v-display v-display--lg">Their first robot is one message away</h2>
+            <p>Send us a WhatsApp message – we’ll find a trial time that works for your family.</p>
+            <a class="v-btn" data-wa="final" href="#contact" data-v-magnet="0.2" data-v-rise="0">Book a FREE Trial Class</a>
+          </div>
+        </div>
+
+        <footer class="foot">
+          <span>© 2026 Gearbox Kids, Austin, TX</span>
+          <a href="#">Privacy Policy</a>
+          <span>Portfolio demo: the school, teachers, prices and contacts are fictional; photos are AI-generated.</span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="dock" id="dock">
+    <a class="v-btn" data-wa="mobile-dock" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>Book a FREE Trial Class</a>
+  </div>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  if (window.matchMedia('(max-width: 860px)').matches) document.getElementById('top').setAttribute('data-v-span', '1.4');
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // WhatsApp: every button opens a chat with a ready-made message.
+  // WA_NUMBER – the school's number in international format, digits only (demo: fictional 555-01xx number).
+  var WA_NUMBER = '15125550100';
+  var WA_TEXT = "Hi! I'd like to book a FREE trial robotics class for my child (age __). What times are available?";
+  (function () {
+    var href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(WA_TEXT);
+    document.querySelectorAll('[data-wa]').forEach(function (a) {
+      a.href = href; a.target = '_blank'; a.rel = 'noopener';
+      // Click tracking: GA4 event (gtag) and a dataLayer event for Google Tag Manager, with the button's place on the page.
+      a.addEventListener('click', function () {
+        var where = a.getAttribute('data-wa');
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'whatsapp_click', cta_location: where });
+        if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_click', { cta_location: where });
+      });
+    });
+  })();
+
+  // Header backdrop after 40px; mobile WhatsApp dock after the first screen, hidden over the contact block.
+  (function () {
+    var bar = document.querySelector('.bar'), dock = document.getElementById('dock'), contact = document.getElementById('location'), on = null, d = null;
+    function tick() {
+      var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); }
+      var r = contact.getBoundingClientRect(), show = window.scrollY > window.innerHeight * .8 && r.top > window.innerHeight * .5;
+      if (show !== d) { d = show; dock.classList.toggle('is-on', show); }
+    }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+
+  // Signature: the program blocks snap into place one by one as the list scrolls into view, and stay.
+  (function () {
+    var blocks = [].slice.call(document.querySelectorAll('#prog .blk'));
+    if (!('IntersectionObserver' in window)) { blocks.forEach(function (b) { b.classList.add('is-in'); }); return; }
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var i = blocks.indexOf(e.target);
+        setTimeout(function () { e.target.classList.add('is-in'); }, 90 * Math.max(0, i - blocks.filter(function (b) { return b.classList.contains('is-in'); }).length));
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px' });
+    blocks.forEach(function (b) { io.observe(b); });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Продажа самолётов с прозрачной историей – {{название}}</title>
+<meta name="description" content="Продажа бизнес-джетов, турбовинтовых и лёгких самолётов: проверенные документы, налёт и техобслуживание, подбор под ваши маршруты и сопровождение сделки до перегона.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Продажа самолётов с прозрачной историей">
+<meta property="og:description" content="Бизнес-джеты и лёгкие самолёты с проверенной историей. Подбор под ваши маршруты.">
+<meta property="og:url" content="{{ссылка-сайта}}">
+<meta property="og:image" content="{{ссылка-сайта}}/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230e1115%27/%3E%3Cpath d=%27M5 18l22-7-4 4 2 7-3 1-4-6-6 3 1 3-2 1-2-4-4-1z%27 fill=%27%23f0ede6%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"{{название}}","description":"Продажа самолётов: бизнес-джеты, турбовинтовые и лёгкие самолёты с проверенной историей.","url":"{{ссылка-сайта}}","image":"{{ссылка-сайта}}/assets/og.jpg","telephone":"{{телефон}}"}
+</script>
+<style>
+  /* ---- тема «ночной ангар»: графит, светлые кнопки, янтарь только у статусов и дальности ---- */
+  .v-page {
+    --v-canvas: #0e1115; --v-surface: #161b21;
+    --v-ink: #eceff2; --v-ink-soft: #9aa4ae;             /* 7,6:1 на фоне */
+    --v-accent: #f0ede6; --v-accent-ink: #0e1115;        /* светлая кнопка 16:1 */
+    --v-accent-deep: #e3a64a;
+    --amber: #e3a64a;
+    --v-font-display: "Oswald", "Arial Narrow", system-ui, sans-serif;
+    --v-font-text: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 500;
+    --v-track-tight: -0.005em;
+    --v-shadow-color: 0 0 0;
+    --v-radius: 6px;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --v-t-3xl: clamp(2.4rem, 1.6rem + 3vw, 4.4rem);
+    --v-section: clamp(3.5rem, 8vw, 7rem);
+  }
+  html, body { margin: 0; background: #0e1115; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  .v-page .v-display { line-height: 1.02; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
+  .v-page .v-lede { font-weight: 400; color: var(--v-ink); }
+  .v-page .v-label { font-weight: 500; letter-spacing: .02em; text-transform: none; font-size: var(--v-t-sm); color: var(--amber); }
+  .v-page .v-btn { font-size: var(--v-t-sm); font-weight: 600; }
+  .v-page button.v-btn { background: var(--v-accent); color: var(--v-accent-ink); }
+  .v-page .v-btn--line { background: transparent; color: var(--v-ink); box-shadow: inset 0 0 0 1px rgb(236 239 242 / .35); }
+  .v-page ol, .v-page ul { margin: 0; padding: 0; list-style: none; }
+  .slot { color: var(--amber); }
+  .v-page .head .v-label { display: block; margin-bottom: var(--v-3); }
+  .v-page .head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 46ch; text-wrap: pretty; }
+
+  /* ---- шапка ---- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter); background: rgb(14 17 21 / 0); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(14 17 21 / .86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgb(236 239 242 / .08); }
+  .bar__mark { font-family: var(--v-font-display); font-weight: 600; font-size: 1.15rem; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: .55em; min-height: 44px; white-space: nowrap; }
+  .bar__mark svg { width: 1.6em; height: 1.6em; flex: none; }
+  .nav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
+  .nav a { text-decoration: none; color: var(--v-ink-soft); display: inline-flex; align-items: center; min-height: 44px; transition: color .16s var(--v-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .nav a:hover { color: var(--v-ink); } }
+  .bar .v-btn { padding: .65em 1.2em; }
+  @media (max-width: 960px) { .nav { display: none; } }
+  @media (max-width: 520px) { .bar__mark { font-size: 1rem; } .bar .v-btn { padding: 0 .9em; min-height: 44px; } }
+
+  /* ---- плашка демо для заказчика (снимается перед сдачей) ---- */
+  .demo-for { display: inline-flex; align-items: center; gap: .6em; max-width: 100%; margin-bottom: var(--v-5); padding: .35em .95em .35em .4em;
+    border-radius: 999px; background: rgb(22 27 33 / .82); box-shadow: inset 0 0 0 1px rgb(236 239 242 / .14); font-size: var(--v-t-xs); line-height: 1.35; color: var(--v-ink); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  .demo-for img { width: 30px; height: 30px; border-radius: 50%; flex: none; object-fit: cover; }
+  .demo-for a { color: var(--amber); font-weight: 500; }
+
+  /* ---- 1 · hero ---- */
+  .hero__back img { position: absolute; max-width: none; width: 108%; height: 110%; left: -2%; top: -5%; object-fit: cover; object-position: 66% 55%; }
+  .hero__col { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to right, rgb(14 17 21 / .9) 0%, rgb(14 17 21 / .6) 36%, transparent 62%); }
+  .hero__copy { top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-top: 3.5rem; max-width: min(40rem, 48vw); }
+  .hero__copy .v-display { font-size: clamp(2.8rem, 1.5rem + 4vw, 5.6rem); max-width: 12ch; }
+  .hero__copy .v-lede { margin-top: var(--v-5); max-width: 40ch; }
+  .hero__specs { display: flex; flex-wrap: wrap; gap: var(--v-5); margin-top: var(--v-6); }
+  .hero__specs div { display: grid; gap: .1em; padding-left: var(--v-3); border-left: 1px solid rgb(236 239 242 / .25); }
+  .hero__specs b { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); letter-spacing: .02em; }
+  .hero__specs span { font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-6); margin-top: var(--v-6); }
+  .hero__more { color: var(--v-ink); font-size: var(--v-t-sm); display: inline-flex; align-items: center; min-height: 44px; }
+  @media (max-width: 860px) {
+    .hero__back img { width: 104%; height: 104%; left: -2%; top: -2%; object-position: 50% 100%; }
+    .hero__col { background: linear-gradient(to bottom, rgb(14 17 21 / .92) 0%, rgb(14 17 21 / .65) 50%, transparent 74%); }
+    .hero__copy { top: clamp(4.4rem, 9vh, 5.4rem); bottom: auto; display: block; padding-top: 0; max-width: none; }
+    .demo-for { margin-bottom: var(--v-3); }
+    .hero__copy .v-display { font-size: clamp(2.3rem, 1.4rem + 5vw, 3.1rem); }
+    .hero__copy .v-lede { font-size: var(--v-t-sm); margin-top: var(--v-3); }
+    .hero__specs { display: none; }
+    .hero__cta { margin-top: var(--v-4); gap: 0 var(--v-5); }
+  }
+
+  /* ---- 2 · каталог ---- */
+  .cat__top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--v-5); }
+  .filters { display: flex; flex-wrap: wrap; gap: var(--v-2); }
+  .v-page .fbtn { font: inherit; font-size: var(--v-t-sm); min-height: 42px; padding: 0 1em; border-radius: 999px; border: 0; background: transparent; color: var(--v-ink-soft); box-shadow: inset 0 0 0 1px rgb(236 239 242 / .2); cursor: pointer; transition: background-color .16s var(--v-ease-out), color .16s var(--v-ease-out); }
+  .v-page .fbtn[aria-pressed="true"] { background: var(--v-accent); color: var(--v-accent-ink); box-shadow: none; }
+  @media (hover: hover) and (pointer: fine) { .v-page .fbtn:hover { color: var(--v-ink); } .v-page .fbtn[aria-pressed="true"]:hover { color: var(--v-accent-ink); } }
+  .cards { margin-top: var(--v-6); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--v-5); }
+  .card { display: flex; flex-direction: column; border-radius: var(--v-radius); background: var(--v-surface); overflow: hidden; box-shadow: inset 0 0 0 1px rgb(236 239 242 / .06); transition: transform .2s var(--v-ease-out), box-shadow .2s var(--v-ease-out); }
+  .card[hidden] { display: none; }
+  @media (hover: hover) and (pointer: fine) { .card:hover { transform: translateY(-3px); box-shadow: inset 0 0 0 1px rgb(236 239 242 / .16); } }
+  .card__ph { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #1c2229; }
+  .card__ph img { width: 100%; height: 100%; object-fit: cover; }
+  .card__st { position: absolute; left: var(--v-3); top: var(--v-3); padding: .25em .7em; border-radius: 999px; font-size: var(--v-t-xs); font-weight: 500; background: rgb(14 17 21 / .78); color: var(--amber); }
+  .card__body { padding: var(--v-5); display: flex; flex-direction: column; flex: 1; }
+  .card__type { font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .card h3 { margin: .2em 0 0; font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); letter-spacing: .02em; text-transform: uppercase; line-height: 1.15; }
+  .card dl { margin: var(--v-4) 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--v-3) var(--v-4); }
+  .card dl div { display: grid; gap: .1em; }
+  .card dt { font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .card dd { margin: 0; font-weight: 500; font-variant-numeric: tabular-nums; }
+  .card__foot { margin-top: auto; padding-top: var(--v-5); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--v-3); }
+  .card__price { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-xl); letter-spacing: .02em; }
+  .card__price small { display: block; font-family: var(--v-font-text); font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: 0; }
+  .card__btns { display: flex; gap: var(--v-2); }
+  .v-page .card .v-btn { padding: .6em 1em; font-size: var(--v-t-xs); }
+  .v-page .rangebtn { font: inherit; font-size: var(--v-t-xs); min-height: 40px; padding: 0 .9em; border: 0; border-radius: 999px; background: transparent; color: var(--amber); box-shadow: inset 0 0 0 1px rgb(227 166 74 / .5); cursor: pointer; }
+  .v-page .cat__note { margin-top: var(--v-5); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  @media (max-width: 1000px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 620px) { .cards { grid-template-columns: 1fr; } }
+
+  /* ---- 3 · куда долетит (фирменный ход) ---- */
+  .reach { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: var(--v-7) var(--v-8); align-items: center; }
+  .picks { margin-top: var(--v-6); display: grid; gap: var(--v-2); }
+  .v-page .pick { font: inherit; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: var(--v-4); width: 100%; min-height: 48px; padding: .7em 1em; border: 0; border-radius: var(--v-radius);
+    background: transparent; color: var(--v-ink-soft); text-align: left; cursor: pointer; box-shadow: inset 0 0 0 1px rgb(236 239 242 / .12); transition: background-color .16s var(--v-ease-out), color .16s var(--v-ease-out); }
+  .pick b { font-weight: 500; }
+  .pick span { font-family: var(--v-font-display); font-weight: 500; letter-spacing: .03em; font-variant-numeric: tabular-nums; }
+  .v-page .pick[aria-pressed="true"] { background: var(--v-surface); color: var(--v-ink); box-shadow: inset 2px 0 0 var(--amber), inset 0 0 0 1px rgb(236 239 242 / .14); }
+  .v-page .pick[aria-pressed="true"] span { color: var(--amber); }
+  @media (hover: hover) and (pointer: fine) { .v-page .pick:hover { color: var(--v-ink); } }
+  .v-page .reach__out { margin-top: var(--v-5); min-height: 3.2em; color: var(--v-ink-soft); font-size: var(--v-t-sm); text-wrap: pretty; }
+  .reach__out b { color: var(--v-ink); font-weight: 500; }
+  .radar { position: relative; }
+  .radar svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .radar .ring { fill: none; stroke: rgb(236 239 242 / .1); }
+  .radar .ring-t { fill: rgb(236 239 242 / .35); font: 500 15px var(--v-font-text); }
+  .radar .axis { stroke: rgb(236 239 242 / .06); }
+  .radar .zone { fill: rgb(227 166 74 / .1); stroke: var(--amber); stroke-width: 2; stroke-dasharray: 6 6; transition: r .6s var(--v-ease-out); }
+  .radar .city circle { fill: rgb(236 239 242 / .25); transition: fill .3s var(--v-ease-out), r .3s var(--v-ease-out); }
+  .radar .city text { fill: rgb(236 239 242 / .38); font: 500 16px var(--v-font-text); transition: fill .3s var(--v-ease-out); }
+  .radar .city.is-in circle { fill: var(--amber); }
+  .radar .city.is-in text { fill: var(--v-ink); }
+  .radar .home { fill: var(--v-ink); }
+  .radar .home-t { fill: var(--v-ink); font: 600 17px var(--v-font-text); }
+  @media (prefers-reduced-motion: reduce) { .radar .zone { transition: none; } }
+  @media (max-width: 620px) { .radar .city text { font-size: 24px; } .radar .ring-t { font-size: 20px; } .radar .home-t { font-size: 24px; } }
+  .v-page .radar__note { margin-top: var(--v-3); font-size: var(--v-t-xs); color: var(--v-ink-soft); text-align: right; }
+  @media (max-width: 900px) { .reach { grid-template-columns: 1fr; } .radar { order: -1; } }
+
+  /* ---- 4 · как проходит покупка ---- */
+  .v-page .steps { margin-top: var(--v-7); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--v-5); counter-reset: st; }
+  .steps li { padding-top: var(--v-5); border-top: 1px solid rgb(236 239 242 / .18); counter-increment: st; }
+  .steps li::before { content: "0" counter(st); display: block; font-family: var(--v-font-display); font-size: var(--v-t-lg); color: var(--amber); letter-spacing: .04em; margin-bottom: var(--v-3); }
+  .steps b { display: block; font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); text-transform: uppercase; letter-spacing: .02em; line-height: 1.15; }
+  .steps p { margin-top: var(--v-2); color: var(--v-ink-soft); font-size: var(--v-t-sm); text-wrap: pretty; }
+  @media (max-width: 900px) { .v-page .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--v-6); } }
+  @media (max-width: 520px) { .v-page .steps { grid-template-columns: 1fr; } }
+
+  /* ---- 5 · заявка ---- */
+  .book { position: relative; background: radial-gradient(52rem 32rem at calc(var(--v-mx, .3) * 100%) calc(var(--v-my, .3) * 100%), rgb(227 166 74 / .07), transparent 62%); }
+  .book__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--v-7) var(--v-9); align-items: start; }
+  .book__grid .v-display { max-width: 12ch; }
+  .v-page .book dl { margin: var(--v-6) 0 0; }
+  .book dl div { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: var(--v-3); padding: .7em 0; border-top: 1px solid rgb(236 239 242 / .1); font-size: var(--v-t-sm); }
+  .book dt { color: var(--v-ink-soft); }
+  .book dd { margin: 0; }
+  .form { display: grid; gap: var(--v-4); padding: var(--v-6); border-radius: var(--v-radius); background: var(--v-surface); box-shadow: inset 0 0 0 1px rgb(236 239 242 / .08); }
+  .field { display: grid; gap: var(--v-1); }
+  .field > span, .form legend { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .field input, .field select, .field textarea { font: inherit; color: var(--v-ink); background: #0e1115; border: 1px solid rgb(236 239 242 / .18); border-radius: var(--v-radius); padding: .75em 1em; min-height: 48px; width: 100%;
+    transition: border-color .16s var(--v-ease-out), box-shadow .16s var(--v-ease-out); }
+  .field textarea { min-height: 5rem; resize: vertical; }
+  .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: none; border-color: var(--amber); box-shadow: 0 0 0 3px rgb(227 166 74 / .18); }
+  .consent { display: flex; gap: .6em; align-items: flex-start; font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .consent input { margin-top: .2em; width: 1.05rem; height: 1.05rem; accent-color: var(--amber); flex: none; }
+  .form .v-btn { justify-self: start; }
+  .form__done { display: none; padding: var(--v-6); border-radius: var(--v-radius); background: var(--v-surface); }
+  .form__done b { display: block; font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-xl); text-transform: uppercase; margin-bottom: var(--v-3); }
+  .form__done p { color: var(--v-ink-soft); }
+  .form__done small { display: block; margin-top: var(--v-4); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .book.is-sent .form { display: none; }
+  .book.is-sent .form__done { display: block; }
+  .foot { margin-top: var(--v-9); padding: var(--v-6) 0 calc(var(--v-6) + env(safe-area-inset-bottom)); border-top: 1px solid rgb(236 239 242 / .1); display: flex; flex-wrap: wrap; gap: var(--v-2) var(--v-6); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  @media (max-width: 860px) { .book__grid { grid-template-columns: 1fr; } .form { padding: var(--v-5); } .form .v-btn { justify-self: stretch; justify-content: center; } }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__mark" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1c2229"/><path d="M5 18l22-7-4 4 2 7-3 1-4-6-6 3 1 3-2 1-2-4-4-1z" fill="#f0ede6"/></svg>{{название}}
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#samolety">Самолёты</a>
+      <a href="#dalnost">Куда долетит</a>
+      <a href="#pokupka">Как купить</a>
+      <a href="#zayavka">Контакты</a>
+    </nav>
+    <a class="v-btn" href="#zayavka">Подобрать самолёт</a>
+  </header>
+
+  <main>
+
+    <!-- 1 · ПЕРВЫЙ ЭКРАН: бизнес-джет на перроне в сумерках -->
+    <section id="top" data-v-act="pin" data-v-span="1.6" data-v-drift="#0e1115" aria-label="Продажа самолётов">
+      <div data-v-stage>
+        <div class="v-layer hero__back" data-v-parallax="-0.5">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+            <img src="assets/hero.webp" alt="Бизнес-джет на мокром перроне в сумерках, в салоне горит свет" width="1920" height="1080" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="hero__col" aria-hidden="true"></div>
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.8 0">
+          <!-- плашка демо для заказчика: убрать перед сдачей -->
+          <p class="demo-for"><img src="assets/zakazchik.jpg" alt="" width="30" height="30">Демо для Дмитрия · по заказу <a href="https://kwork.ru/projects/3267188/view" target="_blank" rel="noopener">«Лендинг с дизайном нейросетей»</a></p>
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Продажа самолётов с прозрачной историей</h1>
+          <p class="v-lede">Бизнес-джеты, турбовинтовые и лёгкие самолёты: проверенные документы, налёт и техобслуживание – и сопровождение сделки до перегона.</p>
+          <div class="hero__specs" aria-label="Коротко">
+            <div><b>Проверка</b><span>документы и налёт</span></div>
+            <div><b>Подбор</b><span>под ваши маршруты</span></div>
+            <div><b>Перегон</b><span>до вашего аэродрома</span></div>
+          </div>
+          <div class="hero__cta">
+            <a class="v-btn" href="#zayavka" data-v-magnet="0.2" data-v-rise="0">Подобрать самолёт</a>
+            <a class="hero__more" href="#samolety">Смотреть самолёты</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · КАТАЛОГ: фильтр по типу и карточки бортов -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#0e1115" id="samolety" aria-label="Самолёты в продаже">
+      <div class="v-wrap">
+        <div class="cat__top" data-v-in data-v-stagger="60">
+          <div class="head">
+            <span class="v-label">Сейчас в продаже</span>
+            <h2 class="v-display v-display--lg">Самолёты</h2>
+          </div>
+          <div class="filters" role="group" aria-label="Тип самолёта">
+            <button type="button" class="fbtn" data-f="all" aria-pressed="true">Все</button>
+            <button type="button" class="fbtn" data-f="jet" aria-pressed="false">Бизнес-джеты</button>
+            <button type="button" class="fbtn" data-f="turbo" aria-pressed="false">Турбовинтовые</button>
+            <button type="button" class="fbtn" data-f="piston" aria-pressed="false">Поршневые</button>
+          </div>
+        </div>
+        <ul class="cards" id="cards" data-v-in data-v-stagger="60"></ul>
+        <p class="cat__note">В демо борта и цифры условные, фото созданы нейросетью. На сайте – ваши самолёты и ваши фото, обработанные в том же стиле.</p>
+      </div>
+    </section>
+
+    <!-- 3 · КУДА ДОЛЕТИТ БЕЗ ПОСАДКИ: круг дальности от Москвы (фирменный ход) -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#0e1115" id="dalnost" aria-label="Куда долетит без посадки">
+      <div class="v-wrap reach">
+        <div class="head" data-v-in data-v-stagger="60">
+          <span class="v-label">Дальность</span>
+          <h2 class="v-display v-display--lg">Куда долетит без посадки из Москвы</h2>
+          <p>Выберите самолёт – круг покажет его дальность, а города внутри круга загорятся.</p>
+          <div class="picks" id="picks" role="group" aria-label="Самолёт"></div>
+          <p class="reach__out" id="reach-out" aria-live="polite"></p>
+        </div>
+        <div class="radar" data-v-in>
+          <svg viewBox="-330 -330 660 660" id="radar" role="img" aria-label="Схема дальности полёта от Москвы"></svg>
+          <p class="radar__note">Расстояния по прямой от Москвы, примерные. Реальная дальность зависит от загрузки и погоды.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · КАК ПРОХОДИТ ПОКУПКА -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#0e1115" id="pokupka" aria-label="Как проходит покупка">
+      <div class="v-wrap">
+        <div class="head" data-v-in>
+          <span class="v-label">Как купить</span>
+          <h2 class="v-display v-display--lg">От первого звонка до перегона</h2>
+        </div>
+        <ol class="steps" data-v-in data-v-stagger="70">
+          <li><b>Подбор</b><p>Обсуждаем, откуда и куда летать, сколько пассажиров и бюджет – предлагаем подходящие борта.</p></li>
+          <li><b>Проверка</b><p>Документы, история налёта и обслуживания, предпокупочная инспекция в сертифицированном центре.</p></li>
+          <li><b>Сделка</b><p>Договор, расчёты через <span class="slot">{{эскроу / аккредитив}}</span>, переоформление и регистрация.</p></li>
+          <li><b>Перегон</b><p>Доставляем самолёт на ваш аэродром и помогаем с экипажем и базированием.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 5 · ЗАЯВКА -->
+    <section class="v-section book" data-v-act="flow" data-v-drift="#0e1115" id="zayavka" aria-label="Заявка" data-v-spotlight>
+      <div class="v-wrap">
+        <div class="book__grid">
+          <div class="head" data-v-in data-v-stagger="60">
+            <span class="v-label">Заявка</span>
+            <h2 class="v-display v-display--lg">Подберём самолёт под ваши задачи</h2>
+            <p>Расскажите, куда и сколько планируете летать – пришлём подходящие борта с документами. Конфиденциально.</p>
+            <dl>
+              <div><dt>Телефон</dt><dd><a href="tel:{{телефон}}">{{телефон}}</a></dd></div>
+              <div><dt>Telegram</dt><dd><a href="{{ссылка-telegram}}">{{ник}}</a></dd></div>
+              <div><dt>WhatsApp</dt><dd><a href="{{ссылка-whatsapp}}">{{номер}}</a></dd></div>
+              <div><dt>Почта</dt><dd><a href="mailto:{{почта}}">{{почта}}</a></dd></div>
+            </dl>
+          </div>
+          <div>
+            <form class="form" id="form" novalidate data-v-in data-v-stagger="40">
+              <label class="field"><span>Как к вам обращаться</span><input name="name" autocomplete="name" required></label>
+              <label class="field"><span>Телефон или Telegram</span><input name="contact" autocomplete="tel" required></label>
+              <label class="field"><span>Интересует</span><select name="plane" id="plane-select"><option value="">Помогите подобрать</option></select></label>
+              <label class="field"><span>Типичные маршруты и число пассажиров – если знаете</span><textarea name="note" rows="3" placeholder="Например: Москва – Сочи – Дубай, до 6 человек"></textarea></label>
+              <label class="consent"><input type="checkbox" name="consent" required><span>Согласен(на) на обработку персональных данных по <a href="{{ссылка-политики}}">политике конфиденциальности</a></span></label>
+              <button class="v-btn" type="submit" data-v-magnet="0.2" data-v-rise="0">Подобрать самолёт</button>
+            </form>
+            <div class="form__done" role="status" aria-live="polite">
+              <b>Заявка получена</b>
+              <p>Свяжемся в течение <span class="slot">{{времени ответа}}</span> и пришлём подходящие борта.</p>
+              <small>В демо заявка никуда не уходит. На сайте она придёт на почту и в Telegram.</small>
+            </div>
+          </div>
+        </div>
+        <footer class="foot">
+          <span>{{название}} – продажа самолётов</span>
+          <span>{{юрлицо, ИНН}}</span>
+          <a href="{{ссылка-политики}}">Политика конфиденциальности</a>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // ДЕМО-ДАННЫЕ: борта условные. На сайте – самолёты заказчика (фото, год, налёт, места, дальность, цена).
+  var PLANES = [
+    { id: 'mid',   t: 'jet',    type: 'Бизнес-джет · средний', name: 'Средний бизнес-джет', img: 'mid-jet',   year: 2012, hours: '3 400 ч', seats: 8,  range: 4000, price: '$6,8 млн', st: 'В наличии' },
+    { id: 'light', t: 'jet',    type: 'Бизнес-джет · лёгкий',  name: 'Лёгкий бизнес-джет',  img: 'light-jet', year: 2016, hours: '1 850 ч', seats: 6,  range: 2400, price: '$4,2 млн', st: 'В наличии' },
+    { id: 'large', t: 'jet',    type: 'Бизнес-джет · дальний', name: 'Дальнемагистральный бизнес-джет', img: 'large-jet', year: 2010, hours: '5 200 ч', seats: 13, range: 9500, price: 'По запросу', st: 'Предпродажная проверка' },
+    { id: 'turbo', t: 'turbo',  type: 'Турбовинтовой',         name: 'Однодвигательный турбовинтовой', img: 'turboprop', year: 2018, hours: '1 100 ч', seats: 6,  range: 2900, price: '$3,1 млн', st: 'В наличии' },
+    { id: 'pist',  t: 'piston', type: 'Поршневой',             name: 'Четырёхместный поршневой', img: 'piston',    year: 2020, hours: '420 ч',   seats: 4,  range: 1200, price: '$0,45 млн', st: 'В наличии' }
+  ];
+  // Города: расстояние от Москвы по большому кругу (км, примерно) и направление (градусы от севера).
+  var CITIES = [
+    // [город, км, направление, сторона подписи (r/l), сдвиг подписи по вертикали]
+    ['Санкт-Петербург', 635, 322, 'l', -4], ['Сочи', 1360, 186, 'r', 2], ['Стамбул', 1755, 210, 'l', -6], ['Баку', 1920, 150, 'r', 0], ['Анталья', 2180, 200, 'l', 14],
+    ['Париж', 2480, 262, 'l', 0], ['Новосибирск', 2810, 72, 'r', 0], ['Алматы', 3100, 118, 'r', 0], ['Дубай', 3680, 165, 'r', 4], ['Владивосток', 6430, 58, 'l', -12], ['Нью-Йорк', 7500, 318, 'l', 0]
+  ];
+</script>
+<script src="vibe.js"></script>
+<script>
+  // Карточки собираются из PLANES до монтирования движка, чтобы появление сработало и для них.
+  (function () {
+    var ul = document.getElementById('cards'), sel = document.getElementById('plane-select'), km = function (n) { return n.toLocaleString('ru-RU') + ' км'; };
+    ul.innerHTML = PLANES.map(function (p) {
+      return '<li class="card" data-t="' + p.t + '"><div class="card__ph"><img src="assets/' + p.img + '.webp" alt="' + p.name + '" width="900" height="675" loading="lazy"><span class="card__st">' + p.st + '</span></div>' +
+        '<div class="card__body"><span class="card__type">' + p.type + '</span><h3>' + p.name + '</h3>' +
+        '<dl><div><dt>Год</dt><dd>' + p.year + '</dd></div><div><dt>Налёт</dt><dd>' + p.hours + '</dd></div><div><dt>Мест</dt><dd>' + p.seats + '</dd></div><div><dt>Дальность</dt><dd>' + km(p.range) + '</dd></div></dl>' +
+        '<div class="card__foot"><div class="card__price">' + p.price + '<small>' + (p.price === 'По запросу' ? 'конфиденциально' : 'цена борта') + '</small></div>' +
+        '<div class="card__btns"><button type="button" class="rangebtn" data-range="' + p.id + '">Дальность</button><a class="v-btn" href="#zayavka" data-plane="' + p.name + ', ' + p.year + '">Подробнее</a></div></div></div></li>';
+    }).join('');
+    PLANES.forEach(function (p) { var o = document.createElement('option'); o.textContent = p.name + ', ' + p.year; sel.appendChild(o); });
+  })();
+  if (window.matchMedia('(max-width: 860px)').matches) document.getElementById('top').setAttribute('data-v-span', '1.4');
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Шапка: подложка после 40 px.
+  (function () {
+    var bar = document.querySelector('.bar'), on = null;
+    function tick() { var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+
+  // Фильтр по типу и кнопка «Подробнее» – подставляет борт в заявку.
+  (function () {
+    var btns = document.querySelectorAll('.fbtn'), cards = document.querySelectorAll('.card'), sel = document.getElementById('plane-select');
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.getAttribute('data-f');
+        btns.forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+        cards.forEach(function (c) { c.hidden = !(f === 'all' || c.getAttribute('data-t') === f); });
+      });
+    });
+    document.getElementById('cards').addEventListener('click', function (e) {
+      var a = e.target.closest('[data-plane]'); if (a) sel.value = a.getAttribute('data-plane');
+    });
+  })();
+
+  // Фирменный ход «Куда долетит без посадки»: полярная схема от Москвы, радиус по корню из расстояния,
+  // чтобы ближние города не слипались. Круг выбранного самолёта = его дальность.
+  (function () {
+    var svg = document.getElementById('radar'), NS = 'http://www.w3.org/2000/svg', R = 290, MAX = 10000;
+    var r = function (d) { return R * Math.sqrt(d / MAX); };
+    function el(n, a, txt) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); if (txt) e.textContent = txt; svg.appendChild(e); return e; }
+    for (var a = 0; a < 360; a += 30) { var t = (a - 90) * Math.PI / 180; el('line', { class: 'axis', x1: 0, y1: 0, x2: (R * Math.cos(t)).toFixed(1), y2: (R * Math.sin(t)).toFixed(1) }); }
+    [1000, 3000, 6000, 10000].forEach(function (d) { el('circle', { class: 'ring', cx: 0, cy: 0, r: r(d).toFixed(1) }); el('text', { class: 'ring-t', x: 6, y: (-r(d) + 18).toFixed(1) }, d.toLocaleString('ru-RU') + ' км'); });
+    var zone = el('circle', { class: 'zone', cx: 0, cy: 0, r: 0 });
+    var cities = CITIES.map(function (c) {
+      var t = (c[2] - 90) * Math.PI / 180, x = r(c[1]) * Math.cos(t), y = r(c[1]) * Math.sin(t);
+      var g = document.createElementNS(NS, 'g'); g.setAttribute('class', 'city'); svg.appendChild(g);
+      var dot = document.createElementNS(NS, 'circle'); dot.setAttribute('cx', x.toFixed(1)); dot.setAttribute('cy', y.toFixed(1)); dot.setAttribute('r', 5); g.appendChild(dot);
+      var left = c[3] === 'l', tx = document.createElementNS(NS, 'text'); tx.setAttribute('x', (x + (left ? -10 : 10)).toFixed(1)); tx.setAttribute('y', (y + 5 + (c[4] || 0)).toFixed(1)); tx.setAttribute('text-anchor', left ? 'end' : 'start'); tx.textContent = c[0]; g.appendChild(tx);
+      return { g: g, d: c[1], name: c[0] };
+    });
+    el('circle', { class: 'home', cx: 0, cy: 0, r: 7 }); el('text', { class: 'home-t', x: 12, y: 22 }, 'Москва');
+    var picks = document.getElementById('picks'), out = document.getElementById('reach-out');
+    picks.innerHTML = PLANES.map(function (p) { return '<button type="button" class="pick" data-id="' + p.id + '" aria-pressed="false"><b>' + p.name + '</b><span>' + p.range.toLocaleString('ru-RU') + ' км</span></button>'; }).join('');
+    function choose(id) {
+      var p = PLANES.filter(function (x) { return x.id === id; })[0];
+      picks.querySelectorAll('.pick').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-id') === id); });
+      zone.setAttribute('r', r(p.range).toFixed(1));
+      var inside = [];
+      cities.forEach(function (c) { var ok = c.d <= p.range; c.g.classList.toggle('is-in', ok); if (ok) inside.push(c.name); });
+      out.innerHTML = '<b>' + p.name + '</b> – до ' + p.range.toLocaleString('ru-RU') + ' км без посадки. ' + (inside.length ? 'Долетит: ' + inside.join(', ') + '.' : '');
+    }
+    picks.addEventListener('click', function (e) { var b = e.target.closest('.pick'); if (b) choose(b.getAttribute('data-id')); });
+    document.getElementById('cards').addEventListener('click', function (e) {
+      var b = e.target.closest('[data-range]'); if (!b) return;
+      choose(b.getAttribute('data-range'));
+      document.getElementById('dalnost').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    });
+    choose('mid');
+  })();
+
+  // Форма: в демо заявка никуда не уходит.
+  (function () {
+    var form = document.getElementById('form'), box = document.getElementById('zayavka');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      box.classList.add('is-sent');
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>English with Adam Reed – личный наставник по английскому со своей командой</title>
+<meta name="description" content="Английский язык: личный наставник со своей командой. Когда нужен результат, а не очередные уроки – переезд, работа, переговоры, путешествия. Бесплатная вводная встреча и 3 пробных занятия.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="English with Adam Reed – ваш личный наставник со своей командой">
+<meta property="og:description" content="Когда нужен результат, а не очередные уроки.">
+<meta property="og:url" content="https://pavel-sites.github.io/english-portfolio">
+<meta property="og:image" content="https://pavel-sites.github.io/english-portfolio/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%232B2B2B%27/%3E%3Cpath d=%27M7 25 15 7h2l8 18h-4l-2-5h-6l-2 5zm7-8h4l-2-5z%27 fill=%27%2320B8B1%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<style>
+  /* ---- тема по ТЗ: тиффани #20B8B1, графит #2B2B2B, белый, светло-серый #F5F5F5 ---- */
+  .v-page {
+    --v-canvas: #ffffff; --v-surface: #ffffff;
+    --v-ink: #2b2b2b; --v-ink-soft: #5f6363;
+    --v-accent: #0f817c; --v-accent-ink: #ffffff;       /* кнопка на тон темнее тиффани: 4,7:1 */
+    --v-accent-deep: #0f817c;
+    --tif: #20b8b1; --tif-soft: #e6f7f6; --gray: #f5f5f5; --graph: #2b2b2b;
+    --v-font-display: "Oswald", "Bebas Neue", "Arial Narrow", system-ui, sans-serif;
+    --v-font-text: "Montserrat", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 600;
+    --v-track-tight: 0em;
+    --v-shadow-color: 43 43 43;
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .05), 0 8px 24px rgb(var(--v-shadow-color) / .07);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .07), 0 22px 54px rgb(var(--v-shadow-color) / .13);
+    --v-radius: 18px;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9rem, 0.87rem + 0.2vw, 0.97rem);
+    --v-t-3xl: clamp(2.4rem, 1.5rem + 3.4vw, 4.4rem);
+    --v-section: clamp(3.5rem, 8vw, 6.5rem);
+  }
+  html, body { margin: 0; background: #fff; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  .v-page .v-display { line-height: 1.04; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
+  .v-page .v-lede { font-weight: 500; }
+  .v-page .v-label { font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: var(--v-t-xs); color: var(--tif); }
+  .v-page .v-btn { font-size: var(--v-t-sm); font-weight: 700; letter-spacing: .03em; text-transform: uppercase; border-radius: 12px; gap: .6em; }
+  .v-page .v-btn svg { width: 1.1em; height: 1.1em; }
+  .v-page button.v-btn { background: var(--v-accent); color: var(--v-accent-ink); }
+  .v-page .v-btn--dark { background: var(--graph); color: #fff; }
+  .v-page ol, .v-page ul { margin: 0; padding: 0; list-style: none; }
+  .v-page .center { text-align: center; }
+  .v-page .sec-h { text-align: center; max-width: 52rem; margin: 0 auto; }
+  .v-page .sec-h p { margin: var(--v-4) auto 0; color: var(--v-ink-soft); max-width: 52ch; }
+  .accent { color: var(--tif); }
+  .gray { background: var(--gray); }
+  .dark { background: #1f1f1f; color: #fff; }
+  .dark .v-display { color: #fff; }
+
+  /* ---- хедер в три зоны + бургер ---- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 40; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: var(--v-4);
+    padding: var(--v-2) var(--v-gutter); background: rgb(255 255 255 / .92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgb(43 43 43 / .08); }
+  .logo { display: inline-flex; align-items: center; gap: .5em; text-decoration: none; min-height: 44px; font-family: var(--v-font-display); font-weight: 600; letter-spacing: .08em; }
+  .logo svg { width: 34px; height: 34px; }
+  .bar__title { font-size: var(--v-t-sm); font-weight: 600; white-space: nowrap; }
+  .v-page .burger { justify-self: end; width: 44px; height: 44px; border: 0; background: none; display: grid; place-content: center; gap: 5px; cursor: pointer; padding: 0; }
+  .burger i { display: block; width: 24px; height: 2px; background: var(--graph); border-radius: 2px; transition: transform .25s var(--v-ease-out), opacity .2s var(--v-ease-out); }
+  .menu-open .burger i:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-open .burger i:nth-child(2) { opacity: 0; }
+  .menu-open .burger i:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .menu { position: fixed; z-index: 39; top: 0; right: 0; height: 100dvh; width: min(22rem, 86vw); padding: 5.5rem var(--v-6) var(--v-6); background: #fff; box-shadow: var(--v-e2);
+    transform: translateX(105%); transition: transform .3s var(--v-ease-out); display: grid; align-content: start; gap: var(--v-1); }
+  .menu-open .menu { transform: none; }
+  .menu a { display: flex; align-items: center; min-height: 46px; font-family: var(--v-font-display); font-size: 1.25rem; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid rgb(43 43 43 / .08); }
+  @media (hover: hover) and (pointer: fine) { .menu a:hover { color: var(--v-accent); } }
+  @media (max-width: 560px) { .bar__title { font-size: .8rem; } .logo b { display: none; } }
+
+  /* ---- плашка демо для заказчика (снимается перед сдачей) ---- */
+  .demo-for { display: inline-flex; align-items: center; gap: .6em; max-width: 100%; margin-bottom: var(--v-5); padding: .35em .95em .35em .4em;
+    border-radius: 999px; background: rgb(255 255 255 / .92); box-shadow: inset 0 0 0 1px rgb(43 43 43 / .1), var(--v-e1); font-size: var(--v-t-xs); line-height: 1.35; }
+  .demo-for img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; flex: none; }
+  .demo-for a { color: var(--v-accent); font-weight: 600; }
+
+  /* ---- 1 · первый экран ---- */
+  .hero [data-v-stage] { background: #fff; }
+  .hero__back img { position: absolute; max-width: none; width: 106%; height: 108%; left: -1%; top: -4%; object-fit: cover; object-position: 70% 50%; }
+  .hero__col { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to right, #fff 0%, rgb(255 255 255 / .92) 30%, rgb(255 255 255 / .4) 48%, transparent 62%); }
+  .hero__copy { top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-top: 3.5rem; max-width: min(40rem, 48vw); }
+  .hero__kicker { display: flex; align-items: center; gap: .8em; font-weight: 600; letter-spacing: .14em; font-size: var(--v-t-xs); color: var(--v-ink-soft); text-transform: uppercase; }
+  .hero__kicker::before { content: ""; width: 3rem; height: 2px; background: var(--tif); }
+  .hero__copy .v-display { margin-top: var(--v-4); font-size: clamp(2.3rem, 1rem + 3vw, 3.9rem); line-height: 1.02; }
+  .hero__h1 span { display: block; animation: rise .8s var(--v-ease-out) both; }
+  .hero__h1 span + span { animation-delay: .15s; }
+  .hero__copy .v-lede { animation: rise .8s .3s var(--v-ease-out) both; }
+  .perks a { animation: rise .7s var(--v-ease-out) both; }
+  .perks a:nth-child(1) { animation-delay: .45s; } .perks a:nth-child(2) { animation-delay: .55s; } .perks a:nth-child(3) { animation-delay: .65s; } .perks a:nth-child(4) { animation-delay: .75s; }
+  .perks svg { animation: pop .6s var(--v-ease-out) both; animation-delay: inherit; }
+  @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  @keyframes pop { from { transform: scale(.6); } to { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .hero__h1 span, .hero__copy .v-lede, .perks a, .perks svg { animation: none; } }
+  .hero__copy .v-lede { margin-top: var(--v-4); font-size: var(--v-t-lg); }
+  .perks { display: grid; grid-template-columns: repeat(2, minmax(0, 15rem)); gap: var(--v-3) var(--v-5); margin-top: var(--v-6); }
+  .perks a { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); align-items: center; gap: var(--v-3); text-decoration: none; font-size: var(--v-t-xs); font-weight: 600; line-height: 1.3; min-height: 44px; }
+  .perks svg { width: 2.6rem; height: 2.6rem; color: var(--tif); }
+  @media (hover: hover) and (pointer: fine) { .perks a:hover span { color: var(--v-accent); text-decoration: underline; } }
+  .hero__cta { display: flex; flex-direction: column; align-items: flex-start; gap: var(--v-2); margin-top: var(--v-6); }
+  .hero__cta small { font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  @media (max-width: 860px) {
+    .hero__back img { width: 104%; height: 104%; left: -2%; top: -2%; object-position: 50% 100%; }
+    .hero__col { background: linear-gradient(to bottom, #fff 0%, rgb(255 255 255 / .9) 50%, transparent 72%); }
+    .hero__copy { top: clamp(4.6rem, 9vh, 5.4rem); bottom: auto; display: block; padding-top: 0; max-width: none; }
+    .hero__copy .v-display { font-size: clamp(2rem, 1.2rem + 4.6vw, 2.7rem); }
+    .hero__copy .v-lede { font-size: var(--v-t-sm); }
+    .perks { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--v-2) var(--v-3); margin-top: var(--v-4); }
+    .perks a { grid-template-columns: 2rem minmax(0, 1fr); gap: var(--v-2); font-size: .74rem; }
+    .perks svg { width: 2rem; height: 2rem; }
+    .hero__cta { margin-top: var(--v-4); }
+  }
+
+  /* ---- 2 · мы не продаём занятия ---- */
+  .nots { margin-top: var(--v-7); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--v-5); max-width: 52rem; margin-inline: auto; }
+  .nots li { display: grid; justify-items: center; gap: var(--v-3); text-align: center; font-family: var(--v-font-display); font-size: var(--v-t-lg); text-transform: uppercase; }
+  .nots svg { width: 3.6rem; height: 3.6rem; color: #9aa0a0; }
+  .nots .strike { stroke: #e04848; }
+  .need { margin-top: var(--v-8); text-align: center; }
+  .need .v-display { font-size: var(--v-t-2xl); max-width: 24ch; margin-inline: auto; }
+  .need p { margin: var(--v-4) auto 0; max-width: 56ch; color: var(--v-ink-soft); }
+  .roles { margin-top: var(--v-7); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--v-5); }
+  .role { padding: var(--v-7) var(--v-6); border-radius: var(--v-radius); background: #fff; box-shadow: var(--v-e1); text-align: center; }
+  .role svg { width: 4.4rem; height: 4.4rem; color: var(--tif); }
+  .role h3 { margin: var(--v-3) 0 0; font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-xl); text-transform: uppercase; }
+  .role b { display: block; margin-top: var(--v-2); font-weight: 700; }
+  .role p { margin-top: var(--v-3); color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  @media (max-width: 760px) { .nots, .roles { grid-template-columns: 1fr; } }
+
+  /* ---- 3 · решения для ваших задач ---- */
+  .sol .v-display { text-align: center; font-size: var(--v-t-3xl); }
+  .quote { margin: var(--v-6) auto 0; max-width: 40rem; text-align: center; }
+  .quote p { font-style: italic; font-size: var(--v-t-lg); line-height: 1.5; color: rgb(255 255 255 / .9); }
+  .quote p::before, .quote p::after { font-family: var(--v-font-display); font-style: normal; font-size: 3rem; color: var(--tif); line-height: 0; vertical-align: -.35em; }
+  .quote p::before { content: "“ "; } .quote p::after { content: " ”"; }
+  .quote cite { display: block; margin-top: var(--v-3); font-style: normal; letter-spacing: .3em; font-weight: 600; font-size: var(--v-t-xs); color: var(--tif); }
+  .goals { margin-top: var(--v-7); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--v-4); }
+  .goal { border-radius: var(--v-radius); background: #fff; color: var(--graph); padding: var(--v-5) var(--v-4) var(--v-6); text-align: center; }
+  .goal i { font-style: normal; font-family: var(--v-font-display); font-size: 2rem; color: var(--tif); }
+  .goal img { width: 76%; aspect-ratio: 1; object-fit: cover; margin: var(--v-2) auto 0; display: block; border-radius: 50%; transform: scale(1.02); }
+  .goal h3 { margin: var(--v-3) 0 0; font-family: var(--v-font-display); font-size: var(--v-t-xl); text-transform: uppercase; }
+  .goal p { margin-top: var(--v-2); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .sol__foot { margin-top: var(--v-8); text-align: center; }
+  .sol__foot h3 { margin: 0; font-family: var(--v-font-display); font-size: var(--v-t-2xl); text-transform: uppercase; }
+  .sol__foot p { margin-top: var(--v-3); color: rgb(255 255 255 / .8); }
+  .sol__foot .v-btn { margin-top: var(--v-6); }
+  .sol__foot small { display: block; margin-top: var(--v-3); color: rgb(255 255 255 / .6); font-size: var(--v-t-xs); letter-spacing: .04em; }
+  @media (max-width: 900px) { .goals { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .goal { padding: var(--v-4) var(--v-3) var(--v-5); } .goal h3 { font-size: 1.15rem; letter-spacing: 0; overflow-wrap: anywhere; } .goal p { font-size: var(--v-t-xs); } }
+
+  /* ---- листалки (команда, кейсы, отзывы) ---- */
+  .rail-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--v-4); }
+  .rail-nav { display: flex; gap: var(--v-2); }
+  .v-page .rail-nav button { width: 48px; height: 48px; border-radius: 50%; border: 0; background: #fff; box-shadow: inset 0 0 0 1px rgb(43 43 43 / .2); cursor: pointer; display: grid; place-items: center; }
+  .rail-nav svg { width: 20px; height: 20px; }
+  .rail { margin-top: var(--v-6); display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 3 * var(--v-5)) / 3.4); gap: var(--v-5); overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 4px var(--v-4); scrollbar-width: thin; }
+  .rail > * { scroll-snap-align: start; }
+  @media (max-width: 900px) { .rail { grid-auto-columns: calc((100% - var(--v-4)) / 1.5); gap: var(--v-4); } }
+  .legend { display: flex; flex-wrap: wrap; gap: var(--v-5); font-size: var(--v-t-xs); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+  .legend span { display: inline-flex; align-items: center; gap: .5em; }
+  .legend i { width: .8em; height: .8em; border-radius: 50%; }
+
+  .tm { border-radius: var(--v-radius); overflow: hidden; background: #fff; box-shadow: var(--v-e1); display: flex; flex-direction: column; }
+  .tm__top { position: relative; height: 9.5rem; display: grid; place-items: center; }
+  .tm--mentor .tm__top { background: var(--tif); }
+  .tm--method .tm__top { background: #1f1f1f; }
+  .tm--teach .tm__top { background: var(--tif-soft); }
+  .tm__ava { width: 5rem; height: 5rem; border-radius: 18px; display: grid; place-items: center; font-family: var(--v-font-display); font-size: 1.8rem; font-weight: 700; }
+  .tm--mentor .tm__ava { background: #fff; color: var(--v-accent); }
+  .tm--method .tm__ava { background: var(--tif); color: #fff; }
+  .tm--teach .tm__ava { background: #fff; color: var(--v-accent); box-shadow: inset 0 0 0 2px var(--tif); }
+  .tm__ph { position: absolute; right: .8rem; bottom: .6rem; font-size: .68rem; color: rgb(43 43 43 / .55); }
+  .tm--mentor .tm__ph, .tm--method .tm__ph { color: rgb(255 255 255 / .7); }
+  .tm__body { padding: var(--v-5); }
+  .tm__role { display: inline-block; padding: .25em .7em; border-radius: 6px; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  .tm--mentor .tm__role { background: var(--tif); color: #fff; }
+  .tm--method .tm__role { background: var(--graph); color: #fff; }
+  .tm--teach .tm__role { background: var(--tif-soft); color: var(--v-accent); }
+  .tm h3 { margin: var(--v-3) 0 0; font-family: var(--v-font-display); font-size: var(--v-t-xl); text-transform: uppercase; }
+  .tm__sub { margin-top: .2em; font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .tm ul { margin-top: var(--v-4); display: grid; gap: .45em; font-size: var(--v-t-xs); line-height: 1.45; }
+  .tm li { display: grid; grid-template-columns: .8em minmax(0, 1fr); gap: .5em; }
+  .tm li::before { content: ""; width: .4em; height: .4em; border-radius: 50%; background: var(--tif); margin-top: .5em; }
+
+  .case { border-radius: var(--v-radius); background: #fff; box-shadow: var(--v-e1); padding: var(--v-5); display: flex; flex-direction: column; }
+  .case__who { display: flex; align-items: center; gap: var(--v-3); }
+  .case__ava { width: 3rem; height: 3rem; border-radius: 12px; display: grid; place-items: center; background: var(--tif-soft); color: var(--v-accent); font-family: var(--v-font-display); font-size: 1.3rem; font-weight: 700; flex: none; }
+  .case__who b { display: block; font-weight: 700; }
+  .case__who small { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--v-ink-soft); }
+  .case__path { display: flex; align-items: center; gap: .5em; margin-top: var(--v-4); font-size: .72rem; font-weight: 700; }
+  .case__path span { padding: .3em .7em; border-radius: 6px; background: var(--gray); }
+  .case__path span:last-child { background: var(--tif); color: #fff; }
+  .case__ask { margin-top: var(--v-4); padding: var(--v-4); border-radius: 12px; background: var(--tif-soft); font-style: italic; font-size: var(--v-t-sm); line-height: 1.5; }
+  .case__given { margin-top: var(--v-3); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .case__given b { color: var(--graph); }
+  .case__more { margin-top: var(--v-4); font-size: var(--v-t-sm); line-height: 1.55; }
+  .case__more h4 { margin: var(--v-4) 0 var(--v-2); font-size: var(--v-t-xs); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--v-accent); }
+  .case__more ol { padding-left: 1.2em; list-style: decimal; display: grid; gap: .4em; }
+  .case__more .ps { margin-top: var(--v-4); font-weight: 600; }
+  .case__more[hidden] { display: none; }
+  .v-page .linkbtn { margin-top: auto; padding-top: var(--v-4); border: 0; background: none; font: inherit; font-size: var(--v-t-sm); font-weight: 700; color: var(--v-accent); cursor: pointer; text-align: left; display: inline-flex; align-items: center; gap: .4em; min-height: 44px; }
+  .linkbtn svg { width: 1em; height: 1em; transition: transform .25s var(--v-ease-out); }
+  .linkbtn[aria-expanded="true"] svg { transform: rotate(180deg); }
+  .case--many { background: #1f1f1f; color: #fff; display: grid; place-content: center; text-align: center; padding: var(--v-7) var(--v-5); }
+  .case--many b { font-family: var(--v-font-display); font-size: 4rem; color: var(--tif); line-height: 1; }
+  .case--many h3 { margin: var(--v-2) 0 0; font-family: var(--v-font-display); text-transform: uppercase; font-size: var(--v-t-xl); }
+  .case--many p { margin-top: var(--v-3); font-size: var(--v-t-xs); color: rgb(255 255 255 / .75); }
+  .cases-cta { text-align: center; margin-top: var(--v-6); }
+  .cases-cta p { color: var(--v-ink-soft); max-width: 60ch; margin: 0 auto var(--v-5); font-size: var(--v-t-sm); }
+
+  /* ---- 6 · сколько стоит свобода (дорожная карта) ---- */
+  .road { margin-top: var(--v-7); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--v-4); counter-reset: r; position: relative; }
+  .road::before { content: ""; position: absolute; left: 6%; right: 6%; top: 2.1rem; height: 2px; background: repeating-linear-gradient(90deg, var(--tif) 0 8px, transparent 8px 16px); }
+  .step { position: relative; padding: var(--v-6) var(--v-5); border-radius: var(--v-radius); background: #fff; box-shadow: var(--v-e1); counter-increment: r; display: flex; flex-direction: column; }
+  .step::before { content: counter(r); width: 2.6rem; height: 2.6rem; border-radius: 50%; display: grid; place-items: center; background: #fff; box-shadow: inset 0 0 0 2px var(--tif); color: var(--v-accent); font-weight: 700; margin-top: -.6rem; }
+  .step--goal::before { background: var(--tif); color: #fff; }
+  .step h3 { margin: var(--v-4) 0 0; font-size: var(--v-t-base); font-weight: 700; line-height: 1.3; }
+  .step .sum { margin-top: var(--v-2); font-family: var(--v-font-display); font-size: var(--v-t-2xl); line-height: 1; color: var(--graph); }
+  .step .sum small { display: block; font-family: var(--v-font-text); font-size: var(--v-t-xs); font-weight: 600; color: var(--v-ink-soft); margin-top: .3em; }
+  .step ul { margin-top: var(--v-4); display: grid; gap: .45em; font-size: var(--v-t-xs); line-height: 1.45; color: var(--v-ink-soft); }
+  .step li { display: grid; grid-template-columns: .8em minmax(0, 1fr); gap: .5em; }
+  .step li::before { content: ""; width: .4em; height: .4em; border-radius: 50%; background: var(--tif); margin-top: .5em; }
+  .road-note { text-align: center; margin-top: var(--v-6); }
+  .road-note p { color: var(--v-ink-soft); font-size: var(--v-t-sm); margin-bottom: var(--v-4); }
+  @media (max-width: 1000px) { .road { grid-template-columns: repeat(2, minmax(0, 1fr)); } .road::before { display: none; } }
+  @media (max-width: 560px) { .road { grid-template-columns: 1fr; } }
+
+  /* ---- 7 · с чего начать + форма ---- */
+  .start { position: relative; overflow: hidden; }
+  .start::before { content: ""; position: absolute; inset: 0; background: radial-gradient(48rem 30rem at calc(var(--v-mx, .3) * 100%) calc(var(--v-my, .3) * 100%), rgb(32 184 177 / .16), transparent 62%); pointer-events: none; }
+  .start__grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--v-7) var(--v-8); align-items: center; }
+  .start .v-display { font-size: var(--v-t-3xl); }
+  .start__sub { margin-top: var(--v-3); font-size: var(--v-t-lg); color: var(--tif); font-weight: 600; }
+  .start__lede { margin-top: var(--v-4); color: rgb(255 255 255 / .85); }
+  .bens { margin-top: var(--v-6); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--v-5) var(--v-4); }
+  .bens li { display: grid; gap: var(--v-2); font-size: var(--v-t-sm); color: rgb(255 255 255 / .9); }
+  .bens svg { width: 2.2rem; height: 2.2rem; color: var(--tif); }
+  .form { display: grid; gap: var(--v-4); padding: var(--v-6); border-radius: var(--v-radius); background: #fff; color: var(--graph); }
+  .form h3 { margin: 0; font-family: var(--v-font-display); font-size: var(--v-t-xl); text-transform: uppercase; line-height: 1.1; }
+  .field { display: grid; gap: var(--v-1); }
+  .field > span { font-size: var(--v-t-xs); font-weight: 600; color: var(--v-ink-soft); }
+  .field input { font: inherit; color: var(--graph); background: var(--gray); border: 1px solid transparent; border-radius: 10px; padding: .8em 1em; min-height: 48px; width: 100%; transition: border-color .16s var(--v-ease-out); }
+  .field input:focus-visible { outline: none; border-color: var(--tif); box-shadow: 0 0 0 3px rgb(32 184 177 / .2); }
+  .form .v-btn { justify-content: center; }
+  .msgr { display: flex; align-items: center; gap: var(--v-3); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .msgr a { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--tif-soft); color: var(--v-accent); }
+  .msgr svg { width: 20px; height: 20px; }
+  .consent { font-size: .72rem; color: var(--v-ink-soft); line-height: 1.45; }
+  .form__done { display: none; padding: var(--v-7) var(--v-6); border-radius: var(--v-radius); background: #fff; color: var(--graph); text-align: center; }
+  .form__done svg { width: 3.4rem; height: 3.4rem; color: var(--tif); }
+  .form__done b { display: block; margin-top: var(--v-3); font-family: var(--v-font-display); font-size: var(--v-t-xl); text-transform: uppercase; }
+  .form__done small { display: block; margin-top: var(--v-4); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .start.is-sent .form { display: none; }
+  .start.is-sent .form__done { display: block; }
+  @media (max-width: 900px) { .start__grid { grid-template-columns: 1fr; } .bens { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  /* ---- 8 · отзывы ---- */
+  .rev { border-radius: var(--v-radius); background: #fff; box-shadow: var(--v-e1); padding: var(--v-6) var(--v-5); display: flex; flex-direction: column; }
+  .rev__who { display: flex; align-items: center; gap: var(--v-3); }
+  .rev__who b { font-weight: 700; }
+  .rev p { margin-top: var(--v-4); font-size: var(--v-t-sm); line-height: 1.6; }
+  .rev p.is-cut { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+  .rev-more { text-align: center; margin-top: var(--v-5); }
+  .rev-more a { font-weight: 700; color: var(--v-accent); }
+
+  /* ---- 9 · бонус ---- */
+  .bonus { margin-top: var(--v-6); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--v-5); max-width: 56rem; margin-inline: auto; }
+  .gd { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: var(--v-4); align-items: center; padding: var(--v-5); border-radius: var(--v-radius); background: #fff; box-shadow: var(--v-e1); }
+  .gd__cover { aspect-ratio: 3 / 4; border-radius: 10px; background: linear-gradient(160deg, var(--tif), #0f817c); color: #fff; display: grid; place-items: end start; padding: .6em; font-family: var(--v-font-display); font-size: .85rem; text-transform: uppercase; line-height: 1.05; }
+  .gd h3 { margin: 0; font-size: var(--v-t-base); font-weight: 700; line-height: 1.3; }
+  .gd p { margin-top: .4em; font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .bonus-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--v-3); margin-top: var(--v-6); }
+  @media (max-width: 700px) { .bonus { grid-template-columns: 1fr; } }
+
+  /* ---- 10 · FAQ ---- */
+  .faq { margin: var(--v-7) auto 0; max-width: 56rem; border-top: 1px solid rgb(43 43 43 / .1); }
+  .faq details { border-bottom: 1px solid rgb(43 43 43 / .1); }
+  .faq summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--v-4); align-items: center; padding: var(--v-5) 0; min-height: 44px; font-weight: 700; font-size: var(--v-t-base); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary i { position: relative; width: 1.2rem; height: 1.2rem; }
+  .faq summary i::before, .faq summary i::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: var(--tif); transition: transform .25s var(--v-ease-out); }
+  .faq summary i::after { transform: rotate(90deg); }
+  .faq details[open] summary i::after { transform: rotate(0deg); }
+  .faq .ans { padding: 0 0 var(--v-5); color: var(--v-ink-soft); font-size: var(--v-t-sm); line-height: 1.6; max-width: 70ch; }
+  .faq .ans p + p, .faq .ans p + ol, .faq .ans ol + p { margin-top: var(--v-3); }
+  .faq .ans ol { padding-left: 1.2em; list-style: decimal; display: grid; gap: .3em; }
+  .faq .ans ul { padding-left: 1.1em; list-style: disc; }
+  .faq details[open] .ans { animation: fade-in .3s var(--v-ease-out); }
+  @keyframes fade-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+  /* ---- футер и cookie ---- */
+  .foot { padding: var(--v-9) var(--v-gutter) calc(var(--v-6) + env(safe-area-inset-bottom)); background: #141414; color: #fff; text-align: center; }
+  .foot__kicker { font-size: var(--v-t-xs); letter-spacing: .3em; color: #c9a86a; font-weight: 600; }
+  .slogan { margin: var(--v-4) 0 0; font-family: var(--v-font-display); font-weight: 700; text-transform: uppercase; line-height: .92; font-size: clamp(2.8rem, 1rem + 8vw, 8.5rem); }
+  .slogan span { display: block; color: #b9b9b9; }
+  .slogan span + span { color: var(--tif); }
+  .foot__line { width: 12rem; height: 1px; background: #c9a86a; margin: var(--v-6) auto; }
+  .foot__txt { color: rgb(255 255 255 / .8); max-width: 40ch; margin: 0 auto; font-size: var(--v-t-lg); }
+  .socials { display: flex; justify-content: center; gap: var(--v-3); margin-top: var(--v-7); }
+  .socials a { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: rgb(255 255 255 / .08); color: #fff; font-weight: 700; font-size: .8rem; text-decoration: none; }
+  .socials svg { width: 22px; height: 22px; }
+  .req { margin-top: var(--v-6); display: grid; gap: .3em; font-size: var(--v-t-xs); color: rgb(255 255 255 / .55); }
+  .req a { color: rgb(255 255 255 / .8); }
+  .cookie { position: fixed; z-index: 50; left: var(--v-4); right: var(--v-4); bottom: var(--v-4); max-width: 34rem; margin-inline: auto; display: flex; align-items: center; gap: var(--v-4); padding: var(--v-4) var(--v-5);
+    border-radius: 14px; background: #1f1f1f; color: #fff; box-shadow: var(--v-e2); font-size: var(--v-t-xs); line-height: 1.45; transform: translateY(160%); transition: transform .4s var(--v-ease-out); }
+  .cookie.is-on { transform: none; }
+  .cookie a { color: var(--tif); }
+  .v-page .cookie button { flex: none; border: 0; border-radius: 10px; padding: .7em 1.1em; background: var(--tif); color: #10302f; font: inherit; font-weight: 700; cursor: pointer; min-height: 44px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-goal" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 42V8"/><path d="M10 8h22l-4 6 4 6H10"/><path d="M4 42h40"/><circle cx="34" cy="34" r="4"/><path d="M34 26v4M34 38v4M26 34h4M38 34h4"/></symbol>
+    <symbol id="i-team" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="6"/><circle cx="10" cy="20" r="4.5"/><circle cx="38" cy="20" r="4.5"/><path d="M14 40c0-6 4.5-10 10-10s10 4 10 10"/><path d="M3 38c0-4.5 3-8 7-8 2 0 3.6.6 5 1.8M45 38c0-4.5-3-8-7-8-2 0-3.6.6-5 1.8"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="36" height="32" rx="4"/><path d="M6 18h36M15 5v8M33 5v8"/><path d="M14 26h4M22 26h4M30 26h4M14 33h4M22 33h4"/><path d="m30 33 2.5 2.5L38 30"/></symbol>
+    <symbol id="i-path" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 40c8 0 8-10 16-10s6-10 14-10"/><path d="M36 4v16"/><path d="M36 4h8l-2.5 3.5L44 11h-8"/><circle cx="6" cy="40" r="2.5"/><path d="M14 18l2 2 4-4"/></symbol>
+    <symbol id="i-mentor" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="21"/><circle cx="24" cy="19" r="6"/><path d="M13 36c1.6-5 5.8-8 11-8s9.4 3 11 8"/></symbol>
+    <symbol id="i-book" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="21"/><path d="M14 16c3.5-1.5 7-1.5 10 1 3-2.5 6.5-2.5 10-1v17c-3.5-1.5-7-1.5-10 1-3-2.5-6.5-2.5-10-1z"/><path d="M24 17v17"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="21"/><path d="m11 20 13-6 13 6-13 6z"/><path d="M17 23v6c2 2 4.5 3 7 3s5-1 7-3v-6M37 20v8"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.3 2.9 11.5c-1 .4-1 1.6.1 1.9l4.6 1.4 1.8 5.6c.3.8 1.3 1 1.9.4l2.6-2.4 4.6 3.4c.7.5 1.7.1 1.9-.7l3.2-15.3c.2-1-.8-1.8-1.5-1.5zM9.8 14.6l8.4-7.4-6.6 8.6-.3 3.1z"/></symbol>
+    <symbol id="i-max" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M8 15V9l4 4 4-4v6"/></symbol>
+    <symbol id="i-vk" viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 18C6.7 18 3.2 13.8 3 7h3c.1 5 2.3 7.1 4.1 7.5V7H13v4.3c1.8-.2 3.6-2.2 4.2-4.3H20c-.5 2.6-2.4 4.6-3.8 5.4 1.4.7 3.6 2.4 4.4 5.6h-3.1c-.7-2.1-2.3-3.7-4.5-3.9V18z"/></symbol>
+  </defs>
+</svg>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="logo" href="#top" aria-label="English with Adam Reed – наверх">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="7" fill="#2b2b2b"/><path d="M8 26 16 8h2l8 18h-4l-2-5h-6l-2 5zm7.3-8h3.4L17 13.6z" fill="#20b8b1"/></svg><b>ADAM REED</b>
+    </a>
+    <span class="bar__title">English with Adam Reed</span>
+    <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+  </header>
+  <nav class="menu" id="menu" aria-label="Разделы">
+    <a href="#ne-prodaem">Мы не продаём занятия</a>
+    <a href="#resheniya">Решения для ваших задач</a>
+    <a href="#komanda">Давайте знакомиться</a>
+    <a href="#keysy">Кейсы клиентов</a>
+    <a href="#stoimost">Сколько стоит свобода</a>
+    <a href="#nachat">С чего начать</a>
+    <a href="#otzyvy">Отзывы</a>
+    <a href="#faq">Вопросы</a>
+  </nav>
+
+  <main>
+
+    <!-- 1 · ПЕРВЫЙ ЭКРАН -->
+    <section id="top" class="hero" data-v-act="pin" data-v-span="1.5" aria-label="Английский язык: личный наставник">
+      <div data-v-stage>
+        <div class="v-layer hero__back" data-v-parallax="-0.45">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+            <img src="assets/hero.webp" alt="Люди идут по набережной к городам мира с флагом своей цели" width="1920" height="1080" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="hero__col" aria-hidden="true"></div>
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.8 0">
+          <span class="hero__kicker">Английский язык</span>
+          <h1 class="v-display v-display--xl hero__h1"><span class="accent">Ваш личный наставник</span> <span>со своей командой</span></h1>
+          <p class="v-lede">Когда нужен результат, а не очередные уроки</p>
+          <div class="perks">
+            <a href="#resheniya"><svg aria-hidden="true"><use href="#i-goal"/></svg><span>Индивидуально под вашу цель</span></a>
+            <a href="#komanda"><svg aria-hidden="true"><use href="#i-team"/></svg><span>На вас работает команда</span></a>
+            <a href="#keysy"><svg aria-hidden="true"><use href="#i-cal"/></svg><span>3 пробных занятия</span></a>
+            <a href="#stoimost"><svg aria-hidden="true"><use href="#i-path"/></svg><span>Сопровождение до достижения цели (и даже после)</span></a>
+          </div>
+          <div class="hero__cta">
+            <a class="v-btn" href="#nachat" data-v-magnet="0.2" data-v-rise="0">Записаться <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · МЫ НЕ ПРОДАЁМ ЗАНЯТИЯ -->
+    <section class="v-section gray" data-v-act="flow" id="ne-prodaem" aria-label="Мы не продаём занятия английским">
+      <div class="v-wrap">
+        <div class="sec-h" data-v-in><h2 class="v-display v-display--lg">Мы не продаём занятия <span class="accent">английским</span></h2></div>
+        <ul class="nots" data-v-in data-v-stagger="80">
+          <li><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="12" y="14" width="40" height="36" rx="4"/><path d="M22 28h20M22 36h12"/><text x="22" y="26" font-size="9" fill="currentColor" stroke="none" font-family="Arial" font-weight="700">B1</text><path class="strike" d="M8 56 56 8" stroke-width="3.4"/></svg>Не уровень B1</li>
+          <li><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="10" y="12" width="44" height="32" rx="3"/><path d="M18 22h28M18 29h20"/><circle cx="40" cy="44" r="7"/><path d="m36 50-2 8 6-3 6 3-2-8"/><path class="strike" d="M8 56 56 8" stroke-width="3.4"/></svg>Не сертификат</li>
+          <li><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 14c6-2 13-2 20 2 7-4 14-4 20-2v34c-6-2-13-2-20 2-7-4-14-4-20-2z"/><path d="M32 16v34"/><path class="strike" d="M8 56 56 8" stroke-width="3.4"/></svg>Не знание Present Perfect</li>
+        </ul>
+        <div class="need" data-v-in data-v-stagger="60">
+          <p style="font-weight:700;color:var(--graph)">Вам нужен результат, а не очередной курс английского</p>
+          <h3 class="v-display">Вам нужна возможность решить <span class="accent">конкретную жизненную задачу</span></h3>
+          <p>На ваш результат работает команда, которая помогает достичь конкретной цели: переезд, работа, международный бизнес, путешествия или жизнь за границей.</p>
+        </div>
+        <div class="roles" data-v-in data-v-stagger="80">
+          <div class="role"><svg aria-hidden="true"><use href="#i-mentor"/></svg><h3>Наставник</h3><b>Единая точка ответственности за ваш результат</b><p>Формулирует цель, строит стратегию обучения, контролирует прогресс, поддерживает между занятиями и помогает преодолевать сложности на пути к результату</p></div>
+          <div class="role"><svg aria-hidden="true"><use href="#i-book"/></svg><h3>Методист</h3><b>Соответствие программы вашей цели</b><p>Создаёт индивидуальную программу под вашу цель, подбирает материалы и контролирует соответствие занятий вашим задачам</p></div>
+          <div class="role"><svg aria-hidden="true"><use href="#i-cap"/></svg><h3>Преподаватель</h3><b>Ваши навыки в английском</b><p>Проводит занятия, развивает языковые навыки и учит использовать английский в реальных жизненных и рабочих ситуациях</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · РЕШЕНИЯ ДЛЯ ВАШИХ ЗАДАЧ -->
+    <section class="v-section dark sol" data-v-act="flow" id="resheniya" aria-label="Решения для ваших задач">
+      <div class="v-wrap">
+        <h2 class="v-display" data-v-in>У нас есть<br><span class="accent">решение для ваших задач</span></h2>
+        <blockquote class="quote" data-v-in><p>Английский открывает новые возможности. Мы помогаем ими воспользоваться</p><cite>ADAM REED</cite></blockquote>
+        <div class="goals" data-v-in data-v-stagger="80">
+          <div class="goal"><i>01</i><img src="assets/g-travel.webp" alt="" width="600" height="600" loading="lazy"><h3>Путешествия</h3><p>Самостоятельно через 3–4 месяца, без страха, стыда и паники</p></div>
+          <div class="goal"><i>02</i><img src="assets/g-talks.webp" alt="" width="600" height="600" loading="lazy"><h3>Переговоры</h3><p>Через 6–8 месяцев, без переводчиков</p></div>
+          <div class="goal"><i>03</i><img src="assets/g-work.webp" alt="" width="600" height="600" loading="lazy"><h3>Работа</h3><p>За большие деньги в международной компании или за рубежом</p></div>
+          <div class="goal"><i>04</i><img src="assets/g-move.webp" alt="" width="600" height="600" loading="lazy"><h3>Переезд</h3><p>Жизнь, учёба, работа за рубежом</p></div>
+        </div>
+        <div class="sol__foot" data-v-in data-v-stagger="60">
+          <h3>Наставничество помогает достигать целей с помощью английского</h3>
+          <p>Мы начинаем не с учебника. Мы начинаем с вашей цели.</p>
+          <a class="v-btn" href="#nachat">Записаться на вводную встречу</a>
+          <small>онлайн · бесплатно · без обязательств</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ДАВАЙТЕ ЗНАКОМИТЬСЯ: листалка команды -->
+    <section class="v-section" data-v-act="flow" id="komanda" aria-label="Давайте знакомиться">
+      <div class="v-wrap">
+        <div class="rail-head" data-v-in>
+          <div><h2 class="v-display v-display--lg">Давайте знакомиться</h2>
+            <div class="legend" style="margin-top:var(--v-4)"><span><i style="background:#20b8b1"></i>Наставник</span><span><i style="background:#2b2b2b"></i>Методист</span><span><i style="background:#fff;box-shadow:inset 0 0 0 2px #20b8b1"></i>Преподаватели</span></div></div>
+          <div class="rail-nav"><button type="button" data-rail="team" data-dir="-1" aria-label="Назад"><svg style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button><button type="button" data-rail="team" data-dir="1" aria-label="Вперёд"><svg><use href="#i-arrow"/></svg></button></div>
+        </div>
+        <div class="rail" id="team" tabindex="0" aria-label="Команда, листается вбок">
+          <article class="tm tm--mentor"><div class="tm__top"><div class="tm__ava">AS</div><span class="tm__ph">здесь будет фото</span></div><div class="tm__body"><span class="tm__role">Наставник · руководитель</span><h3>Adam Reed</h3><p class="tm__sub">Ваш наставник и руководитель команды</p><ul><li>Я тоже взрослый и знаю, что после работы нет сил на артикли</li><li>Руководитель и наставник с 20-летним опытом</li><li>Более 25 000 часов преподавания</li><li>Сотни учеников живут, работают и учатся по всему миру: от Аргентины до Ирландии, от Великобритании до Бали</li><li>В прошлом топ-менеджер крупной международной IT-компании</li><li>Образование: инженерное, языковое (Лондон), психологическое (МГУ), педагогическое</li></ul></div></article>
+          <article class="tm tm--method"><div class="tm__top"><div class="tm__ava">E</div><span class="tm__ph">здесь будет фото</span></div><div class="tm__body"><span class="tm__role">Методист</span><h3>Elena</h3><p class="tm__sub">Следит за работой преподавателя: смотрит записи занятий, даёт обратную связь, готовит материалы и отчёты</p><ul><li>3 высших педагогических образования: педагог английского языка, логопед, дирижёр</li><li>Опыт преподавания более 15 лет</li><li>Работала во всевозможных учебных заведениях</li><li>Объездила десятки стран, во многих жила подолгу</li></ul></div></article>
+          <article class="tm tm--teach"><div class="tm__top"><div class="tm__ava">E</div><span class="tm__ph">здесь будет фото</span></div><div class="tm__body"><span class="tm__role">Преподаватель</span><h3>Elizabeth</h3><p class="tm__sub">Носитель языка, билингв</p><ul><li>Окончила колледж Кертин в Бентли, Австралия</li><li>Преподаёт английский более 5 лет</li><li>Прошла курсы в тестовом центре TOEFL и Британском Совете</li><li>Её студенты получают 7.5+ баллов по IELTS</li><li>Жила по всему миру, в том числе 3 года в Австралии</li></ul></div></article>
+          <article class="tm tm--teach"><div class="tm__top"><div class="tm__ava">A</div><span class="tm__ph">здесь будет фото</span></div><div class="tm__body"><span class="tm__role">Преподаватель</span><h3>Akhmat</h3><p class="tm__sub">Бакалавр лингвистики, магистр в преподавании</p><ul><li>6 лет жил и работал в международных школах и университетах Шанхая и Пекина</li><li>Сертификат TESOL</li><li>8 лет опыта частным репетитором</li></ul></div></article>
+          <article class="tm tm--teach"><div class="tm__top"><div class="tm__ava">J</div><span class="tm__ph">здесь будет фото</span></div><div class="tm__body"><span class="tm__role">Преподаватель</span><h3>Julia</h3><p class="tm__sub">Английский и немецкий языки</p><ul><li>Высшее педагогическое образование</li><li>Опыт обучения групп до 10 человек в языковых школах</li><li>5 лет частным репетитором</li><li>Бывший гид для иностранных туристов</li><li>Ведёт собственный разговорный клуб английского языка</li></ul></div></article>
+          <article class="tm tm--teach"><div class="tm__top"><div class="tm__ava">A</div><span class="tm__ph">здесь будет фото</span></div><div class="tm__body"><span class="tm__role">Преподаватель</span><h3>Anfisa</h3><p class="tm__sub">Филолог, английский и немецкий</p><ul><li>7 лет школьным учителем, 13 лет частным репетитором</li><li>Ученики получают максимальные баллы на ЕГЭ и ОГЭ</li><li>Сотрудничала с Международным олимпийским комитетом</li><li>Мама троих детей</li></ul></div></article>
+          <article class="tm tm--teach"><div class="tm__top"><div class="tm__ava">S</div><span class="tm__ph">здесь будет фото</span></div><div class="tm__body"><span class="tm__role">Преподаватель</span><h3>Sofia</h3><p class="tm__sub">МГЛУ, Erasmus+ во Франции</p><ul><li>Преподаёт частным репетитором более 5 лет</li><li>Училась в Университете Люмьер Лион II</li><li>Работала на курсах подготовки к ЕГЭ в РАНХиГС</li><li>Участница TEDx и недели ECOM&amp;Retail</li><li>Выступала в постановках оригинальных бродвейских мюзиклов</li></ul></div></article>
+          <article class="tm tm--teach"><div class="tm__top"><div class="tm__ava">A</div><span class="tm__ph">здесь будет фото</span></div><div class="tm__body"><span class="tm__role">Преподаватель</span><h3>Daniel</h3><p class="tm__sub">Носитель языка, американский английский</p><ul><li>15 лет прожил в США: Хьюстон, Лас-Вегас, Лос-Анджелес</li><li>Известный художник, чьи работы находятся в Белом доме и в студии Майкла Джексона</li><li>Давал интервью ABC News и Fox Business</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · КЕЙСЫ КЛИЕНТОВ: раскрытие «Показать историю целиком» -->
+    <section class="v-section gray" data-v-act="flow" id="keysy" aria-label="Кейсы клиентов">
+      <div class="v-wrap">
+        <div class="rail-head" data-v-in>
+          <div><h2 class="v-display v-display--lg">Кейсы клиентов</h2><p style="margin-top:var(--v-3);color:var(--v-ink-soft)">Реальные истории людей, которые пришли с задачей – и получили жизнь, о которой мечтали</p></div>
+          <div class="rail-nav"><button type="button" data-rail="cases" data-dir="-1" aria-label="Назад"><svg style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button><button type="button" data-rail="cases" data-dir="1" aria-label="Вперёд"><svg><use href="#i-arrow"/></svg></button></div>
+        </div>
+        <div class="rail" id="cases" tabindex="0" aria-label="Кейсы, листаются вбок" style="align-items:start">
+          <article class="case"><div class="case__who"><span class="case__ava">А</span><div><b>Александр</b><small>Бизнес-аналитик</small></div></div><div class="case__path"><span>B1</span>→<span>Австралия</span></div><p class="case__given"><b>Дано:</b> английский уровня B1.</p><p class="case__ask">«Нужно подтянуть уровень до B2 и сдать международный экзамен, чтобы работать в Австралии»</p>
+            <div class="case__more" hidden><h4>Сделано</h4><ol><li>После нескольких занятий поменяли цель: не подтягивать общий уровень, а сразу за 3 месяца подготовиться к экзамену. Затем за 6 месяцев довести деловой английский до B1+, достаточного для работы в IT на желаемой должности.</li><li>Провели занятия в 2 этапа: подготовка к экзамену и развитие бизнес-английского.</li></ol><h4>Результат</h4><ol><li>Через 4 месяца успешно сдал экзамен и подал документы на визу в Австралию.</li><li>Ещё через 6 месяцев свободно общается на деловые темы на уровне B1+, живёт и работает в Австралии.</li></ol><p class="ps">P.S. Сейчас живёт на Кипре и работает ведущим бизнес-аналитиком в одной из крупнейших мировых продакшн-компаний.</p></div>
+            <button type="button" class="linkbtn" aria-expanded="false">Показать историю целиком <svg aria-hidden="true"><use href="#i-chev"/></svg></button></article>
+          <article class="case"><div class="case__who"><span class="case__ava">К</span><div><b>Ксения</b><small>Психолог, мама</small></div></div><div class="case__path"><span>Ноль</span>→<span>Греция</span></div><p class="case__given"><b>Дано:</b> практически нулевой английский. Считала, что у неё нет способностей к языкам.</p><p class="case__ask">«Хочу учить язык просто так, для себя»</p>
+            <div class="case__more" hidden><h4>Сделано</h4><ol><li>На вводной встрече выяснили настоящие мотивы: супруг почти в совершенстве говорит по-английски, и она не хочет ударить в грязь лицом перед его иностранными друзьями; они с супругом всерьёз обдумывали переезд за рубеж (и в итоге переехали).</li><li>Сформулировали цель: уровень B1 за полгода (получилось быстрее).</li><li>Составили план обучения: speaking, listening, базовая грамматика, только темы для общения и переезда.</li><li>Провели занятия в течение 4 месяцев.</li></ol><h4>Результат</h4><ol><li>Через 4 месяца Ксения начала общаться с иностранцами, ушёл страх.</li><li>Позже Ксения с супругом и детьми переехала за рубеж.</li><li>Сейчас Ксения учит греческий через английский и уже достигла в греческом B1.</li></ol><p class="ps">P.S. Счастливо живёт с семьёй в Греции, воспитывает детей и радуется жизни.</p></div>
+            <button type="button" class="linkbtn" aria-expanded="false">Показать историю целиком <svg aria-hidden="true"><use href="#i-chev"/></svg></button></article>
+          <article class="case"><div class="case__who"><span class="case__ava">А</span><div><b>Анастасия</b><small>Предприниматель · ИИ</small></div></div><div class="case__path"><span>Ноль</span>→<span>Франция</span></div><p class="case__given"><b>Дано:</b> совсем нулевой английский, не знала даже чисел.</p><p class="case__ask">«Переехала на Бали, даже заказать доставку не могу, срочно нужен язык»</p>
+            <div class="case__more" hidden><h4>Сделано</h4><ol><li>Сформулировали цель: за 3 месяца научиться говорить на базовые темы, необходимые для жизни.</li><li>Составили план: только speaking и listening, минимум грамматики, только насущные темы, 300–400 ключевых слов для простого общения.</li><li>Через 3 месяца пересмотрели цель и методику: выучить язык на уровне, достаточном для переезда в другую страну.</li><li>Ещё через несколько месяцев новая цель: использовать язык в работе с носителями.</li></ol><h4>Результат</h4><ol><li>Через 3 месяца ушёл языковой барьер: сама на английском разрешила конфликтную ситуацию со стыковочным рейсом в азиатском аэропорту.</li><li>Ещё через 3 месяца переехала в Аргентину и стала общаться в англоязычных сообществах.</li><li>Ещё через 3 месяца отчитывалась перед британским советом директоров и начала учить португальский через английский.</li></ol><p class="ps">P.S. Вышла замуж за француза и переехала во Францию :)</p></div>
+            <button type="button" class="linkbtn" aria-expanded="false">Показать историю целиком <svg aria-hidden="true"><use href="#i-chev"/></svg></button></article>
+          <article class="case"><div class="case__who"><span class="case__ava">М</span><div><b>Маргарита</b><small>Логистика · юрист</small></div></div><div class="case__path"><span>A2 · барьер</span>→<span>Бизнес за рубежом</span></div><p class="case__given"><b>Дано:</b> английский A2 с сильным языковым барьером: «всё понимаю, но сказать ничего не могу».</p><p class="case__ask">«Живу в Турции, занимаюсь международным бизнесом, нужно участвовать в переговорах»</p>
+            <div class="case__more" hidden><h4>Сделано</h4><ol><li>Сформулировали цель: за 6 месяцев достичь неуверенного B1 в speaking и listening для деловых коммуникаций.</li><li>После 2–3 занятий выяснили, что с деловым общением проблем нет, а сложности возникают на неформальных встречах.</li><li>Переформулировали цель: за 6 месяцев достичь уверенного B1 в говорении и понимании речи на общие темы.</li><li>Составили план обучения и провели занятия.</li></ol><h4>Результат</h4><ol><li>Через 6 месяцев Маргарита спокойно говорит на общие темы: с ошибками, но они не мешают смыслу.</li><li>Английским теперь занимается вся семья: Маргарита, супруг и двое сыновей.</li><li>Позже семья переехала в страну, где английский востребован, и открыла там бизнес.</li></ol><p class="ps">P.S. Маргарита с супругом достигли своих целей за 6 месяцев, а дети почти в совершенстве владеют английским и учатся в международной школе.</p></div>
+            <button type="button" class="linkbtn" aria-expanded="false">Показать историю целиком <svg aria-hidden="true"><use href="#i-chev"/></svg></button></article>
+          <article class="case"><div class="case__who"><span class="case__ava">M</span><div><b>Michaella</b><small>Personal assistant</small></div></div><div class="case__path"><span>B1 без практики</span>→<span>Оффер за месяц</span></div><p class="case__given"><b>Дано:</b> английский на уровне B1, но очень давно не было практики.</p><p class="case__ask">«За несколько месяцев активировать английский и устроиться в крупную международную компанию на должность PA»</p>
+            <div class="case__more" hidden><h4>Сделано</h4><ol><li>Сформулировали цель: подготовиться именно к собеседованию, так как на этой должности нужен в основном письменный английский.</li><li>Провели несколько занятий, на которых отработали все возможные сценарии собеседования.</li></ol><h4>Результат</h4><p>Через месяц Michaella получила желаемую должность.</p><p class="ps">P.S. На новой работе Michaella узнала о новом IT-стартапе, успешно в него вложилась и через полгода вышла на пенсию.</p></div>
+            <button type="button" class="linkbtn" aria-expanded="false">Показать историю целиком <svg aria-hidden="true"><use href="#i-chev"/></svg></button></article>
+          <article class="case case--many"><b>100+</b><h3>Кейсов сотни</h3><p>Ученики Адама и команды достигают своих целей, связанных с английским. Они живут, работают и учатся в США, Канаде, Великобритании, Ирландии, Германии, Италии, ОАЭ и многих других странах.</p></article>
+        </div>
+        <div class="cases-cta" data-v-in><a class="v-btn v-btn--dark" href="#nachat">Хочу так же <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </div>
+    </section>
+
+    <!-- 6 · СКОЛЬКО СТОИТ СВОБОДА: дорожная карта -->
+    <section class="v-section" data-v-act="flow" id="stoimost" aria-label="Сколько стоит свобода">
+      <div class="v-wrap">
+        <div class="sec-h" data-v-in><h2 class="v-display v-display--lg">Сколько стоит <span class="accent">свобода?</span></h2><p>Оплата блоками: в каждый блок входят 8 занятий с преподавателем.</p></div>
+        <ol class="road" data-v-in data-v-stagger="80">
+          <li class="step"><h3>Хотите попробовать?</h3><p class="sum">0 ₽<small>не платите ничего</small></p><ul><li>Вводная встреча</li><li>Предварительный план обучения после вводной встречи</li><li>3 пробных занятия по 60 минут (оплачиваете, только если принимаете решение идти с нами)</li></ul></li>
+          <li class="step"><h3>Решили идти с нами?</h3><p class="sum">24 000 ₽<small>за 1-й месяц</small></p><ul><li>Детальный план обучения после пробных занятий</li><li>Ещё 5 занятий по 60 минут</li><li>Поддержка преподавателя и наставника в чате и по аудио</li><li>Отчёт о прогрессе после 1-го месяца (8 занятий)</li><li>Проверка прогресса с наставником</li></ul></li>
+          <li class="step"><h3>Всё устраивает?</h3><p class="sum">28 000 / 32 000 ₽<small>в месяц</small></p><ul><li>8 занятий по 60 минут</li><li>Стоимость зависит от преподавателя: носитель-билингв или нет</li><li>Поддержка преподавателя и наставника в чате и по аудио</li><li>Ежемесячные отчёты об успехах (и неудачах)</li><li>Регулярные проверки прогресса</li></ul></li>
+          <li class="step step--goal"><h3>Цель достигнута</h3><p class="sum" style="color:var(--v-accent)">✓<small>и это не конец</small></p><ul><li>Проверяете свои навыки в реальной жизни</li><li>Получаете сертификат</li><li>Наставник остаётся на связи и помогает с любыми вопросами в образовании</li><li>Можете практиковать язык в нашем английском клубе</li><li>Попадаете в закрытый чат выпускников</li><li>Будем благодарны за отзыв</li></ul></li>
+        </ol>
+        <div class="road-note" data-v-in><a class="v-btn" href="#nachat">Попробовать <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </div>
+    </section>
+
+    <!-- 7 · С ЧЕГО НАЧАТЬ + ФОРМА -->
+    <section class="v-section dark start" data-v-act="flow" id="nachat" aria-label="С чего начать" data-v-spotlight>
+      <div class="v-wrap start__grid">
+        <div data-v-in data-v-stagger="60">
+          <h2 class="v-display">С чего начать?</h2>
+          <p class="start__sub">30 минут, которые могут изменить вашу жизнь</p>
+          <p class="start__lede">Запишитесь на бесплатную вводную онлайн-встречу:</p>
+          <ul class="bens">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>займёт 30 минут</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg>оценим ваш speaking и listening по шкале CEFR</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>точно сформулируем цель обучения</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM8 11h8M8 15h6"/></svg>составим план действий</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 18 10 12l4 4 6-8"/><path d="M15 8h5v5"/></svg>расскажем, как быстрее достичь цели</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg>пришлём подробный отчёт</li>
+          </ul>
+        </div>
+        <div>
+          <form class="form" id="form" novalidate data-v-in data-v-stagger="40">
+            <h3>Записаться на вводную встречу или консультацию</h3>
+            <label class="field"><span>Имя *</span><input name="name" autocomplete="name" required></label>
+            <label class="field"><span>Телефон *</span><input name="phone" type="tel" autocomplete="tel" required placeholder="+7"></label>
+            <label class="field"><span>Электронная почта</span><input name="email" type="email" autocomplete="email"></label>
+            <button class="v-btn" type="submit" data-v-magnet="0.15" data-v-rise="0">Записаться</button>
+            <div class="msgr">Или напишите нам в Макс или Телеграм
+              <a href="#" target="_blank" rel="noopener" aria-label="Макс"><svg><use href="#i-max"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Телеграм"><svg><use href="#i-tg"/></svg></a></div>
+            <p class="consent">Отправляя заявку, я даю согласие на обработку моих персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a>.</p>
+          </form>
+          <div class="form__done" role="status" aria-live="polite">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7 12 3.5 3.5L17 9"/></svg>
+            <b>Спасибо!</b><p>Мы свяжемся с вами в течение 1 рабочего дня.</p>
+            <small>В демо заявка никуда не уходит. На Тильде она придёт на почту и в Telegram.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · ОТЗЫВЫ КЛИЕНТОВ -->
+    <section class="v-section gray" data-v-act="flow" id="otzyvy" aria-label="Отзывы клиентов">
+      <div class="v-wrap">
+        <div class="rail-head" data-v-in>
+          <h2 class="v-display v-display--lg">Отзывы клиентов</h2>
+          <div class="rail-nav"><button type="button" data-rail="revs" data-dir="-1" aria-label="Назад"><svg style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button><button type="button" data-rail="revs" data-dir="1" aria-label="Вперёд"><svg><use href="#i-arrow"/></svg></button></div>
+        </div>
+        <div class="rail" id="revs" tabindex="0" aria-label="Отзывы, листаются вбок" style="align-items:start">
+          <article class="rev"><div class="rev__who"><span class="case__ava">С</span><b>Сергей Воронцов</b></div><p class="is-cut">Хочется сказать большое спасибо Адаму за прекрасную организацию обучения! Ранее Адам готовил моего сына к SAT и IELTS, в результате сын поступил в международный университет. Также удалось за сжатое время подтянуть английский членам семьи. Они занимаются с разными преподавателями из команды Адама, и в обоих случаях отлично подобраны методика и материал: гибко, под наши цели. Радует, что я вижу записи всех занятий. А ещё всё происходит под надзором Адама и методиста команды. Каждый месяц я получаю отчёт о прогрессе, а Адам проводит регулярные progress checks. А главное, что спустя полгода уже есть значительные результаты. Повторюсь, прекрасная организация обучения!</p><button type="button" class="linkbtn" data-rev aria-expanded="false">Читать полностью <svg aria-hidden="true"><use href="#i-chev"/></svg></button></article>
+          <article class="rev"><div class="rev__who"><span class="case__ava">Е</span><b>Елена Миронова</b></div><p class="is-cut">Только что было первое занятие с Элизабет из команды Адама. Если честно, у меня такое настроение, просто уи-и-и! Это настолько классно… Прям восторг какой-то. Всё отработали, она очень классная, прям профи. Обдуманно ведёт занятия, понимает цель и ведёт к ней. Очень интересно было узнать некоторые моменты по произношению. В общем, очень понравилось, и очень хочется заниматься дальше. Спасибо вам огромное!</p><button type="button" class="linkbtn" data-rev aria-expanded="false">Читать полностью <svg aria-hidden="true"><use href="#i-chev"/></svg></button></article>
+          <article class="rev"><div class="rev__who"><span class="case__ava">А</span><b>Андрей Ларин</b></div><p>Занимаюсь с преподавателем из команды Адама, Юлией, всё очень классно. Гибкий график: для меня это было важно, так как я пилот. Есть результат: за 3 месяца разговорился, почти не делаю ошибок в речи, стало проще.</p></article>
+          <article class="rev"><div class="rev__who"><span class="case__ava">Ю</span><b>Юлия Белова</b></div><p class="is-cut">Хочу выразить благодарность Адаму и его команде. Я преподаватель английского языка, а каждому преподавателю нужен свой преподаватель. Нестер из команды Адама начал со мной работать, и за пару месяцев мы достигли отличных результатов! Словарный запас растёт, навык говорения крепнет. Занятия очень интересные, построены на аутентичных материалах. Очень удобно отслеживать прогресс по ежемесячным отчётам о пройденном материале. Большое спасибо Адаму и Нестеру! Вы лучшие!</p><button type="button" class="linkbtn" data-rev aria-expanded="false">Читать полностью <svg aria-hidden="true"><use href="#i-chev"/></svg></button></article>
+        </div>
+        <p class="rev-more" data-v-in><a href="#" target="_blank" rel="noopener">Больше отзывов в Максе →</a></p>
+      </div>
+    </section>
+
+    <!-- 9 · БОНУС -->
+    <section class="v-section" data-v-act="flow" id="bonus" aria-label="Бонус">
+      <div class="v-wrap">
+        <div class="sec-h" data-v-in><h2 class="v-display v-display--lg">Бонус</h2><p>Раздаём полезные гайды за подписку на наш канал в Максе</p></div>
+        <div class="bonus" data-v-in data-v-stagger="80">
+          <div class="gd"><div class="gd__cover">Гайд<br>№1</div><div><h3>Можно ли выучить английский самостоятельно?</h3><p>Да, можно! Но есть нюанс…</p></div></div>
+          <div class="gd"><div class="gd__cover">Гайд<br>№2</div><div><h3>Репетитор вашего ребёнка действительно учит?</h3><p>Или вы просто платите деньги за время…</p></div></div>
+        </div>
+        <div class="bonus-btns" data-v-in><a class="v-btn" href="#">Получить бесплатно в Максе</a><a class="v-btn v-btn--dark" href="#">VK</a><a class="v-btn v-btn--dark" href="#">Телеграм</a></div>
+      </div>
+    </section>
+
+    <!-- 10 · FAQ: аккордеон, открыт один ответ -->
+    <section class="v-section gray" data-v-act="flow" id="faq" aria-label="Часто задаваемые вопросы">
+      <div class="v-wrap">
+        <div class="sec-h" data-v-in><h2 class="v-display v-display--lg">Часто задаваемые вопросы</h2></div>
+        <div class="faq" data-v-in data-v-stagger="30">
+          <details name="faq"><summary>Есть ли гарантия результата?<i aria-hidden="true"></i></summary><div class="ans"><p>Было бы нечестно гарантировать результат, который зависит не только от нас. На скорость достижения цели влияют ваше усердие, выполнение заданий, регулярность занятий и способности к языкам: они у всех разные, но безнадёжных случаев не бывает.</p><p>Что мы можем гарантировать, так это то, что мы приложим все усилия, чтобы наставничество происходило на самом высоком уровне, и сделаем всё от нас зависящее, чтобы вы достигли ваших целей в английском как можно быстрее.</p></div></details>
+          <details name="faq"><summary>Как всё устроено шаг за шагом?<i aria-hidden="true"></i></summary><div class="ans"><ol><li><b>Вводная встреча:</b> формулируем вашу цель, определяем текущий уровень, составляем предварительный план, подбираем преподавателя.</li><li><b>3 пробных занятия:</b> вы адаптируетесь и принимаете решение, мы составляем детальный план обучения.</li><li><b>Регулярные занятия:</b> развиваем нужные навыки, решаем любые вопросы по обучению, поддерживаем между занятиями.</li><li><b>Постоянный контроль:</b> смотрим записи занятий, готовим ежемесячные отчёты, наставник проводит регулярные progress checks, корректируем цели и план.</li><li><b>Выпускной:</b> применяете навыки на практике и получаете сертификат выпускника.</li></ol></div></details>
+          <details name="faq"><summary>А если мне не понравится?<i aria-hidden="true"></i></summary><div class="ans"><p>Скорее всего, речь о контакте с преподавателем. Во-первых, у вас есть 3 пробных занятия, чтобы понять, сложится ли контакт. Плюс есть первый месяц со скидкой, чтобы удостовериться, что всё точно идёт как надо.</p><p>В любом случае все проблемы мы видим заранее: на записях занятий, в отчётах преподавателей и на progress checks с наставником. Что делаем:</p><ol><li>Пересобираем план</li><li>Меняем подход и методику</li><li>Пересматриваем цель</li><li>Меняем преподавателя без потери контекста: всю историю хранит наставник</li><li>В крайнем случае возвращаем оплату за неиспользованное время</li></ol></div></details>
+          <details name="faq"><summary>Как вы отслеживаете мой прогресс?<i aria-hidden="true"></i></summary><div class="ans"><p>Очень тщательно, на всех этапах. Каждый месяц вы получаете progress report: ваши достижения и области, над которыми ещё нужно поработать. Наставник регулярно проводит progress checks по видеосвязи.</p><p>Есть и работа, которую вы не увидите, но почувствуете: мы смотрим записи занятий, общаемся с преподавателями, даём им обратную связь и с вашего согласия корректируем учебный план.</p></div></details>
+          <details name="faq"><summary>Как вы отбираете преподавателей?<i aria-hidden="true"></i></summary><div class="ans"><p>Все наши преподаватели прошли отбор от 30 до 60 человек на место:</p><ol><li>Ищем кандидатов везде: от профильных платформ до профессиональных чатов</li><li>Отсеиваем кандидатов без профильного образования и опыта, студентов и тех, кто работает по устаревшим методикам</li><li>Проверяем видео-задание: произношение и то, как преподаватель подаёт материал</li><li>Adam и Elena проводят финальное собеседование</li><li>Составляем психологический портрет преподавателя и определяем, каким ученикам он подходит</li><li>Доверяем провести 1–3 занятия</li><li>Смотрим записи и даём обратную связь</li><li>Проверяем, как учтены рекомендации</li><li>Берём в команду</li></ol></div></details>
+          <details name="faq"><summary>Через сколько времени я заговорю как носитель языка?<i aria-hidden="true"></i></summary><div class="ans"><p>Стремление говорить как носитель достойно уважения, но обычно за ним не стоит конкретная жизненная цель. На вводной встрече мы вместе её найдём: почти наверняка она окажется более насущной.</p></div></details>
+          <details name="faq"><summary>Можно ли временно приостановить наставничество?<i aria-hidden="true"></i></summary><div class="ans"><p>Да. Не волнуйтесь: ни наставник, ни методист, ни преподаватель, ни оплаченное время никуда не денутся. Мы будем вас ждать.</p></div></details>
+          <details name="faq"><summary>Вы готовите к экзаменам?<i aria-hidden="true"></i></summary><div class="ans"><p>Да, мы готовим к международным языковым экзаменам, а также к вступительному экзамену SAT. Это отдельная услуга, её можно обсудить с наставником.</p></div></details>
+          <details name="faq"><summary>Вы даёте сертификат об окончании обучения?<i aria-hidden="true"></i></summary><div class="ans"><p>Да, даём. Но важно понимать, что официально уровень языка подтверждают только международные сертификаты, которые выдают после сдачи экзаменов. Мы готовим к таким экзаменам, но в России сейчас нет официальных центров для их сдачи, поэтому ехать придётся в другую страну. Куда лучше, подскажем в рамках наставничества.</p></div></details>
+          <details name="faq"><summary>Есть ли рассрочка?<i aria-hidden="true"></i></summary><div class="ans"><p>В стоимость наставничества уже заложена оплата блоками. В каждый блок входят 8 занятий с преподавателем.</p></div></details>
+          <details name="faq"><summary>Могу ли я записать своего ребёнка?<i aria-hidden="true"></i></summary><div class="ans"><p>Да, в команде есть детские преподаватели. Наставничество для детей устроено немного иначе. Сайт по английскому для детей сейчас в разработке. Вы можете задать любые вопросы напрямую Адаму в Макс, ВК или Телеграм.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <span class="foot__kicker">✦ PERSONAL ENGLISH MENTORING</span>
+    <p class="slogan"><span>Stop studying English</span><span>Start using it</span></p>
+    <div class="foot__line"></div>
+    <p class="foot__txt">Английский нужен не для уроков. Он нужен для путешествий, работы, переговоров и жизни без ограничений.</p>
+    <div class="socials">
+      <a href="#" target="_blank" rel="noopener" aria-label="Макс"><svg><use href="#i-max"/></svg></a>
+      <a href="#" target="_blank" rel="noopener" aria-label="ВКонтакте"><svg><use href="#i-vk"/></svg></a>
+      <a href="#" target="_blank" rel="noopener" aria-label="Телеграм"><svg><use href="#i-tg"/></svg></a>
+    </div>
+    <div class="req">
+      <span>© Демо-сайт для портфолио: школа, команда, отзывы и контакты условные</span>
+      <span>Регистрационный номер оператора персональных данных 77-26-554138</span>
+      <span>Почта: <a href="mailto:hello@example.ru">hello@example.ru</a></span>
+    </div>
+  </footer>
+
+  <div class="cookie" id="cookie" role="dialog" aria-label="Файлы cookie">
+    <span>Мы используем файлы cookie для улучшения работы сайта. Оставаясь на сайте, вы соглашаетесь с нашей <a href="#">Политикой использования cookie</a>.</span>
+    <button type="button" id="cookie-ok">Понятно</button>
+  </div>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  if (window.matchMedia('(max-width: 860px)').matches) document.getElementById('top').setAttribute('data-v-span', '1.3');
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Бургер-меню: открыть/закрыть, закрыть по ссылке и Esc.
+  (function () {
+    var page = document.querySelector('.v-page'), btn = document.querySelector('.burger'), menu = document.getElementById('menu');
+    function set(on) { page.classList.toggle('menu-open', on); btn.setAttribute('aria-expanded', on); }
+    btn.addEventListener('click', function () { set(!page.classList.contains('menu-open')); });
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Листалки: стрелки прокручивают на одну карточку.
+  document.querySelectorAll('[data-rail]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var rail = document.getElementById(b.getAttribute('data-rail')), card = rail.firstElementChild;
+      rail.scrollBy({ left: (card.getBoundingClientRect().width + 20) * +b.getAttribute('data-dir'), behavior: 'smooth' });
+    });
+  });
+
+  // Кейсы: «Показать историю целиком»; отзывы: «Читать полностью».
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.linkbtn'); if (!b) return;
+    var open = b.getAttribute('aria-expanded') !== 'true';
+    b.setAttribute('aria-expanded', open);
+    if (b.hasAttribute('data-rev')) {
+      b.previousElementSibling.classList.toggle('is-cut', !open);
+      b.firstChild.textContent = open ? 'Свернуть ' : 'Читать полностью ';
+    } else {
+      b.previousElementSibling.hidden = !open;
+      b.firstChild.textContent = open ? 'Свернуть историю ' : 'Показать историю целиком ';
+    }
+  });
+
+  // Форма: в демо заявка никуда не уходит – показываем окно «Спасибо».
+  (function () {
+    var form = document.getElementById('form'), box = document.getElementById('nachat');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      box.classList.add('is-sent');
+    });
+  })();
+
+  // Плашка cookie при первом заходе.
+  (function () {
+    var c = document.getElementById('cookie'), seen = false;
+    try { seen = localStorage.getItem('cookie-ok') === '1'; } catch (e) {}
+    if (!seen) setTimeout(function () { c.classList.add('is-on'); }, 1200);
+    document.getElementById('cookie-ok').addEventListener('click', function () { c.classList.remove('is-on'); try { localStorage.setItem('cookie-ok', '1'); } catch (e) {} });
+  })();
+</script>
+</body>
+</html>

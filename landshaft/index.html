@@ -118,11 +118,14 @@
   .v-page .seas__name { margin-top: var(--v-6); font-family: var(--v-font-display); font-weight: 700; font-size: clamp(2rem, 1.4rem + 2.4vw, 3.4rem); line-height: 1; }
   .v-page .seas__what { margin-top: var(--v-3); max-width: 34ch; color: rgb(242 241 234 / .88); min-height: 4.8em; text-wrap: pretty; }
   .seas__track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: var(--v-6); max-width: 24rem; }
-  .seas__track span { display: grid; gap: .5em; font-size: var(--v-t-xs); color: rgb(242 241 234 / .6); transition: color .3s var(--v-ease-out); }
-  .seas__track span::before { content: ""; height: 4px; border-radius: 2px; background: rgb(242 241 234 / .22); transition: background-color .3s var(--v-ease-out); }
-  .seas__track span.is-on { color: #f2f1ea; }
-  .seas__track span.is-on::before { background: var(--c); }
-  .seas__track span.is-done::before { background: rgb(242 241 234 / .55); }
+  .v-page .seas__track button { display: grid; gap: .5em; align-content: start; min-height: 44px; padding: .2em 0 0; border: 0; background: none; text-align: left; cursor: pointer;
+    font: inherit; font-size: var(--v-t-sm); font-weight: 600; color: rgb(242 241 234 / .62); transition: color .2s var(--v-ease-out); }
+  .seas__track button::before { content: ""; height: 4px; border-radius: 2px; background: rgb(242 241 234 / .22); transition: background-color .3s var(--v-ease-out), transform .2s var(--v-ease-out); transform-origin: left; }
+  .v-page .seas__track button.is-on { color: #f2f1ea; }
+  .seas__track button.is-on::before { background: var(--c); }
+  .seas__track button.is-done::before { background: rgb(242 241 234 / .55); }
+  .seas__track button:focus-visible { outline: 2px solid #c9d8b6; outline-offset: 4px; border-radius: 2px; }
+  @media (hover: hover) and (pointer: fine) { .v-page .seas__track button:hover { color: #f2f1ea; } .seas__track button:hover::before { transform: scaleY(1.6); } }
   @media (max-width: 860px) {
     .seas__shade { background: linear-gradient(to bottom, rgb(18 26 20 / .85) 0%, rgb(18 26 20 / .55) 50%, rgb(18 26 20 / .1) 80%); }
     .seas__copy { top: clamp(4.4rem, 9vh, 5.2rem); bottom: auto; display: block; right: var(--v-gutter); max-width: none; }
@@ -275,7 +278,7 @@
         </div>
         <div class="ba__view" data-v-in>
           <img src="assets/do.webp" alt="Участок после стройки: глина, колеи и строительный мусор" width="1600" height="900" loading="lazy">
-          <figure class="ba__after" data-v-reveal="right" data-v-reveal-at="0.2 0.62"><img src="assets/sad.webp" alt="Тот же участок через год: газон, дорожка, терраса и посадки" width="1920" height="1080" loading="lazy"></figure>
+          <figure class="ba__after" data-v-reveal="right" data-v-reveal-at="0.37 0.7" id="ba-after"><img src="assets/sad.webp" alt="Тот же участок через год: газон, дорожка, терраса и посадки" width="1920" height="1080" loading="lazy"></figure>
           <span class="ba__tag ba__tag--before">Было</span><span class="ba__tag ba__tag--after">Стало</span>
         </div>
       </div>
@@ -296,8 +299,8 @@
           <h2 class="v-display v-display--lg">Красивый не только в июле</h2>
           <p class="seas__name" id="seas-name">Май</p>
           <p class="seas__what" id="seas-what">Первыми просыпаются луковичные: тюльпаны и нарциссы вдоль дорожки, свежая зелень газона и молодые листья берёз.</p>
-          <div class="seas__track" id="seas-track" aria-hidden="true">
-            <span class="is-on" style="--c:#9cc46b">май</span><span style="--c:#6f8f3f">июль</span><span style="--c:#c27a2c">сентябрь</span><span style="--c:#7d97ad">январь</span>
+          <div class="seas__track" id="seas-track" role="group" aria-label="Выбрать сезон">
+            <button type="button" class="is-on" style="--c:#9cc46b" aria-pressed="true">май</button><button type="button" style="--c:#6f8f3f" aria-pressed="false">июль</button><button type="button" style="--c:#c27a2c" aria-pressed="false">сентябрь</button><button type="button" style="--c:#7d97ad" aria-pressed="false">январь</button>
           </div>
         </div>
       </div>
@@ -417,6 +420,7 @@
   if (window.matchMedia('(max-width: 860px)').matches) {
     document.getElementById('top').setAttribute('data-v-span', '1.5');
     document.getElementById('sezony').setAttribute('data-v-span', '2.6');
+    document.getElementById('ba-after').setAttribute('data-v-reveal-at', '0.45 0.82');
   }
   Vibe.mount(document.querySelector('.v-page'));
 
@@ -430,7 +434,7 @@
   // Фирменный ход «Сад по сезонам»: --v-p акта делится на четыре сезона,
   // фото того же сада сменяют друг друга, слева – что в это время работает в саду.
   (function () {
-    var act = document.getElementById('sezony'), imgs = act.querySelectorAll('.seas__img img'), track = act.querySelectorAll('#seas-track span');
+    var act = document.getElementById('sezony'), imgs = act.querySelectorAll('.seas__img img'), track = act.querySelectorAll('#seas-track button');
     var nameEl = document.getElementById('seas-name'), whatEl = document.getElementById('seas-what');
     var S = [
       ['Май', 'Первыми просыпаются луковичные: тюльпаны и нарциссы вдоль дорожки, свежая зелень газона и молодые листья берёз.'],
@@ -443,7 +447,7 @@
       var k = Math.min(3, Math.max(0, Math.floor(p * 4)));
       if (k === last) return; last = k;
       imgs.forEach(function (im, i) { im.classList.toggle('is-on', i === k); });
-      track.forEach(function (t, i) { t.classList.toggle('is-on', i === k); t.classList.toggle('is-done', i < k); });
+      track.forEach(function (t, i) { t.classList.toggle('is-on', i === k); t.classList.toggle('is-done', i < k); t.setAttribute('aria-pressed', i === k); });
       nameEl.textContent = S[k][0]; whatEl.textContent = S[k][1];
     }
     var live = false, lastP = -1;
@@ -454,6 +458,15 @@
     }
     new IntersectionObserver(function (es) { live = es[0].isIntersecting; if (live) tick(); }).observe(act);
     render(0);
+    // Кнопки месяцев: прокручиваем страницу к середине нужного сезона – сцена сама переключится,
+    // и прокрутка с кнопками всегда показывают одно и то же.
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    track.forEach(function (btn, i) {
+      btn.addEventListener('click', function () {
+        var top = act.getBoundingClientRect().top + window.scrollY, run = act.offsetHeight - window.innerHeight;
+        window.scrollTo({ top: Math.round(top + run * (i + 0.5) / 4), behavior: reduce ? 'auto' : 'smooth' });
+      });
+    });
   })();
 
   // Форма: в демо заявка никуда не уходит; показываем выбранные фото и состояние «отправлено».

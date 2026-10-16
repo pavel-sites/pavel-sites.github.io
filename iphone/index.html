@@ -104,6 +104,12 @@
     -webkit-mask-composite: source-in; mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 80%, transparent), linear-gradient(to right, transparent, #000 16%, #000 88%, transparent); mask-composite: intersect; }
   .bubble { position: absolute; top: 6%; right: 0; max-width: 15rem; background: #fff; border-radius: 18px; padding: 1rem 1.1rem; font-size: var(--v-t-sm); line-height: 1.45; box-shadow: var(--v-e1); text-align: center; }
   .bubble::before { content: ""; position: absolute; left: -9px; top: 46%; border: 10px solid transparent; border-right-color: #fff; border-left: 0; }
+  .hero__fig .bubble { top: 2%; right: auto; left: 64%; width: max-content; max-width: 14.5rem; }
+  @media (max-width: 1240px) and (min-width: 861px) {
+    .hero__fig { display: flex; flex-direction: column; }
+    .hero__fig .bubble { order: -1; position: relative; top: auto; left: auto; max-width: none; width: auto; margin: 0 0 .9rem; text-align: left; }
+    .hero__fig .bubble::before { left: 62%; top: auto; bottom: -9px; border: 10px solid transparent; border-top-color: #fff; border-bottom: 0; }
+  }
   .who { position: absolute; left: 0; top: 46%; display: grid; gap: 6px; justify-items: start; }
   .who b { background: var(--or); color: #fff; font-weight: 700; padding: .6rem 1.1rem; border-radius: 10px; font-size: 1.02rem; box-shadow: var(--v-e1); }
   .who span { background: #fff; padding: .5rem .9rem; border-radius: 10px; font-size: var(--v-t-sm); box-shadow: var(--v-e1); margin-left: 1rem; }
@@ -125,7 +131,7 @@
     .facts svg { width: 26px; height: 26px; }
     .hero__fig { max-width: 440px; margin: 0 auto; width: 100%; display: flex; flex-direction: column; }
     .hero__fig .bubble { order: -1; }
-    .hero__fig .bubble { position: relative; top: auto; right: auto; max-width: none; margin: 0 0 .9rem; font-size: .9rem; padding: .8rem 1rem; text-align: left; }
+    .hero__fig .bubble { position: relative; top: auto; right: auto; left: auto; width: auto; max-width: none; margin: 0 0 .9rem; font-size: .9rem; padding: .8rem 1rem; text-align: left; }
     .hero__fig .bubble::before { left: 62%; top: auto; bottom: -9px; border: 10px solid transparent; border-top-color: #fff; border-bottom: 0; }
     .who b { font-size: .9rem; padding: .5rem .8rem; } .who span { font-size: .78rem; margin-left: .5rem; }
   }

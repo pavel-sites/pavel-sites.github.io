@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <title>Путешествие под ключ</title>
-  <meta name="description" content="Подберу готовый тур или соберу самостоятельное путешествие с маршрутом по дням. Вам останется собрать чемодан.">
+  <meta name="description" content="Путешествие под ключ, даже в Европу: бронирование, регистрация на рейсы, карты маршрутов в подарок и помощь в любой точке мира. Вам останется собрать чемодан.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111716'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23ffcc00'%3E%E2%9C%88%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Путешествие под ключ">
-  <meta property="og:description" content="Подберу тур или соберу самостоятельную поездку под ваш бюджет. Вам останется собрать чемодан.">
+  <meta property="og:description" content="Путешествие под ключ, даже в Европу. Карты маршрутов в подарок, помощь в любой точке мира. Вам останется собрать чемодан.">
   <meta property="og:image" content="https://pavel-sites.github.io/turnkeytrip/assets/og.jpg">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -23,6 +23,7 @@
       <a href="#" class="logo"><span aria-hidden="true">✈</span> Путешествие под&nbsp;ключ</a>
       <nav class="topbar__links" aria-label="Основное меню">
         <a href="#formats">Услуги</a>
+        <a href="#when">Куда лететь</a>
         <a href="#how">Как работаю</a>
         <a href="#prices">Цены</a>
         <a href="#faq">Вопросы</a>
@@ -32,25 +33,36 @@
     </div>
   </header>
 
-  <!-- Первый экран: тёмно-зелёный, жёлтый остаётся акцентом -->
+  <!-- Первый экран: светлое фото во всю ширину, текст слева на тёмно-зелёной подложке -->
   <section class="hero">
-    <div class="wrap">
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <h1>Соберу поездку под ваш бюджет: тур или&nbsp;самостоятельно</h1>
-          <p class="hero__lead">Посчитаю оба варианта, покажу, что дешевле, и соберу билеты, жильё и маршрут по дням. Вам останется собрать чемодан.</p>
-          <div class="hero__actions">
-            <a href="#brief" class="btn btn--ink">Оставить заявку</a>
-            <a href="https://t.me/spaspb755" class="btn btn--line" target="_blank" rel="noopener">Написать в Telegram</a>
-          </div>
-          <ul class="hero__facts">
-            <li><strong>Бесплатно</strong> подбор готового тура</li>
-            <li><strong>2–3 дня</strong> на готовый маршрут</li>
-            <li><strong>На связи</strong> во время поездки</li>
-          </ul>
+    <picture class="hero__bg">
+      <source media="(max-width: 640px)" srcset="assets/hero-m.webp">
+      <img src="assets/hero.webp" alt="" width="2000" height="1125" fetchpriority="high">
+    </picture>
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <h1>Путешествие под ключ – даже в&nbsp;Европу</h1>
+        <p class="hero__lead">Бронирую и подтверждаю билеты и отели, регистрирую на рейсы, помогаю и консультирую в любой точке мира. Вам останется собрать чемодан.</p>
+        <div class="hero__actions">
+          <a href="#brief" class="btn btn--ink">Оставить заявку</a>
+          <a href="https://t.me/spaspb755" class="btn btn--line" target="_blank" rel="noopener">Написать в Telegram</a>
         </div>
+        <ul class="hero__facts">
+          <li><strong>Карты маршрутов</strong> в подарок к поездке</li>
+          <li><strong>Бронь и регистрация</strong> на рейсы беру на себя</li>
+          <li><strong>На связи</strong> в любой точке мира</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-        <div class="hero__side">
+  <!-- Куда и когда: календарь и табло -->
+  <section class="when" id="when">
+    <div class="wrap">
+      <h2>Куда и когда лететь</h2>
+      <p class="when__lead">Листайте месяцы в календаре – табло подскажет, где в это время сезон. Выбранные даты сразу попадут в заявку.</p>
+      <div class="when__grid">
         <section class="cal" aria-labelledby="cal-title">
           <div class="cal__head">
             <button type="button" class="cal__nav" id="cal-prev" aria-label="Предыдущий месяц">‹</button>
@@ -82,15 +94,16 @@
             </thead>
             <tbody>
               <tr data-months="1-12"><td class="flap" data-text="СТАМБУЛ">СТАМБУЛ</td><td>самостоятельно<span class="board__off">не сезон</span></td><td>3 ч</td><td class="board__season">круглый год</td></tr>
+              <tr data-months="5-10"><td class="flap" data-text="БАРСЕЛОНА">БАРСЕЛОНА</td><td>самостоятельно<span class="board__off">не сезон</span></td><td>пересадка</td><td class="board__season">май–октябрь</td></tr>
+              <tr data-months="4-10"><td class="flap" data-text="ЛИССАБОН">ЛИССАБОН</td><td>самостоятельно<span class="board__off">не сезон</span></td><td>пересадка</td><td class="board__season">апрель–октябрь</td></tr>
               <tr data-months="5-10"><td class="flap" data-text="АНТАЛЬЯ">АНТАЛЬЯ</td><td>тур<span class="board__off">не сезон</span></td><td>4 ч</td><td class="board__season">май–октябрь</td></tr>
               <tr data-months="4-10"><td class="flap" data-text="ТБИЛИСИ">ТБИЛИСИ</td><td>самостоятельно<span class="board__off">не сезон</span></td><td>3 ч</td><td class="board__season">апрель–октябрь</td></tr>
               <tr data-months="11-4"><td class="flap" data-text="ПХУКЕТ">ПХУКЕТ</td><td>тур<span class="board__off">не сезон</span></td><td>9 ч</td><td class="board__season">ноябрь–апрель</td></tr>
               <tr data-months="10-4"><td class="flap" data-text="ДУБАЙ">ДУБАЙ</td><td>тур<span class="board__off">не сезон</span></td><td>5 ч</td><td class="board__season">октябрь–апрель</td></tr>
             </tbody>
           </table>
-          <p class="board__foot"><span id="board-season-note"></span>В пути – примерное время прямого рейса из Москвы. Для ваших дат посчитаю оба варианта и покажу, что дешевле.</p>
+          <p class="board__foot"><span id="board-season-note"></span>В пути – примерное время прямого рейса из Москвы, в Европу летим с пересадкой. Для ваших дат посчитаю оба варианта и покажу, что дешевле.</p>
         </figure>
-        </div>
       </div>
     </div>
   </section>
@@ -153,11 +166,11 @@
           </li>
           <li>
             <h3>Бронирование</h3>
-            <p>Вы выбираете, я помогаю всё оформить без ошибок.</p>
+            <p>Бронирую и подтверждаю билеты и отели, регистрирую вас на рейсы.</p>
           </li>
           <li>
             <h3>Поездка</h3>
-            <p>Отдыхайте. Если что-то пойдёт не так, я на связи в Telegram.</p>
+            <p>Отдыхайте. Помогу и подскажу в любой точке мира – я на связи в Telegram.</p>
           </li>
         </ol>
       </div>
@@ -196,8 +209,8 @@
     <section class="gift" id="gift">
       <div class="wrap gift__grid">
         <div class="gift__text">
-          <h2>В подарок – план поездки и путеводитель</h2>
-          <p>Каждому, кто едет со мной, соберу личный план по дням и путеводитель по городам: маршруты, транспорт, где поесть и что привезти домой.</p>
+          <h2>Наша фишка – карты маршрутов в подарок</h2>
+          <p>К каждой поездке соберу личные карты маршрутов и путеводитель: что смотреть по дням, как ездить по городу, где поесть и что привезти домой.</p>
           <p>Так это выглядит на примере Португалии за 10 дней и маршрутов по Лиссабону.</p>
           <p class="gift__hint">Нажмите на карточку, чтобы рассмотреть её.</p>
         </div>
@@ -422,6 +435,10 @@
         <details>
           <summary>Что лучше: тур или самостоятельная поездка?</summary>
           <p>Зависит от направления и сезона. Турция и Египет в пакете обычно выгоднее, а города Европы и Азии часто дешевле и интереснее самостоятельно. Напишите, куда хотите, и я посчитаю оба варианта.</p>
+        </details>
+        <details>
+          <summary>Помогаете с поездками в Европу?</summary>
+          <p>Да. Соберу маршрут с удобной пересадкой, забронирую и подтвержу билеты и жильё, зарегистрирую на рейсы и подготовлю карты маршрутов по городам. Во время поездки я на связи.</p>
         </details>
         <details>
           <summary>Еду за границу впервые. С чем поможете?</summary>

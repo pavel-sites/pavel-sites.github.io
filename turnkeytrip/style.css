@@ -35,7 +35,7 @@
   --fs-md: 1.3rem;
   --fs-lg: 1.65rem;
   --fs-xl: clamp(2rem, 4vw, 2.75rem);
-  --fs-hero: clamp(2rem, 4.2vw, 3.6rem);
+  --fs-hero: clamp(2.2rem, 5vw, 4.2rem);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -248,20 +248,79 @@ main .btn--ink {
 /* ---------- Первый экран ---------- */
 
 .hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: min(calc(100svh - 64px), 860px);
+  padding: 64px 0;
   background: var(--hero-bg);
   color: var(--hero-fg);
-  padding-bottom: 72px;
-  /* в тёмной теме фон страницы такой же — тонкая линия отделяет первый экран */
-  border-bottom: 1px solid rgba(232, 238, 237, 0.14);
 }
 
-.hero {
+/* Светлое фото во всю ширину */
+.hero__bg,
+.hero__bg img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__bg img {
+  object-fit: cover;
+  object-position: 62% 50%;
+}
+
+/* Подложка только там, где текст: слева тёмно-зелёная, справа фото остаётся ярким */
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg,
+    rgba(17, 23, 22, 0.92) 0%,
+    rgba(17, 23, 22, 0.78) 34%,
+    rgba(17, 23, 22, 0.25) 56%,
+    rgba(17, 23, 22, 0) 70%);
+}
+
+.hero__inner {
+  width: 100%;
+}
+
+.hero__copy {
+  max-width: 600px;
+}
+
+/* ---------- Куда и когда ---------- */
+
+.when {
+  padding: 72px 0 80px;
+  background: var(--hero-bg);
+  color: var(--hero-fg);
+}
+
+.when__lead {
+  max-width: 60ch;
+  color: rgba(232, 238, 237, 0.78);
+}
+
+.when__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 32px;
+  align-items: start;
+  margin-top: 32px;
+}
+
+.when {
   position: relative;
   isolation: isolate;
 }
 
 /* Лёгкое зерно (4%), чтобы тёмный фон не выглядел плоской заливкой */
-.hero::before {
+.when::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -346,20 +405,13 @@ main .btn--ink {
   transition-duration: 0.06s;
 }
 
-.hero__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 56px;
-  align-items: center;
-  padding-top: 64px;
-}
-
 .hero h1 {
   font-size: var(--fs-hero);
   font-weight: 900;
   letter-spacing: -0.045em;
   line-height: 1;
-  max-width: 18ch;
+  max-width: 13ch;
+  text-shadow: 0 2px 24px rgba(17, 23, 22, 0.35);
   text-wrap: balance;
 }
 
@@ -405,12 +457,6 @@ main .btn--ink {
 }
 
 /* ---------- Календарь поездки ---------- */
-
-.hero__side {
-  display: grid;
-  gap: 20px;
-  min-width: 0;
-}
 
 /* Календарь — бумажная карточка на тёмном экране, табло под ним остаётся главным */
 .cal {
@@ -1361,14 +1407,10 @@ main .btn--ink {
 /* ---------- Адаптив ---------- */
 
 @media (max-width: 960px) {
-  .hero__grid,
+  .when__grid,
   .brief__grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .hero__grid {
-    padding-top: 40px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
   }
 
   .route__line {
@@ -1394,7 +1436,7 @@ main .btn--ink {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1060px) {
   .topbar__links {
     display: none;
   }
@@ -1405,8 +1447,44 @@ main .btn--ink {
 }
 
 @media (max-width: 640px) {
+  /* на телефоне фото – яркая картинка сверху, текст под ней на тёмно-зелёном */
   .hero {
-    padding-bottom: 48px;
+    display: block;
+    min-height: 0;
+    padding: calc(min(100vw, 52svh) - 48px) 0 36px;
+  }
+
+  .hero__bg,
+  .hero__bg img {
+    bottom: auto;
+    height: min(100vw, 52svh);
+  }
+
+  .hero__bg img {
+    object-position: 50% 40%;
+  }
+
+  .hero__scrim {
+    bottom: auto;
+    height: min(100vw, 52svh);
+    background: linear-gradient(0deg, var(--hero-bg) 0%, rgba(17, 23, 22, 0) 38%);
+  }
+
+  .board__table th {
+    font-size: 0.75rem;
+  }
+
+  .board__table td {
+    font-size: 0.8rem;
+    padding-right: 6px;
+  }
+
+  .when {
+    padding: 56px 0;
+  }
+
+  .flap {
+    font-size: 0.72rem;
   }
 
   .board {

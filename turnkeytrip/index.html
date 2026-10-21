@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Путешествие под ключ</title>
+  <meta name="description" content="Подберу готовый тур или соберу самостоятельное путешествие с маршрутом по дням. Вам останется собрать чемодан.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111716'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23ffcc00'%3E%E2%9C%88%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Путешествие под ключ">
+  <meta property="og:description" content="Подберу тур или соберу самостоятельную поездку под ваш бюджет. Вам останется собрать чемодан.">
+  <meta property="og:image" content="https://pavel-sites.github.io/turnkeytrip/assets/og.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Верхняя строка: закреплена при прокрутке -->
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a href="#" class="logo"><span aria-hidden="true">✈</span> Путешествие под&nbsp;ключ</a>
+      <nav class="topbar__links" aria-label="Основное меню">
+        <a href="#formats">Услуги</a>
+        <a href="#how">Как работаю</a>
+        <a href="#prices">Цены</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#guides">Гидам</a>
+      </nav>
+      <a href="#brief" class="topbar__cta">Оставить заявку</a>
+    </div>
+  </header>
+
+  <!-- Первый экран: тёмно-зелёный, жёлтый остаётся акцентом -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <h1>Соберу поездку под ваш бюджет: тур или&nbsp;самостоятельно</h1>
+          <p class="hero__lead">Посчитаю оба варианта, покажу, что дешевле, и соберу билеты, жильё и маршрут по дням. Вам останется собрать чемодан.</p>
+          <div class="hero__actions">
+            <a href="#brief" class="btn btn--ink">Оставить заявку</a>
+            <a href="https://t.me/spaspb755" class="btn btn--line" target="_blank" rel="noopener">Написать в Telegram</a>
+          </div>
+          <ul class="hero__facts">
+            <li><strong>Бесплатно</strong> подбор готового тура</li>
+            <li><strong>2–3 дня</strong> на готовый маршрут</li>
+            <li><strong>На связи</strong> во время поездки</li>
+          </ul>
+        </div>
+
+        <div class="hero__side">
+        <section class="cal" aria-labelledby="cal-title">
+          <div class="cal__head">
+            <button type="button" class="cal__nav" id="cal-prev" aria-label="Предыдущий месяц">‹</button>
+            <h2 class="cal__title" id="cal-title" aria-live="polite">Месяц</h2>
+            <button type="button" class="cal__nav" id="cal-next" aria-label="Следующий месяц">›</button>
+          </div>
+          <div class="cal__week" aria-hidden="true">
+            <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+          </div>
+          <div class="cal__grid" id="cal-grid"></div>
+          <div class="cal__foot">
+            <p id="cal-summary">Нажмите дату вылета, потом дату возвращения</p>
+            <a href="#brief" class="cal__go" id="cal-go" hidden>Подобрать на эти даты</a>
+          </div>
+        </section>
+
+        <figure class="board" aria-labelledby="board-title">
+          <figcaption class="board__head">
+            <span id="board-title">Куда и как лететь</span>
+          </figcaption>
+          <table class="board__table">
+            <thead>
+              <tr>
+                <th scope="col">Направление</th>
+                <th scope="col">Как выгоднее</th>
+                <th scope="col">В пути</th>
+                <th scope="col" class="board__season">Сезон</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-months="1-12"><td class="flap" data-text="СТАМБУЛ">СТАМБУЛ</td><td>самостоятельно<span class="board__off">не сезон</span></td><td>3 ч</td><td class="board__season">круглый год</td></tr>
+              <tr data-months="5-10"><td class="flap" data-text="АНТАЛЬЯ">АНТАЛЬЯ</td><td>тур<span class="board__off">не сезон</span></td><td>4 ч</td><td class="board__season">май–октябрь</td></tr>
+              <tr data-months="4-10"><td class="flap" data-text="ТБИЛИСИ">ТБИЛИСИ</td><td>самостоятельно<span class="board__off">не сезон</span></td><td>3 ч</td><td class="board__season">апрель–октябрь</td></tr>
+              <tr data-months="11-4"><td class="flap" data-text="ПХУКЕТ">ПХУКЕТ</td><td>тур<span class="board__off">не сезон</span></td><td>9 ч</td><td class="board__season">ноябрь–апрель</td></tr>
+              <tr data-months="10-4"><td class="flap" data-text="ДУБАЙ">ДУБАЙ</td><td>тур<span class="board__off">не сезон</span></td><td>5 ч</td><td class="board__season">октябрь–апрель</td></tr>
+            </tbody>
+          </table>
+          <p class="board__foot"><span id="board-season-note"></span>В пути – примерное время прямого рейса из Москвы. Для ваших дат посчитаю оба варианта и покажу, что дешевле.</p>
+        </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- Два формата – как два выхода на посадку -->
+    <section class="formats" id="formats">
+      <div class="wrap">
+        <h2>Два способа поехать</h2>
+        <p class="section-lead">Не знаете, какой формат лучше? Напишите направление и даты, и я подскажу.</p>
+        <div class="gates">
+          <article class="gate">
+            <header class="gate__sign">
+              <span class="gate__letter" aria-hidden="true">А</span>
+              <h3>Готовый тур</h3>
+            </header>
+            <img class="gate__photo" src="assets/gate-tour.webp" alt="Терраса отеля у моря с двумя шезлонгами" width="900" height="675" loading="lazy">
+            <div class="gate__body">
+              <p>Перелёт, отель, трансфер и страховка в одном пакете. Сравню предложения нескольких туроператоров и выберу лучшее по цене и отзывам.</p>
+              <ul>
+                <li>Проверенные туроператоры</li>
+                <li>Отели с реальными отзывами, а не рекламными фото</li>
+                <li>Горящие предложения под ваши даты</li>
+              </ul>
+              <p class="gate__price">Подбор бесплатный</p>
+            </div>
+          </article>
+          <article class="gate">
+            <header class="gate__sign">
+              <span class="gate__letter" aria-hidden="true">Б</span>
+              <h3>Самостоятельная поездка</h3>
+            </header>
+            <img class="gate__photo" src="assets/gate-self.webp" alt="Путешественник с рюкзаком на улочке старого Тбилиси" width="900" height="675" loading="lazy">
+            <div class="gate__body">
+              <p>Свобода без хлопот. Соберу маршрут, найду билеты и жильё, распишу логистику. Бронируете вы сами, по моим ссылкам и подсказкам.</p>
+              <ul>
+                <li>Маршрут по дням с картой</li>
+                <li>Билеты, жильё и трансферы</li>
+                <li>Бюджет поездки до рубля</li>
+              </ul>
+              <p class="gate__price">от 5 000 ₽</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Как работаю: реальная последовательность, поэтому линия маршрута -->
+    <section class="route" id="how">
+      <div class="wrap">
+        <h2>Как я работаю</h2>
+        <ol class="route__line">
+          <li>
+            <h3>Заявка</h3>
+            <p>Коротко расскажите: куда, когда, бюджет и сколько человек.</p>
+          </li>
+          <li>
+            <h3>Варианты</h3>
+            <p>За 1–3 дня пришлю 2–3 варианта с ценами, плюсами и минусами.</p>
+          </li>
+          <li>
+            <h3>Бронирование</h3>
+            <p>Вы выбираете, я помогаю всё оформить без ошибок.</p>
+          </li>
+          <li>
+            <h3>Поездка</h3>
+            <p>Отдыхайте. Если что-то пойдёт не так, я на связи в Telegram.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Цены: таблица, а не одинаковые карточки -->
+    <section class="prices" id="prices">
+      <div class="wrap">
+        <h2>Цены</h2>
+        <p class="section-lead">Никаких скрытых платежей: вы заранее знаете, за что платите.</p>
+        <div class="price-list">
+          <div class="price-row">
+            <h3>Подбор тура</h3>
+            <p>Сравню туроператоров и выберу лучший вариант. Мне платит туроператор, цена тура для вас не меняется.</p>
+            <strong class="price-row__sum">0 ₽</strong>
+            <a href="#brief" class="price-row__pick" data-format="Готовый тур">Выбрать</a>
+          </div>
+          <div class="price-row price-row--main">
+            <h3>Маршрут под ключ</h3>
+            <p>Маршрут по дням, билеты, жильё, бюджет и поддержка во время поездки.</p>
+            <strong class="price-row__sum">от 5 000 ₽</strong>
+            <a href="#brief" class="price-row__pick" data-format="Самостоятельное путешествие">Выбрать</a>
+          </div>
+          <div class="price-row">
+            <h3>Консультация</h3>
+            <p>Час созвона: проверю ваш план и отвечу на вопросы. Если потом купите тур у меня, стоимость зачту.</p>
+            <strong class="price-row__sum">от 1 500 ₽</strong>
+            <a href="#brief" class="price-row__pick" data-format="Консультация">Выбрать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Подарок: план и путеводитель, колода рассыпанных карточек -->
+    <section class="gift" id="gift">
+      <div class="wrap gift__grid">
+        <div class="gift__text">
+          <h2>В подарок – план поездки и путеводитель</h2>
+          <p>Каждому, кто едет со мной, соберу личный план по дням и путеводитель по городам: маршруты, транспорт, где поесть и что привезти домой.</p>
+          <p>Так это выглядит на примере Португалии за 10 дней и маршрутов по Лиссабону.</p>
+          <p class="gift__hint">Нажмите на карточку, чтобы рассмотреть её.</p>
+        </div>
+        <div class="deck" id="deck" aria-label="Страницы путеводителей">
+          <button type="button" class="card card--slide" data-full="assets/gift/ls-10-full.webp" data-title="Безопасность и комфорт на холмах">
+            <img src="assets/gift/ls-10.webp" alt="Безопасность и комфорт на холмах" width="520" height="293" loading="lazy">
+          </button>
+          <button type="button" class="card card--slide" data-full="assets/gift/ls-9-full.webp" data-title="Где поесть и что попробовать">
+            <img src="assets/gift/ls-9.webp" alt="Где поесть и что попробовать" width="520" height="293" loading="lazy">
+          </button>
+          <button type="button" class="card card--page" data-full="assets/gift/pt-8-full.webp" data-title="Что попробовать и что привезти домой">
+            <img src="assets/gift/pt-8.webp" alt="Что попробовать и что привезти домой" width="360" height="509" loading="lazy">
+          </button>
+          <button type="button" class="card card--slide" data-full="assets/gift/ls-8-full.webp" data-title="Маршрут 5. Река и современный Лиссабон">
+            <img src="assets/gift/ls-8.webp" alt="Маршрут 5. Река и современный Лиссабон" width="520" height="293" loading="lazy">
+          </button>
+          <button type="button" class="card card--page" data-full="assets/gift/pt-7-full.webp" data-title="День отъезда и практические советы">
+            <img src="assets/gift/pt-7.webp" alt="День отъезда и практические советы" width="360" height="509" loading="lazy">
+          </button>
+          <button type="button" class="card card--slide" data-full="assets/gift/ls-7-full.webp" data-title="Маршрут 4. Шиаду, Байру-Алту и Принсипи-Реал">
+            <img src="assets/gift/ls-7.webp" alt="Маршрут 4. Шиаду, Байру-Алту и Принсипи-Реал" width="520" height="293" loading="lazy">
+          </button>
+          <button type="button" class="card card--page" data-full="assets/gift/pt-6-full.webp" data-title="Порту: мосты, азулежу и портвейн">
+            <img src="assets/gift/pt-6.webp" alt="Порту: мосты, азулежу и портвейн" width="360" height="509" loading="lazy">
+          </button>
+          <button type="button" class="card card--slide" data-full="assets/gift/ls-6-full.webp" data-title="Маршрут 3. Белен: трамвай 15E и пирожные">
+            <img src="assets/gift/ls-6.webp" alt="Маршрут 3. Белен: трамвай 15E и пирожные" width="520" height="293" loading="lazy">
+          </button>
+          <button type="button" class="card card--page" data-full="assets/gift/pt-5-full.webp" data-title="Алгарве: скалы, бухты и пляжи">
+            <img src="assets/gift/pt-5.webp" alt="Алгарве: скалы, бухты и пляжи" width="360" height="509" loading="lazy">
+          </button>
+          <button type="button" class="card card--slide" data-full="assets/gift/ls-5-full.webp" data-title="Маршрут 2. Алфама пешком и трамваем 28">
+            <img src="assets/gift/ls-5.webp" alt="Маршрут 2. Алфама пешком и трамваем 28" width="520" height="293" loading="lazy">
+          </button>
+          <button type="button" class="card card--page" data-full="assets/gift/pt-4-full.webp" data-title="Синтра и Кашкайш: сказка и океан за один день">
+            <img src="assets/gift/pt-4.webp" alt="Синтра и Кашкайш: сказка и океан за один день" width="360" height="509" loading="lazy">
+          </button>
+          <button type="button" class="card card--slide" data-full="assets/gift/ls-4-full.webp" data-title="Маршрут 1. День прилёта: Байша и закат">
+            <img src="assets/gift/ls-4.webp" alt="Маршрут 1. День прилёта: Байша и закат" width="520" height="293" loading="lazy">
+          </button>
+          <button type="button" class="card card--page" data-full="assets/gift/pt-3-full.webp" data-title="Лиссабон: три дня на холмах у реки">
+            <img src="assets/gift/pt-3.webp" alt="Лиссабон: три дня на холмах у реки" width="360" height="509" loading="lazy">
+          </button>
+          <button type="button" class="card card--slide" data-full="assets/gift/ls-3-full.webp" data-title="Карта города: пять маршрутов на три дня">
+            <img src="assets/gift/ls-3.webp" alt="Карта города: пять маршрутов на три дня" width="520" height="293" loading="lazy">
+          </button>
+          <button type="button" class="card card--page" data-full="assets/gift/pt-2-full.webp" data-title="Маршрут: Лиссабон, Алгарве и Порту">
+            <img src="assets/gift/pt-2.webp" alt="Маршрут: Лиссабон, Алгарве и Порту" width="360" height="509" loading="lazy">
+          </button>
+          <button type="button" class="card card--slide" data-full="assets/gift/ls-2-full.webp" data-title="Как ездить по Лиссабону">
+            <img src="assets/gift/ls-2.webp" alt="Как ездить по Лиссабону" width="520" height="293" loading="lazy">
+          </button>
+          <button type="button" class="card card--page" data-full="assets/gift/pt-1-full.webp" data-title="Португалия за 10 дней: путеводитель для весёлой дружной компании">
+            <img src="assets/gift/pt-1.webp" alt="Португалия за 10 дней: путеводитель для весёлой дружной компании" width="360" height="509" loading="lazy">
+          </button>
+          <button type="button" class="card card--slide" data-full="assets/gift/ls-1-full.webp" data-title="Лиссабон: маршруты по городу">
+            <img src="assets/gift/ls-1.webp" alt="Лиссабон: маршруты по городу" width="520" height="293" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <dialog class="viewer" id="viewer" aria-label="Страница путеводителя">
+      <figure class="viewer__frame">
+        <img id="viewer-img" src="" alt="">
+        <figcaption id="viewer-title"></figcaption>
+      </figure>
+      <div class="viewer__bar">
+        <button type="button" class="viewer__btn" id="viewer-prev" aria-label="Предыдущая страница">‹</button>
+        <span id="viewer-count"></span>
+        <button type="button" class="viewer__btn" id="viewer-next" aria-label="Следующая страница">›</button>
+        <button type="button" class="viewer__btn viewer__close" id="viewer-close">Закрыть</button>
+      </div>
+    </dialog>
+
+    <!--
+      Кто я. Этот блок нужен всем, кто оценивал сайт: без имени, фото и отзывов
+      не хватает доверия. Скрыт, пока не заполнен: замените всё в [квадратных скобках],
+      положите фото рядом с index.html как photo.jpg и удалите атрибут hidden.
+    -->
+    <section class="about" id="about" hidden>
+      <div class="wrap about__grid">
+        <img class="about__photo" src="photo.jpg" alt="[Имя Фамилия]" width="320" height="320" loading="lazy">
+        <div class="about__text">
+          <h2>Кто я</h2>
+          <p class="about__name">[Имя Фамилия]</p>
+          <p>[Пара предложений о себе: сколько лет подбираете поездки, где бывали сами, почему этим занимаетесь.]</p>
+          <ul class="about__facts">
+            <li>[Работаю как ИП / турагентство «…», ИНН …]</li>
+            <li>[С кем заключается договор и кому вы платите за тур]</li>
+            <li>[Туроператоры из реестра Ростуризма]</li>
+          </ul>
+          <div class="about__reviews">
+            <blockquote>
+              <p>[Отзыв клиента, дословно и с его разрешения]</p>
+              <cite>[Имя, куда ездили]</cite>
+            </blockquote>
+            <blockquote>
+              <p>[Второй отзыв, лучше от семьи с детьми или от пожилого клиента]</p>
+              <cite>[Имя, куда ездили]</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Анкета -->
+    <section class="brief" id="brief">
+      <div class="wrap brief__grid">
+        <div class="brief__intro">
+          <h2 data-traveler="Заявка на подбор" data-guide="Контакты для сотрудничества">Заявка на подбор</h2>
+          <p data-traveler="Заполнение займёт минуту. Отвечу в течение дня." data-guide="Оставьте имя и контакт – я напишу или позвоню, и мы обсудим работу.">Заполнение займёт минуту. Отвечу в течение дня.</p>
+          <p class="trip-only">Удобнее голосом? Выберите в анкете «Позвонить», и я перезвоню.</p>
+          <p>Удобнее в мессенджере? Пишите сразу в <a href="https://t.me/spaspb755" target="_blank" rel="noopener">Telegram @spaspb755</a>.</p>
+          <img class="brief__photo" src="assets/pack.webp" alt="Открытый чемодан с летними вещами у окна" width="900" height="675" loading="lazy">
+        </div>
+
+        <form class="form" id="brief-form">
+          <fieldset class="mode">
+            <legend class="visually-hidden">Кто вы</legend>
+            <label class="mode__opt">
+              <input type="radio" name="mode" value="traveler" checked>
+              <span>Для путешественников</span>
+            </label>
+            <label class="mode__opt">
+              <input type="radio" name="mode" value="guide">
+              <span>Для гидов</span>
+            </label>
+          </fieldset>
+          <div class="form__row">
+            <label class="field">
+              <span>Ваше имя</span>
+              <input type="text" name="name" placeholder="Анна" autocomplete="given-name" required>
+            </label>
+            <label class="field">
+              <span>Телефон, Telegram или email</span>
+              <input type="text" name="contact" placeholder="+7 900 000-00-00" required>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="field">
+              <span>Как удобнее ответить</span>
+              <select name="reply">
+                <option>Написать в Telegram</option>
+                <option>Позвонить</option>
+                <option>Написать в WhatsApp</option>
+                <option>Написать на email</option>
+              </select>
+            </label>
+            <label class="field trip-only">
+              <span>Формат</span>
+              <select name="format" id="format">
+                <option>Готовый тур</option>
+                <option>Самостоятельное путешествие</option>
+                <option>Консультация</option>
+                <option>Пока не знаю, помогите выбрать</option>
+              </select>
+            </label>
+          </div>
+          <label class="field trip-only">
+            <span>Куда хотите поехать</span>
+            <input type="text" name="destination" placeholder="Например, Турция или «куда-нибудь к морю»" required>
+          </label>
+          <div class="form__row trip-only">
+            <label class="field">
+              <span>Когда</span>
+              <input type="text" name="dates" id="dates" placeholder="Например, 10–17 ноября" required>
+            </label>
+            <label class="field">
+              <span>Кто едет</span>
+              <input type="text" name="people" placeholder="Сколько взрослых, возраст детей">
+            </label>
+          </div>
+          <div class="form__row trip-only">
+            <label class="field">
+              <span>Бюджет на всех</span>
+              <input type="text" name="budget" placeholder="Например, 80 000 ₽">
+            </label>
+            <label class="field">
+              <span>Город вылета</span>
+              <input type="text" name="from" placeholder="Москва">
+            </label>
+          </div>
+          <label class="field trip-only">
+            <span>Пожелания</span>
+            <textarea name="wishes" rows="3" placeholder="У моря без пересадок, детский клуб, лифт в отеле, хостелы тоже подойдут…"></textarea>
+          </label>
+          <!-- Ловушка для спам-ботов: люди это поле не видят -->
+          <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn--ink btn--wide" id="submit-btn" data-traveler="Отправить заявку" data-guide="Отправить контакты">Отправить заявку</button>
+          <p class="form__status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- Приглашение гидам -->
+    <section class="guides" id="guides">
+      <div class="wrap guides__grid">
+        <img class="guides__photo" src="assets/guide.webp" alt="Гид рассказывает группе о Лиссабоне на смотровой площадке" width="900" height="675" loading="lazy">
+        <div class="guides__text">
+          <h2>Приглашаю к сотрудничеству гидов</h2>
+          <p>Водите экскурсии на русском языке? Давайте работать вместе: я рекомендую вас своим туристам, а вы показываете им город так, как не покажет ни один путеводитель.</p>
+          <ul class="guides__list">
+            <li>Рекомендую вас туристам, которым собираю поездку</li>
+            <li>Включаю ваши экскурсии в маршруты и путеводители</li>
+            <li>Условия обсудим лично: формат, даты, комиссия</li>
+          </ul>
+          <a href="#brief" class="btn btn--ink" data-mode-link="guide">Оставить контакты</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="wrap wrap--narrow">
+        <h2>Частые вопросы</h2>
+        <details>
+          <summary>Почему подбор тура бесплатный?</summary>
+          <p>Туроператор платит агенту комиссию из своей цены. Вы платите столько же, сколько на сайте оператора, но с вами рядом человек, который сравнит варианты и поможет, если что-то пойдёт не так.</p>
+        </details>
+        <details>
+          <summary>Что лучше: тур или самостоятельная поездка?</summary>
+          <p>Зависит от направления и сезона. Турция и Египет в пакете обычно выгоднее, а города Европы и Азии часто дешевле и интереснее самостоятельно. Напишите, куда хотите, и я посчитаю оба варианта.</p>
+        </details>
+        <details>
+          <summary>Еду за границу впервые. С чем поможете?</summary>
+          <p>Подскажу, нужна ли виза и хватит ли срока действия загранпаспорта, помогу выбрать страховку и распишу по шагам путь от регистрации в аэропорту до заселения в отель. Во время поездки я на связи в Telegram.</p>
+        </details>
+        <details>
+          <summary>Подбираете отдых для семьи с детьми?</summary>
+          <p>Да. Укажите в заявке возраст детей, и я учту короткий перелёт, отели с детским клубом и бассейном, детское меню и кресло в трансфере. Страховку подберу на всю семью.</p>
+        </details>
+        <details>
+          <summary>Подойдёт ли поездка людям старшего возраста?</summary>
+          <p>Да. Подберу направление без долгих перелётов и пересадок, отель с лифтом недалеко от моря или санаторий с процедурами. Страховку выберу такую, что действует в вашем возрасте. Если неудобно переписываться, выберите в анкете «Позвонить», и я перезвоню.</p>
+        </details>
+        <details>
+          <summary>Что будет, если рейс отменят или поездку придётся перенести?</summary>
+          <p>В готовом туре порядок возврата и переноса прописан в договоре, а от невыезда защищает отдельная страховка. Подскажу, стоит ли её оформлять. В самостоятельной поездке заранее отмечу, какие билеты и брони можно вернуть бесплатно.</p>
+        </details>
+        <details>
+          <summary>Кто бронирует билеты и отели при самостоятельной поездке?</summary>
+          <p>Вы сами, по моим ссылкам и пошаговой инструкции. Деньги не проходят через посредника, а все брони оформлены на вас.</p>
+        </details>
+        <details>
+          <summary>Как с вами связаться?</summary>
+          <p>Заполните анкету выше и выберите, как вам удобнее: позвоню или напишу. Или напишите мне в Telegram: <a href="https://t.me/spaspb755" target="_blank" rel="noopener">@spaspb755</a>. Полезные советы и подборки публикую в канале <a href="https://t.me/TurnkeyTrip" target="_blank" rel="noopener">@TurnkeyTrip</a>.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© <span id="year"></span> Путешествие под ключ</span>
+      <span class="footer__links">
+        <a href="https://t.me/spaspb755" target="_blank" rel="noopener">Написать: @spaspb755</a>
+        <a href="https://t.me/TurnkeyTrip" target="_blank" rel="noopener">Канал: @TurnkeyTrip</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

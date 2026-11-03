@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Екатерина Марусенко – консультации по отношениям</title>
+<meta name="description" content="Консультации по отношениям в {{город}} и онлайн. Психология, энергопрактики и причинно-следственные связи: выйти из круга «молчу – страдаю» и научиться говорить так, чтобы слышали.">
+<meta property="og:title" content="Екатерина Марусенко – консультации по отношениям в {{город}}">
+<meta property="og:description" content="Есть третий вариант: говорить так, чтобы вас слышали и слушали.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pavel-sites.github.io/marusenko">
+<meta property="og:image" content="https://pavel-sites.github.io/marusenko/assets/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b2230'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23d9a24a' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vibe.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Екатерина Марусенко – консультации по отношениям",
+  "url": "https://pavel-sites.github.io/marusenko",
+  "image": "https://pavel-sites.github.io/marusenko/assets/og.jpg",
+  "telephone": "{{телефон}}",
+  "address": { "@type": "PostalAddress", "addressLocality": "{{город}}", "streetAddress": "{{адрес}}" },
+  "openingHours": "{{часы}}"
+}
+</script>
+<style>
+  html, body { background: #eceff3; }
+
+  .v-page {
+    --v-canvas: #eceff3;
+    --v-surface: #f8f9fb;
+    --v-ink: #1b2230;
+    --v-ink-soft: #505a6b;
+    --v-accent: #d9a24a;
+    --v-accent-ink: #1b2230;
+    --v-accent-deep: #85570f;
+    --v-night: #182030;
+    --v-night-ink: #e8ebf1;
+    --v-night-soft: #a3acbd;
+    --v-shadow-color: 27 34 48;
+    --v-font-display: "Spectral", Georgia, serif;
+    --v-font-text: "Onest", "Segoe UI", system-ui, sans-serif;
+    --v-section: clamp(4rem, 9vw, 8rem);
+    --v-radius: 18px;
+  }
+  .v-page .v-display { font-weight: 300; letter-spacing: -0.015em; }
+  .v-page .v-display--xl { font-size: clamp(2.5rem, 1.4rem + 4.6vw, 5.6rem); line-height: 1.02; }
+  @media (max-width: 700px) { .v-page .v-display--xl { font-size: clamp(2.1rem, 1.4rem + 4vw, 2.8rem); line-height: 1.06; } }
+  .v-page { --v-t-sm: clamp(0.94rem, 0.9rem + 0.18vw, 1rem); }
+
+  /* шапка */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter); color: var(--v-night-ink); transition: background-color .25s var(--v-ease-out), color .25s var(--v-ease-out), box-shadow .25s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(236 239 243 / .88); color: var(--v-ink); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__mark { font-family: var(--v-font-display); font-size: var(--v-t-lg); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; white-space: nowrap; }
+  .bar__nav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
+  .bar__nav a { text-decoration: none; opacity: .82; min-height: 44px; display: inline-flex; align-items: center; }
+  .bar__nav a:hover { opacity: 1; text-decoration: underline; }
+  .bar .v-btn { padding: .7em 1.3em; }
+  @media (max-width: 860px) { .bar__nav { display: none; } .bar__mark { font-size: var(--v-t-base); } }
+
+  /* hero */
+  .hero [data-v-stage] { background: var(--v-night); }
+  .hero__back { inset: -6% 0; }
+  .hero__back img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; max-width: none; }
+  .hero .v-scrim--lead { background: radial-gradient(110% 95% at 0% 100%, rgb(14 20 34 / .72) 0%, rgb(14 20 34 / .38) 42%, transparent 72%); }
+  .hero .v-copy { color: var(--v-night-ink); max-width: min(40rem, 88vw); }
+  .hero__name { font-size: var(--v-t-sm); color: var(--v-night-soft); margin-bottom: var(--v-4); }
+  .hero .v-lede { margin-top: var(--v-5); max-width: 36ch; color: rgb(232 235 241 / .9); }
+  .hero__act { margin-top: var(--v-6); display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-3) var(--v-5); font-size: var(--v-t-sm); }
+  .hero__act a:not(.v-btn) { color: var(--v-night-soft); }
+  .hero__quote { font-family: var(--v-font-display); font-weight: 300; font-size: var(--v-t-xl); line-height: 1.2; max-width: 22ch; }
+  .hero__quote small { display: block; margin-top: var(--v-4); font-family: var(--v-font-text); font-size: var(--v-t-sm); color: var(--v-night-soft); line-height: 1.5; max-width: 34ch; }
+  @media (max-width: 860px) {
+    .hero__back img { object-position: 50% 100%; }
+    .hero .v-copy--lead { top: clamp(5rem, 12vh, 7rem); bottom: auto; }
+    .hero .v-scrim--lead { background: linear-gradient(to bottom, rgb(14 20 34 / .78) 0%, rgb(14 20 34 / .45) 40%, transparent 66%); }
+    .hero .v-lede { font-size: var(--v-t-base); }
+  }
+
+  /* узнаёте себя */
+  .know { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--v-7); align-items: start; }
+  .know__head { position: sticky; top: 7rem; }
+  .know__head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 30ch; }
+  .know__list li { font-family: var(--v-font-display); font-weight: 300; font-size: var(--v-t-xl); line-height: 1.22; padding-block: var(--v-5); border-top: 1px solid var(--v-hair); text-wrap: balance; }
+  .know__list li:last-child { border-bottom: 1px solid var(--v-hair); }
+  @media (max-width: 860px) { .know { grid-template-columns: 1fr; gap: var(--v-5); } .know__head { position: static; } }
+
+  /* круг и третий вариант */
+  .loop [data-v-stage] { background: var(--v-night); color: var(--v-night-ink); }
+  .loop__grid { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; padding: 0 var(--v-gutter); gap: var(--v-6); }
+  .loop__text { position: relative; height: 60vh; }
+  .loop__text > div { position: absolute; left: 0; right: 0; top: 50%; translate: 0 -50%; }
+  .loop__text h2 { color: var(--v-night-ink); }
+  .loop__text p { margin-top: var(--v-5); color: var(--v-night-soft); max-width: 40ch; }
+  .loop__third h2 { color: #f4d39a; }
+  .loop__fig { position: relative; width: min(100%, 34rem); aspect-ratio: 1; justify-self: center; }
+  .loop__fig svg { width: 100%; height: 100%; overflow: visible; }
+  .loop__ring { fill: none; stroke: var(--v-night-ink); stroke-width: 1.5; stroke-linecap: round;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: calc(100 - 100 * clamp(0, (var(--v-p, 0) - .04) / .34, 1));
+    opacity: calc(1 - .7 * clamp(0, (var(--v-p, 0) - .5) / .2, 1)); }
+  .loop__path { fill: none; stroke: var(--v-accent); stroke-width: 3; stroke-linecap: round;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: calc(100 - 100 * clamp(0, (var(--v-p, 0) - .5) / .28, 1)); }
+  .loop__end { fill: var(--v-accent); opacity: clamp(0, (var(--v-p, 0) - .76) / .06, 1); }
+  .loop__tag { position: absolute; font-size: var(--v-t-sm); color: var(--v-night-soft); white-space: nowrap; }
+  .loop__tag b { display: block; font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-lg); color: var(--v-night-ink); }
+  .loop__tag { left: 50%; translate: -50% 0; text-align: center; }
+  .loop__tag--l { top: 38%; }
+  .loop__tag--r { top: 60%; }
+  @media (max-width: 860px) {
+    .loop__grid { grid-template-columns: 1fr; grid-template-rows: auto 1fr; align-items: start; padding-top: clamp(4.5rem, 10vh, 6rem); gap: var(--v-3); }
+    .loop__fig { width: min(78vw, 38svh); }
+    .loop__text { height: auto; min-height: 40svh; }
+    .loop__text > div { top: 0; translate: none; }
+    .loop__text h2 { font-size: var(--v-t-xl); }
+    .loop__text p { margin-top: var(--v-3); font-size: var(--v-t-sm); }
+    .loop__tag { font-size: var(--v-t-xs); }
+    .loop__tag b { font-size: var(--v-t-base); }
+  }
+
+  /* как работаем */
+  .how { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: var(--v-8); align-items: start; }
+  .how__fig { position: sticky; top: 6rem; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e1); }
+  .how__fig img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+  .how__lede { margin-top: var(--v-5); max-width: 42ch; color: var(--v-ink-soft); }
+  .steps { margin-top: var(--v-7); counter-reset: s; }
+  .steps li { display: grid; grid-template-columns: 3rem 1fr; gap: var(--v-4); padding-block: var(--v-5); border-top: 1px solid var(--v-hair); }
+  .steps li::before { counter-increment: s; content: counter(s); font-family: var(--v-font-display); font-size: var(--v-t-xl); line-height: 1; color: var(--v-accent-deep); }
+  .steps h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-lg); }
+  .steps p { margin-top: var(--v-2); color: var(--v-ink-soft); max-width: 44ch; }
+  .how__cta { margin-top: var(--v-6); }
+  @media (max-width: 860px) { .how { grid-template-columns: 1fr; gap: var(--v-6); } .how__fig { position: static; order: -1; } .how__fig img { aspect-ratio: 4 / 3; } }
+
+  /* форматы */
+  .fmt__head { max-width: 40rem; }
+  .fmt__head p { margin-top: var(--v-4); color: var(--v-ink-soft); }
+  .fmt__list { margin-top: var(--v-7); }
+  .fmt__row { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) auto; gap: var(--v-6); align-items: baseline; padding-block: var(--v-6); border-top: 1px solid var(--v-hair-strong); }
+  .fmt__row:last-child { border-bottom: 1px solid var(--v-hair-strong); }
+  .fmt__row h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); line-height: 1.15; }
+  .fmt__row h3 small { display: block; margin-top: var(--v-2); font-family: var(--v-font-text); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .fmt__row p { color: var(--v-ink-soft); max-width: 46ch; }
+  .fmt__sum { font-family: var(--v-font-display); font-size: var(--v-t-xl); color: var(--v-accent-deep); white-space: nowrap; }
+  .fmt__note { margin-top: var(--v-6); color: var(--v-ink-soft); }
+  @media (max-width: 860px) { .fmt__row { grid-template-columns: 1fr; gap: var(--v-3); } }
+
+  /* обо мне */
+  .about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--v-8); align-items: center; }
+  .about__frame { position: relative; aspect-ratio: 3 / 4; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); }
+  .about__frame .v-layer { inset: -10% 0; }
+  .about__frame .v-layer img { width: 100%; height: 100%; object-fit: cover; }
+  .about__text blockquote { margin: var(--v-6) 0 0; font-family: var(--v-font-display); font-weight: 300; font-size: var(--v-t-xl); line-height: 1.25; max-width: 26ch; }
+  .about__text p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 46ch; }
+  .about__facts { margin-top: var(--v-6); display: grid; gap: var(--v-3); }
+  .about__facts li { padding-top: var(--v-3); border-top: 1px solid var(--v-hair); }
+  .about__facts span { display: block; font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  @media (max-width: 860px) { .about { grid-template-columns: 1fr; gap: var(--v-6); } .about__frame { aspect-ratio: 4 / 5; } }
+
+  /* финал */
+  .close [data-v-stage] { background: #e9e3da; }
+  .close__back { inset: -6% 0; }
+  .close__back img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; max-width: none; }
+  .close__col { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(90deg, rgb(244 238 229 / .9) 0%, rgb(244 238 229 / .72) 38%, transparent 64%); }
+  .close .v-copy { top: 50%; bottom: auto; translate: 0 -50%; max-width: min(38rem, 88vw); }
+  .close .v-copy p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 38ch; }
+  .close__act { margin-top: var(--v-6); display: flex; flex-wrap: wrap; gap: var(--v-3); }
+  .close__info { margin-top: var(--v-6); display: grid; grid-template-columns: repeat(2, minmax(0, auto)); gap: var(--v-2) var(--v-7); font-size: var(--v-t-sm); }
+  .close__info span { color: var(--v-ink-soft); display: block; }
+  .close__info a { font-size: var(--v-t-base); }
+  .foot { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; padding: var(--v-4) var(--v-gutter); font-size: var(--v-t-xs); color: var(--v-ink-soft);
+    background: rgb(244 238 229 / .8); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); display: flex; flex-wrap: wrap; gap: var(--v-2) var(--v-6); justify-content: space-between; }
+  @media (max-width: 860px) {
+    .close__back img { object-position: 78% 50%; }
+    .close__col { background: linear-gradient(180deg, rgb(244 238 229 / .94) 0%, rgb(244 238 229 / .8) 55%, rgb(244 238 229 / .3) 100%); }
+    .close .v-copy { top: clamp(5rem, 11vh, 6rem); translate: none; }
+    .close__info { grid-template-columns: 1fr; }
+    .foot { position: static; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <div data-v-progress></div>
+
+  <header class="bar">
+    <a class="bar__mark" href="#top">Екатерина Марусенко</a>
+    <nav class="bar__nav" aria-label="Разделы">
+      <a href="#krug">Третий вариант</a>
+      <a href="#kak">Как работаю</a>
+      <a href="#format">Форматы и цены</a>
+      <a href="#obo-mne">Обо мне</a>
+    </nav>
+    <a class="v-btn" href="{{ссылка-записи}}" target="_blank" rel="noopener">Записаться</a>
+  </header>
+
+  <!-- 1. Узнавание -->
+  <section class="hero" id="top" data-v-act="pin" data-v-span="2.2">
+    <div data-v-stage>
+      <div class="v-layer hero__back" data-v-parallax="-0.45">
+        <picture>
+          <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+          <img src="assets/hero.webp" alt="Женщина сидит на подоконнике и смотрит в окно на рассвет" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="v-scrim v-scrim--lead"></div>
+      <div class="v-copy v-copy--lead" data-v-cue="0 0.6 0 0.1">
+        <p class="hero__name">Екатерина Марусенко, {{город}} и онлайн</p>
+        <h1 class="v-display v-display--xl" data-v-kinetic="lines">Консультации по отношениям в {{город}}: чтобы вас слышали</h1>
+        <p class="v-lede">Находим, откуда берётся замкнутый круг в отношениях, проживаем его и учимся говорить так, чтобы слышали и слушали.</p>
+        <div class="hero__act">
+          <a class="v-btn" href="{{ссылка-записи}}" target="_blank" rel="noopener">Записаться</a>
+          <a href="tel:{{телефон}}">или позвоните {{телефон}}</a>
+        </div>
+      </div>
+      <div class="v-copy v-copy--lead" data-v-cue="0.62 1 0.12 0.06">
+        <p class="hero__quote">«Внутри я воин, а снаружи боюсь сказать»<small>С этого часто начинается разговор. Если узнаёте себя, вы по адресу.</small></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Узнаёте себя -->
+  <section class="v-section" id="uznaete" data-v-act="flow" data-v-drift="#eceff3">
+    <div class="v-wrap know">
+      <div class="know__head">
+        <h2 class="v-display v-display--md">Узнаёте себя?</h2>
+        <p>Со мной приходят, когда в отношениях одно и то же повторяется снова и снова.</p>
+      </div>
+      <ul class="know__list" data-v-in data-v-stagger="80">
+        <li>Внутри я одно, а снаружи боюсь сказать</li>
+        <li>Молчу – и страдаю</li>
+        <li>Говорю – и становится только хуже</li>
+        <li>С разными людьми повторяется один и тот же сценарий</li>
+        <li>Головой всё понимаю, а в моменте снова срываюсь или замолкаю</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. Круг и третий вариант (фирменный ход) -->
+  <section class="loop" id="krug" data-v-act="pin" data-v-span="3">
+    <div data-v-stage>
+      <div class="loop__grid">
+        <div class="loop__text">
+          <div data-v-cue="0 0.46 0.04 0.08">
+            <h2 class="v-display v-display--md">Молчу – страдаю. Не молчу – опять страдаю.</h2>
+            <p>Так выглядит круг, из которого кажется, что выхода нет. Два варианта, и оба больно.</p>
+          </div>
+          <div class="loop__third" data-v-cue="0.5 1 0.1 0">
+            <h2 class="v-display v-display--md">Есть третий вариант: говорить так, чтобы слышали и слушали</h2>
+            <p>Мы находим, что держит этот круг, проживаем это и отпускаем. Тогда появляется выбор, которого раньше не было.</p>
+          </div>
+        </div>
+        <div class="loop__fig" aria-hidden="true">
+          <svg viewBox="0 0 400 400">
+            <circle class="loop__ring" cx="200" cy="230" r="130" pathLength="100" transform="rotate(-90 200 230)"/>
+            <path class="loop__path" d="M200 100 C 214 54, 270 22, 392 6" pathLength="100"/>
+            <circle class="loop__end" cx="392" cy="6" r="6"/>
+          </svg>
+          <p class="loop__tag loop__tag--l" data-v-cue="0.06 0.62 0.08 0.1"><b>Молчу</b>и страдаю</p>
+          <p class="loop__tag loop__tag--r" data-v-cue="0.2 0.62 0.08 0.1"><b>Говорю</b>и становится хуже</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Как работаем -->
+  <section class="v-section v-section--tight" id="kak" data-v-act="flow" data-v-drift="#e7ebf0" style="padding-top: var(--v-section)">
+    <div class="v-wrap how">
+      <div>
+        <h2 class="v-display v-display--md">Как мы работаем</h2>
+        <p class="how__lede">Через психологию, энергопрактики и причинно-следственные связи событий. Смотрим не только на ссору, но и на то, что за ней стоит.</p>
+        <ol class="steps" data-v-in data-v-stagger="70">
+          <li><div><h3>Вытаскиваем</h3><p>Находим, что на самом деле сидит внутри и каждый раз запускает один и тот же сценарий.</p></div></li>
+          <li><div><h3>Проживаем</h3><p>Даём этому место, без оценок и спешки, в вашем темпе.</p></div></li>
+          <li><div><h3>Отпускаем</h3><p>Убираем то, что больше не нужно держать в себе.</p></div></li>
+          <li><div><h3>Учимся говорить</h3><p>Так, чтобы вас слышали и слушали: без молчания через силу и без ссор.</p></div></li>
+        </ol>
+        <div class="how__cta"><a class="v-btn v-btn--ghost" href="{{ссылка-записи}}" target="_blank" rel="noopener">Записаться</a></div>
+      </div>
+      <figure class="how__fig" data-v-reveal="left" data-v-reveal-at="0.08 0.42">
+        <img src="assets/metod.webp" alt="Руки на столе в утреннем луче солнца, рядом чашка чая и блокнот" loading="lazy" width="1200" height="1600">
+      </figure>
+    </div>
+  </section>
+
+  <!-- 5. Форматы и цены -->
+  <section class="v-section" id="format" data-v-act="flow" data-v-drift="#eceff3">
+    <div class="v-wrap">
+      <div class="fmt__head">
+        <h2 class="v-display v-display--md">Форматы и стоимость</h2>
+        <p>Цена известна до встречи. Формат выбираете вы.</p>
+      </div>
+      <div class="fmt__list" data-v-in data-v-stagger="90">
+        <article class="fmt__row">
+          <h3>Консультация по отношениям<small>Очно в {{город}} или онлайн</small></h3>
+          <p>Разбираем ваш запрос: что повторяется, откуда это идёт и что можно сделать уже сейчас. {{длительность-консультации}}.</p>
+          <p class="fmt__sum v-nums">{{цена-консультация}}&nbsp;₽</p>
+        </article>
+        <article class="fmt__row">
+          <h3>Access Bars<small>Очно, {{адрес}}</small></h3>
+          <p>Телесная практика: мягкие касания точек на голове, вы лежите одетым. {{длительность-access}}.</p>
+          <p class="fmt__sum v-nums">{{цена-access}}&nbsp;₽</p>
+        </article>
+      </div>
+      <p class="fmt__note">Не знаете, с чего начать? Напишите, и я подскажу, какой формат подойдёт.</p>
+    </div>
+  </section>
+
+  <!-- 6. Обо мне -->
+  <section class="v-section" id="obo-mne" data-v-act="flow" data-v-drift="#e7ebf0">
+    <div class="v-wrap about">
+      <div class="about__frame" data-v-in data-v-in-self>
+        <div class="v-layer" data-v-parallax="-0.5">
+          <img src="assets/prostranstvo.webp" alt="Два кресла у окна в утреннем свете" loading="lazy" width="1200" height="1600">
+        </div>
+      </div>
+      <div class="about__text" data-v-in data-v-stagger="80">
+        <h2 class="v-display v-display--md">Обо мне</h2>
+        <blockquote>Я помогаю вытащить то, что сидит в человеке и не даёт жить так, как хочется.</blockquote>
+        <p>Меня зовут Екатерина Марусенко. Работаю с отношениями через психологию и энергопрактики. {{о-себе}}</p>
+        <ul class="about__facts">
+          <li><span>Образование</span>{{образование}}</li>
+          <li><span>Опыт</span>{{опыт}}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Запись -->
+  <section class="close" id="zapis" data-v-act="pin" data-v-span="1.3" data-v-spotlight>
+    <div data-v-stage>
+      <div class="v-layer close__back" data-v-parallax="-0.3">
+        <img src="assets/final.webp" alt="Солнечный подоконник, на нём свитер и чашка чая" loading="lazy">
+      </div>
+      <div class="close__col"></div>
+      <div class="v-copy v-copy--lead" data-v-cue="0.04">
+        <h2 class="v-display v-display--lg">Записаться на консультацию</h2>
+        <p>Напишите, как вам удобнее: очно в {{город}} или онлайн. Отвечу и предложу время.</p>
+        <div class="close__act">
+          <a class="v-btn" href="{{ссылка-записи}}" target="_blank" rel="noopener" data-v-magnet="0.25" data-v-rise="0">Записаться</a>
+          <a class="v-btn v-btn--ghost" href="tel:{{телефон}}">Позвонить</a>
+        </div>
+        <div class="close__info">
+          <p><span>Телефон</span><a href="tel:{{телефон}}">{{телефон}}</a></p>
+          <p><span>Часы</span>{{часы}}</p>
+          <p><span>Адрес</span>{{адрес}}</p>
+          <p><span>Онлайн</span>видеосвязь, из любого города</p>
+        </div>
+      </div>
+      <footer class="foot">
+        <span>© Екатерина Марусенко</span>
+        <span>Консультации не заменяют медицинскую и психиатрическую помощь.</span>
+      </footer>
+    </div>
+  </section>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  (function () {
+    var bar = document.querySelector('.bar');
+    function onScroll() { bar.classList.toggle('is-scrolled', window.scrollY > 40); }
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    if (window.matchMedia('(max-width: 860px)').matches) {
+      document.getElementById('top').setAttribute('data-v-span', '1.8');
+      document.getElementById('krug').setAttribute('data-v-span', '2.6');
+    }
+    Vibe.mount(document.querySelector('.v-page'));
+  })();
+</script>
+</body>
+</html>

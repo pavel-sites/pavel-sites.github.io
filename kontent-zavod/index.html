@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контент-завод – автогенерация и автопостинг контента</title>
+  <meta name="description" content="Контент-завод: анализ бизнеса, контент-план, автогенерация статей, каруселей и видео и автопостинг в Telegram, VK, Instagram и YouTube. Сборка от 15 тыс. ₽ и ежемесячное сопровождение.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Tektur:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Фон: работающий цех -->
+<div class="factory-bg" aria-hidden="true">
+  <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <!-- Подвесной конвейер -->
+    <rect x="0" y="36" width="1440" height="8" />
+    <g class="f-hooks">
+      <g id="f-hook">
+        <line x1="-180" y1="44" x2="-180" y2="104" stroke-width="3" />
+        <path d="M-188 104 h16 v6 h-16z" />
+        <rect x="-205" y="112" width="50" height="40" rx="3" />
+      </g>
+      <use href="#f-hook" x="180" /><use href="#f-hook" x="360" /><use href="#f-hook" x="540" />
+      <use href="#f-hook" x="720" /><use href="#f-hook" x="900" /><use href="#f-hook" x="1080" />
+      <use href="#f-hook" x="1260" /><use href="#f-hook" x="1440" /><use href="#f-hook" x="1620" />
+    </g>
+
+    <!-- Шестерни -->
+    <g class="f-pos-gears">
+    <g class="f-gear f-gear-big">
+      <circle cx="1300" cy="250" r="70" fill="none" stroke-width="22" stroke-dasharray="18.33 18.33" />
+      <circle cx="1300" cy="250" r="58" fill="none" stroke-width="14" />
+      <circle cx="1300" cy="250" r="16" />
+      <rect x="1296" y="196" width="8" height="108" />
+      <rect x="1246" y="246" width="108" height="8" />
+    </g>
+    <g class="f-gear f-gear-small">
+      <circle cx="1196" cy="336" r="45" fill="none" stroke-width="20" stroke-dasharray="17.67 17.67" />
+      <circle cx="1196" cy="336" r="36" fill="none" stroke-width="10" />
+      <circle cx="1196" cy="336" r="11" />
+    </g>
+    </g>
+
+    <g class="f-pos-gearleft">
+    <g class="f-gear f-gear-left">
+      <circle cx="90" cy="560" r="56" fill="none" stroke-width="20" stroke-dasharray="17.6 17.6" />
+      <circle cx="90" cy="560" r="46" fill="none" stroke-width="10" />
+      <circle cx="90" cy="560" r="12" />
+    </g>
+    </g>
+
+    <!-- Пресс -->
+    <g class="f-pos-press">
+    <rect x="330" y="540" width="14" height="260" />
+    <rect x="456" y="540" width="14" height="260" />
+    <rect x="322" y="528" width="156" height="26" rx="3" />
+    <g class="f-ram">
+      <rect x="392" y="554" width="16" height="40" />
+      <rect x="362" y="594" width="76" height="70" rx="4" />
+    </g>
+    </g>
+
+    <!-- Робот-манипулятор -->
+    <g class="f-pos-robot">
+    <rect x="940" y="770" width="90" height="30" rx="4" />
+    <circle cx="985" cy="764" r="16" />
+    <g class="f-arm1">
+      <rect x="974" y="620" width="22" height="146" rx="10" />
+      <circle cx="985" cy="620" r="14" />
+      <g class="f-arm2">
+        <rect x="985" y="611" width="128" height="18" rx="9" />
+        <rect x="1110" y="600" width="8" height="40" rx="2" />
+        <rect x="1118" y="600" width="18" height="7" />
+        <rect x="1118" y="633" width="18" height="7" />
+        <g class="f-sparks">
+          <line x1="1140" y1="620" x2="1162" y2="606" stroke-width="3" />
+          <line x1="1140" y1="620" x2="1166" y2="622" stroke-width="3" />
+          <line x1="1140" y1="620" x2="1158" y2="638" stroke-width="3" />
+        </g>
+      </g>
+    </g>
+    </g>
+
+    <!-- Напольная лента -->
+    <g class="f-boxes">
+      <g id="f-box"><rect x="-220" y="756" width="62" height="44" rx="3" /><rect x="-198" y="756" width="18" height="10" class="f-tape" /></g>
+      <use href="#f-box" x="220" /><use href="#f-box" x="440" /><use href="#f-box" x="660" />
+      <use href="#f-box" x="880" /><use href="#f-box" x="1100" /><use href="#f-box" x="1320" />
+      <use href="#f-box" x="1540" />
+    </g>
+    <rect x="0" y="802" width="1440" height="16" rx="8" />
+    <g class="f-rollers" fill="none" stroke-width="3">
+      <circle cx="40" cy="836" r="10" /><circle cx="200" cy="836" r="10" /><circle cx="360" cy="836" r="10" />
+      <circle cx="520" cy="836" r="10" /><circle cx="680" cy="836" r="10" /><circle cx="840" cy="836" r="10" />
+      <circle cx="1000" cy="836" r="10" /><circle cx="1160" cy="836" r="10" /><circle cx="1320" cy="836" r="10" />
+    </g>
+  </svg>
+</div>
+
+<header class="top">
+  <a class="logo" href="#top" aria-label="Контент-завод, наверх">
+    <span class="logo-mark" aria-hidden="true"></span>Контент-завод
+  </a>
+  <nav class="top-nav" aria-label="Разделы">
+    <a href="#how">Как работает</a>
+    <a href="#plans">Тарифы</a>
+    <a href="#care">Сопровождение</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+  <a class="btn btn-small" href="https://t.me/spaspb755" target="_blank" rel="noopener">Telegram</a>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Вам нужен контент, но нет идей или что‑то мешает писать, снимать и выкладывать?</h1>
+      <p class="hero-answer">У меня есть решение – автогенерация и автопостинг контента. Вы один раз рассказываете о бизнесе, дальше посты, карусели и видео выходят сами.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://t.me/spaspb755" target="_blank" rel="noopener">Написать в Telegram</a>
+        <a class="link-plain" href="#plans">Посмотреть тарифы</a>
+      </div>
+    </div>
+
+    <figure class="line" aria-label="Схема: контент едет по конвейеру от идеи к публикации">
+      <div class="gantries" aria-hidden="true">
+        <span>идея</span><span>текст</span><span>картинки</span><span>видео</span><span>публикация</span>
+      </div>
+      <div class="belt" aria-hidden="true">
+        <div class="belt-track">
+          <div class="belt-set">
+            <div class="item item-article"><i></i><i></i><i></i><b>Статья</b></div>
+            <div class="item item-carousel"><span class="stack"></span><b>Карусель 1/7</b></div>
+            <div class="item item-video"><span class="play"></span><b>Видео 0:42</b></div>
+            <div class="item item-article"><i></i><i></i><i></i><b>Пост</b></div>
+            <div class="item item-carousel"><span class="stack"></span><b>Карусель 1/5</b></div>
+            <div class="item item-video"><span class="play"></span><b>Рилс 0:18</b></div>
+          </div>
+          <div class="belt-set">
+            <div class="item item-article"><i></i><i></i><i></i><b>Статья</b></div>
+            <div class="item item-carousel"><span class="stack"></span><b>Карусель 1/7</b></div>
+            <div class="item item-video"><span class="play"></span><b>Видео 0:42</b></div>
+            <div class="item item-article"><i></i><i></i><i></i><b>Пост</b></div>
+            <div class="item item-carousel"><span class="stack"></span><b>Карусель 1/5</b></div>
+            <div class="item item-video"><span class="play"></span><b>Рилс 0:18</b></div>
+          </div>
+        </div>
+      </div>
+      <figcaption>Контент выходит по расписанию, даже когда вы заняты делом.</figcaption>
+    </figure>
+  </section>
+
+  <section class="how" id="how" aria-labelledby="how-title">
+    <h2 id="how-title">Как работает завод</h2>
+    <ol class="steps">
+      <li>
+        <h3>Разбираю ваш бизнес</h3>
+        <p>Кто клиенты, что они спрашивают, чем вы отличаетесь. Из этого получаются темы, которые не закончатся через неделю.</p>
+      </li>
+      <li>
+        <h3>Составляю контент-план</h3>
+        <p>План на месяц: что, когда и в какую соцсеть выходит. Вы смотрите и правите, если нужно.</p>
+      </li>
+      <li>
+        <h3>Настраиваю генерацию</h3>
+        <p>Завод сам пишет статьи, собирает карусели и, начиная со средней сборки, делает видео в вашем стиле.</p>
+      </li>
+      <li>
+        <h3>Запускаю автопостинг</h3>
+        <p>Готовые публикации выходят в Telegram или VK, Нельзяграм и YouTube по расписанию. Вам не нужно ничего выкладывать вручную.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="plans" id="plans" aria-labelledby="plans-title">
+    <div class="plans-head">
+      <h2 id="plans-title">Сборка контент-завода</h2>
+      <p>Разовая оплата за готовый завод. Каждая следующая сборка включает всё из предыдущей, жёлтым отмечено, что добавляется.</p>
+    </div>
+
+    <div class="plan-grid">
+      <article class="plan">
+        <h3>Простая сборка</h3>
+        <p class="plan-price">15–30 тыс. ₽</p>
+        <p class="plan-for">Чтобы контент начал выходить регулярно</p>
+        <ul class="blocks">
+          <li class="block new">Анализ бизнеса</li>
+          <li class="block new">Контент-план на месяц</li>
+          <li class="block new">Статьи и карусели</li>
+          <li class="block new">Автопостинг в Telegram или VK и Нельзяграм</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://t.me/spaspb755" target="_blank" rel="noopener">Обсудить<span class="sr-only"> простую сборку</span></a>
+      </article>
+
+      <article class="plan">
+        <h3>Средняя сборка</h3>
+        <p class="plan-price">30–70 тыс. ₽</p>
+        <p class="plan-for">Чтобы добавить видео и выйти на YouTube</p>
+        <ul class="blocks">
+          <li class="block old" style="--n: 4">Всё из простой сборки</li>
+          <li class="block new">Видео-контент</li>
+          <li class="block new">YouTube – третья площадка</li>
+          <li class="block new">Месяц поддержки</li>
+        </ul>
+        <a class="btn" href="https://t.me/spaspb755" target="_blank" rel="noopener">Обсудить<span class="sr-only"> среднюю сборку</span></a>
+      </article>
+
+      <article class="plan">
+        <h3>Продвинутая сборка</h3>
+        <p class="plan-price">70–150+ тыс. ₽</p>
+        <p class="plan-for">Чтобы завод работал долго и рос вместе с бизнесом</p>
+        <ul class="blocks">
+          <li class="block old" style="--n: 7">Всё из средней сборки</li>
+          <li class="block new">Два месяца поддержки</li>
+          <li class="block new">Месяц доработок или второй контент-завод</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://t.me/spaspb755" target="_blank" rel="noopener">Обсудить<span class="sr-only"> продвинутую сборку</span></a>
+      </article>
+
+      <article class="plan plan-custom">
+        <h3>Кастом</h3>
+        <p class="plan-price">от 150 тыс. ₽</p>
+        <p class="plan-for">Для бизнеса с несколькими направлениями, онлайн-школы или агентства</p>
+        <ul class="custom-list">
+          <li>Разбираю, как у вас устроен контент и кто за что отвечает</li>
+          <li>Собираю несколько заводов: под направления, курсы или клиентов агентства</li>
+          <li>Подключаю нужные площадки и сервисы</li>
+          <li>Состав и стоимость считаю после разбора задачи</li>
+        </ul>
+        <a class="btn" href="https://t.me/spaspb755" target="_blank" rel="noopener">Обсудить<span class="sr-only"> кастомную сборку</span></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="care" id="care" aria-labelledby="care-title">
+    <div class="plans-head">
+      <h2 id="care-title">Ежемесячное сопровождение</h2>
+      <p>Для тех, кто хочет, чтобы завод не просто работал, а менялся вместе с бизнесом. Подключается после любой сборки.</p>
+    </div>
+
+    <ul class="care-list">
+      <li class="care-row">
+        <h3>Поддержка системы</h3>
+        <p>Слежу, чтобы завод работал без сбоев, и чиню, если что-то сломалось.</p>
+        <p class="care-price">15–30 тыс. ₽ / мес</p>
+      </li>
+      <li class="care-row">
+        <h3>Ведение и доработка</h3>
+        <p>Поддержка плюс новый контент-план каждый месяц и доработка завода под ваши задачи.</p>
+        <p class="care-price">20–50 тыс. ₽ / мес</p>
+      </li>
+      <li class="care-row">
+        <h3>Сопровождение, новые связки и контроль</h3>
+        <p>Ведение плюс новые связки – площадки, форматы, сервисы – и контроль того, что контент приносит результат.</p>
+        <p class="care-price">от 50 тыс. ₽ / мес</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Расскажите о своём бизнесе – подскажу, какой тариф подойдёт</h2>
+    <div class="contact-links">
+      <a class="contact-link" href="https://t.me/spaspb755" target="_blank" rel="noopener">
+        <span class="contact-kind">Telegram</span>
+        <span class="contact-value">@spaspb755</span>
+      </a>
+      <a class="contact-link" href="mailto:pavel-suhanov@yandex.ru?subject=%D0%9A%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82-%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4">
+        <span class="contact-kind">Почта</span>
+        <span class="contact-value">pavel-suhanov@yandex.ru</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span>Контент-завод</span>
+  <span>Автогенерация и автопостинг контента</span>
+</footer>
+
+</body>
+</html>

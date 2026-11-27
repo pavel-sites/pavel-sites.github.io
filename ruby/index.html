@@ -254,6 +254,10 @@
   .foot { padding: 2.5rem var(--gutter) calc(2.5rem + 76px); max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: .5rem 2rem; font-size: .88rem; color: var(--ink-soft); }
 
   /* ---- кнопки внизу на телефоне ---- */
+  .toast { position: fixed; z-index: 60; left: 50%; bottom: 1.25rem; transform: translate(-50%, 1rem); max-width: min(92vw, 30rem); padding: .8rem 1.1rem; border-radius: var(--r-md); background: var(--ink); color: var(--paper); font-size: .95rem; line-height: 1.35; text-align: center; opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
+  .toast.is-on { opacity: 1; transform: translate(-50%, 0); }
+  @media (max-width: 760px) { .toast { bottom: calc(80px + env(safe-area-inset-bottom)); } }
+  @media (prefers-reduced-motion: reduce) { .toast { transition: none; } }
   .dock { display: none; }
   @media (max-width: 760px) {
     .dock { display: grid; grid-template-columns: 1fr auto; gap: .5rem; position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; padding: .55rem .75rem calc(.55rem + env(safe-area-inset-bottom)); background: rgb(246 248 242 / .94); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-top: 1px solid var(--hair); }
@@ -266,7 +270,6 @@
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-ph" viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="currentColor"/></symbol>
-  <symbol id="i-wa" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#25d366"/><path d="M12 5.6a6.3 6.3 0 0 0-5.4 9.6l-.8 3 3.1-.8A6.3 6.3 0 1 0 12 5.6zm3.6 8.8c-.2.4-.9.8-1.3.8-.3.1-.7.1-2.2-.5-1.8-.8-3-2.6-3.1-2.8-.1-.1-.7-1-.7-1.9s.5-1.4.7-1.6c.2-.2.4-.2.5-.2h.4c.1 0 .3 0 .4.3l.6 1.4c.1.1.1.2 0 .4l-.2.3-.3.3c-.1.1-.2.2-.1.4.1.2.6 1 1.3 1.6.9.8 1.6 1 1.8 1.1.2.1.4.1.5-.1l.6-.8c.2-.2.3-.2.5-.1l1.3.6c.2.1.4.2.4.3.1.1.1.5-.1.9z" fill="#fff"/></symbol>
   <symbol id="i-vk" viewBox="0 0 24 24"><rect width="24" height="24" rx="7" fill="#0077ff"/><path d="M12.8 17c-5 0-7.9-3.4-8-9.1h2.5c.1 4.2 1.9 5.9 3.4 6.3V7.9h2.4v3.6c1.4-.2 2.9-1.8 3.4-3.6h2.3c-.4 2.2-2 3.8-3.1 4.5 1.1.5 2.9 2 3.6 4.6h-2.6c-.6-1.8-2-3.1-3.6-3.3V17z" fill="#fff"/></symbol>
   <symbol id="i-max" viewBox="0 0 24 24"><defs><linearGradient id="gmax" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4cc3ff"/><stop offset="1" stop-color="#8a4dff"/></linearGradient></defs><rect width="24" height="24" rx="7" fill="url(#gmax)"/><path d="M12 5.5a6.5 6.5 0 0 0-5.6 9.8L5.6 18.5l3.3-.8A6.5 6.5 0 1 0 12 5.5z" fill="none" stroke="#fff" stroke-width="1.8"/></symbol>
   <symbol id="i-ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -296,7 +299,7 @@
         <p class="lead">Я – Руби, врач-реабилитолог и сертифицированный мастер массажа. Найду причину боли, сниму зажимы и верну подвижность после травм и нагрузок.</p>
         <div class="hero__cta">
           <a class="btn btn--go" href="#zapis">Записаться на сеанс</a>
-          <a class="btn btn--soft" href="https://wa.me/79219225094" target="_blank" rel="noopener" data-goal="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg>Написать в WhatsApp</a>
+          <a class="btn btn--soft" href="https://max.ru/" target="_blank" rel="noopener" data-goal="max" data-max="+7 960 272-66-41"><svg aria-hidden="true"><use href="#i-max"/></svg>Написать в Max</a>
         </div>
         <ul class="creds">
           <li><b>20+ лет</b>моего стажа</li>
@@ -471,8 +474,7 @@
           </div>
           <small>Санкт-Петербург. Принимаю по записи с 10:00 до 22:00</small>
           <div class="msg">
-            <a href="https://wa.me/79219225094" target="_blank" rel="noopener" data-goal="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
-            <a href="{{ссылка-max}}" target="_blank" rel="noopener" data-goal="max"><svg aria-hidden="true"><use href="#i-max"/></svg>Max</a>
+            <a href="https://max.ru/" target="_blank" rel="noopener" data-goal="max" data-max="+7 960 272-66-41"><svg aria-hidden="true"><use href="#i-max"/></svg>Max: +7&nbsp;960&nbsp;272-66-41</a>
           </div>
         </div>
         <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A2%D0%B8%D0%BF%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%2C%2027%2F39&amp;z=16" title="Типанова, 27/39 на карте" loading="lazy"></iframe></div>
@@ -486,15 +488,25 @@
   <a href="{{ссылка-политики}}">Политика конфиденциальности</a>
 </footer>
 
+<p class="toast" role="status" aria-live="polite"></p>
+
 <div class="dock">
   <a class="btn btn--go" href="#zapis">Записаться</a>
-  <a class="ico" href="https://wa.me/79219225094" target="_blank" rel="noopener" aria-label="WhatsApp" data-goal="wa"><svg><use href="#i-wa"/></svg></a>
+  <a class="ico" href="https://max.ru/" target="_blank" rel="noopener" data-goal="max" data-max="+7 960 272-66-41" aria-label="Написать в Max"><svg><use href="#i-max"/></svg></a>
 </div>
 
 <script>
   (function () {
     var goal = function (g) { if (window.ym && window.YM_ID) ym(window.YM_ID, 'reachGoal', g); };
     document.addEventListener('click', function (e) { var a = e.target.closest('[data-goal]'); if (a) goal(a.dataset.goal); });
+    var toast = document.querySelector('.toast'), tt;
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('[data-max]'); if (!a) return;
+      var n = a.dataset.max;
+      try { navigator.clipboard && navigator.clipboard.writeText(n.replace(/[\s-]/g, '')); } catch (_) {}
+      toast.textContent = 'Номер ' + n.replace(/ /g, '\u00a0').replace(/-/g, '\u2011') + ' скопирован – найдите меня в Max по номеру';
+      toast.classList.add('is-on'); clearTimeout(tt); tt = setTimeout(function () { toast.classList.remove('is-on'); }, 5000);
+    });
 
     /* позвоночник: зона → описание */
     var Z = {
